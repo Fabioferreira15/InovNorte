@@ -1,0 +1,42 @@
+:root {
+    --color-primary-100: #4922D9;
+    --color-primary-200: #5B38DD;
+    --color-primary-300: #6D4EE0;
+    --color-primary-400: #927AE8;
+    --color-primary-500: #B6A7F0;
+    --color-primary-600: #C8BDF4;
+    --color-primary-700: #C8BDF4;
+    --color-primary-800: #DBD3F7;
+    --color-primary-900: #EDE9FB;
+
+    --color-secondary-100: #FC4E2E;
+    --color-secondary-200: #FF9719;
+    --color-secondary-300: #FFA333;
+    --color-secondary-400: #FFBA66;
+    --color-secondary-500: #FFC680;
+    --color-secondary-600: #FFD199;
+    --color-secondary-700: #FFDCB2;
+    --color-secondary-800: #FFE8CC;
+    --color-secondary-900: #FFF3E5;
+
+    --color-text-dark: #191919;
+    --color-text-light: #fff;
+    --color-background-dark: #191919;
+    --color-background-light: #fff;
+
+    --font-title: "Kanit", sans-serif;
+    --font-text: "Prompt", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    font-size: 62.5% !important;
+}
