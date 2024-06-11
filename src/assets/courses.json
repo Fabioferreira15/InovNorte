@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Curso de Programação em JavaScript",
+        "description": "Aprenda a programar em JavaScript do básico ao avançado",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 2,
+        "title": "Curso de Web Design Responsivo",
+        "description": "Domine o desenvolvimento de sites responsivos para dispositivos móveis",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 3,
+        "title": "Curso de Introdução à Inteligência Artificial",
+        "description": "Explore os fundamentos da inteligência artificial e suas aplicações",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 4,
+        "title": "Curso de Análise de Dados com Python",
+        "description": "Aprenda a utilizar Python para análise e visualização de dados",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 5,
+        "title": "Curso de Desenvolvimento de Jogos com Unity",
+        "description": "Crie seus próprios jogos com Unity, o motor de jogos mais popular",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 6,
+        "title": "Curso de Segurança Cibernética",
+        "description": "Proteja sistemas de informação contra ataques cibernéticos",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 7,
+        "title": "Curso de Desenvolvimento Mobile com Flutter",
+        "description": "Desenvolva aplicativos móveis multiplataforma com Flutter",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 8,
+        "title": "Curso de Blockchain e Criptomoedas",
+        "description": "Entenda a tecnologia por trás do Bitcoin e outras criptomoedas",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 9,
+        "title": "Curso de Desenvolvimento de APIs com Node.js",
+        "description": "Crie APIs robustas e escaláveis com Node.js",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 10,
+        "title": "Curso de UX/UI Design",
+        "description": "Aprenda a projetar experiências e interfaces de usuário envolventes",
+        "image": "https://via.placeholder.com/300"
+    }
+]

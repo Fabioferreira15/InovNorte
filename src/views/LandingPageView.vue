@@ -136,12 +136,7 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
+
 
 .background {
   background-color: var(--color-background-dark);
@@ -193,7 +188,7 @@ export default {
 
 .features .v-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 4px 62.5px 0px var(--color-primary-100);
+  box-shadow: 0px 4px 62.5px 0px var(--color-primary-200);
 }
 
 .features .v-card-title {
