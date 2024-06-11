@@ -9,9 +9,35 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn icon @click="overlay = !overlay">
-        <v-icon icon="fa-solid fa-bars"></v-icon>
-      </v-btn>
+      <div class="navigation-btns">
+        <v-menu>
+          <template v-slot:activator="{ props }">
+            <v-btn icon v-bind="props">
+              <v-icon size="large" color="white">mdi-account</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item
+              v-for="(item, index) in items"
+              :key="index"
+              :value="index"
+            >
+              <template v-slot:prepend>
+                <v-icon color="primary">{{ item.icon }}</v-icon>
+              </template>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
+        <v-btn icon>
+          <v-icon size="large" color="white">mdi-bell</v-icon>
+        </v-btn>
+
+        <v-btn icon @click="overlay = !overlay">
+          <v-icon size="large" color="white">mdi-menu</v-icon>
+        </v-btn>
+      </div>
     </v-app-bar>
 
     <v-overlay v-model="overlay" scroll-strategy="block" class="overlay">
@@ -37,9 +63,18 @@ export default {
 
   setup() {
     const overlay = ref(false);
+
+    const items = [
+      { title: "Perfil", icon: "mdi-account" },
+      { title: "Definições", icon: "mdi-cog" },
+      { title: "Favoritos", icon: "mdi-heart" },
+      { title: "Logout", icon: "mdi-logout" },
+    ];
+
     return {
       Logo,
       overlay,
+      items,
     };
   },
 };
@@ -84,5 +119,21 @@ export default {
   height: 100vh;
   left: 0;
   top: 0;
+}
+
+.navigation-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.v-list {
+  width: 20rem;
+  font-size: 1.6rem;
+}
+.v-list-item-title {
+  font-family: var(--font-text);
+  font-size: 1.6rem;
+  font-weight: 200;
 }
 </style>

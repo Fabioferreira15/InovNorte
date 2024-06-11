@@ -6,37 +6,53 @@
 
     <v-main class="main">
       <v-container fluid class="video-container">
-        <video autoplay muted loop class="bg-video">
-          <source :src="Video" type="video/mp4" />
-          Your browser does not support the video.
-        </video>
-        <div class="overlay">
-          <v-container fluid>
-            <v-row class="d-flex align-center course__header-info">
-              <v-col cols="12" md="5">
-                <h1 class="course__title">
-                  Introdução à Segurança da Informação Classificada
-                </h1>
-                <p class="course__categorie">Ciências exatas e tecnologias</p>
-                <v-rating
-                  v-model="rating"
-                  active-color="blue"
-                  color="orange-lighten-1"
-                  readonly
-                  size="18"
-                ></v-rating>
-                <p class="course__description">
-                  Os desafios colocados à preservação e segurança da informação
-                  classificada nunca foram tão altos como na atualidade. Venha
-                  aprender a classificar a informação sensível!
-                </p>
-                <v-btn color="primary">Inscrever</v-btn>
-                <v-btn variant="outlined" color="white">Mais informações</v-btn>
-              </v-col>
-            </v-row>
-          </v-container>
-        </div>
+        <transition name="fade" mode="out-in">
+          <div :key="highlightedCourse.id">
+            <video autoplay muted loop class="bg-video">
+              <source :src="Video" type="video/mp4" />
+              Your browser does not support the video.
+            </video>
+          </div>
+        </transition>
       </v-container>
+      <div class="overlay">
+        <v-container fluid class="info">
+          <v-row class="d-flex align-center course__header-info">
+            <v-col cols="12" xl="5">
+              <transition name="slide-fade" mode="out-in">
+                <div :key="highlightedCourse.id">
+                  <h1 class="course__title">
+                    {{ highlightedCourse.title }}
+                  </h1>
+                  <p class="course__categorie mt-md-6 mt-3">
+                    {{ highlightedCourse.category }}
+                    <span
+                      ><v-rating
+                        v-model="highlightedCourse.average_rating"
+                        active-color="primary"
+                        color="white"
+                        half-increments
+                        readonly
+                        size="20"
+                      ></v-rating
+                    ></span>
+                  </p>
+
+                  <p class="course__description mt-4">
+                    {{ highlightedCourse.description }}
+                  </p>
+                  <div class="mt-3 d-flex align-center">
+                    <v-btn color="primary">Inscrever</v-btn>
+                    <v-btn class="ml-5" variant="outlined" color="white"
+                      >Mais informações</v-btn
+                    >
+                  </div>
+                </div>
+              </transition>
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
       <CourseCarousel title="Em destaque" :courses="topCourses" />
 
       <CourseCarousel title="Novidades" :courses="RecentlyAdded" />
@@ -56,8 +72,14 @@ export default {
     CourseCarousel,
   },
   setup() {
-    const rating = ref(4);
+    const rating = ref(3);
     const coursesStore = useCoursesStore();
+    const highlightedCourse = ref({
+      title: "",
+      category: "",
+      description: "",
+      rating: 0,
+    });
 
     const topCourses = computed(() => {
       const courses = coursesStore.getTop10Rated;
@@ -71,8 +93,21 @@ export default {
       return courses;
     });
 
+    const getRandomCourse = () => {
+      const allCourses = coursesStore.courses;
+      const randomIndex = Math.floor(Math.random() * allCourses.length);
+      return allCourses[randomIndex];
+    };
+
+    const updateHighlightedCourse = () => {
+      highlightedCourse.value = getRandomCourse();
+    };
+
     onMounted(() => {
-      coursesStore.fetchCourses();
+      coursesStore.fetchCourses().then(() => {
+        updateHighlightedCourse();
+        setInterval(updateHighlightedCourse, 5000);
+      });
     });
 
     return {
@@ -80,12 +115,59 @@ export default {
       RecentlyAdded,
       Video,
       rating,
+      highlightedCourse,
     };
   },
 };
 </script>
 
 <style scoped>
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-to {
+  opacity: 1;
+}
+
+.fade-enter-active {
+  transition: all 0.5s ease;
+}
+
+.fade-leave-from {
+  opacity: 1;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: translateX(-250px);
+}
+.slide-fade-enter-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-fade-enter-active {
+  transition: all 0.5s ease;
+}
+
+.slide-fade-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.slide-fade-leave-active {
+  transition: all 0.5s ease;
+}
+
 .bg-video {
   width: 100vw;
   height: 100vh;
@@ -114,13 +196,13 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0) 100%
   );
-  z-index: 2;
+  z-index: 1;
 }
 
 .course__header-info {
@@ -139,6 +221,9 @@ export default {
   font-size: 1.6rem;
   font-family: var(--font-text);
   font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .course__description {
@@ -157,7 +242,25 @@ export default {
   }
 
   .overlay {
-    height: 50vh;
+    height: 40vh;
+    background: none;
+    position: static;
+    top: auto;
+    left: auto;
+  }
+  .course__header-info {
+    height: 0;
+  }
+  .course__title {
+    font-size: 2rem;
+  }
+
+  .course__categorie {
+    font-size: 1.2rem;
+  }
+
+  .course__description {
+    font-size: 1.2rem;
   }
 }
 </style>
