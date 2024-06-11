@@ -23,6 +23,7 @@
                   active-color="blue"
                   color="orange-lighten-1"
                   readonly
+                  size="18"
                 ></v-rating>
                 <p class="course__description">
                   Os desafios colocados à preservação e segurança da informação
