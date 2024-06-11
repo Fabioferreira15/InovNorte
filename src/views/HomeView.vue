@@ -36,6 +36,7 @@
                         size="20"
                       ></v-rating
                     ></span>
+                    <span>({{ highlightedCourse.total_reviews }})</span>
                   </p>
 
                   <p class="course__description mt-4">

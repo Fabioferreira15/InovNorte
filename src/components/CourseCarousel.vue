@@ -8,20 +8,35 @@
       class="custom-carousel"
     >
       <slide v-for="course in courses" :key="course.id">
-        <v-card class="course__card">
-          <v-container fluid class="course__card-container">
-            <v-img :src="CourseImage" cover class="course__card-img"></v-img>
+        <v-hover v-slot="{ isHovering, props }">
+          <v-card class="course__card" v-bind="props">
+            <v-container fluid class="course__card-container">
+              <v-img :src="CourseImage" cover class="course__card-img"></v-img>
+              <v-card-subtitle>{{ course.category }}</v-card-subtitle>
+              <v-card-title>{{ course.title }}</v-card-title>
+              <v-card-text>
+                {{ course.duration }} | {{ course.cost }}
+                <span class="course__card-rating">{{
+                  course.average_rating
+                }}</span>
+                <span>({{ course.total_reviews }})</span>
+              </v-card-text>
+            </v-container>
+            <v-expand-transition>
+              <div
+                v-if="isHovering"
+                class="d-flex flex-column transition-fast-in-fast-out v-card--reveal"
+              >
+                <p>{{ course.program.objectives }}</p>
 
-            <v-card-subtitle>{{ course.category }}</v-card-subtitle>
-            <v-card-title>{{ course.title }}</v-card-title>
-            <v-card-text>
-              {{ course.duration }} | {{ course.cost }}
-              <span class="course__card-rating">{{
-                course.average_rating
-              }}</span>
-            </v-card-text>
-          </v-container>
-        </v-card>
+                <v-btn color="primary">Inscrever</v-btn>
+                <v-btn class="ml-5" variant="outlined" color="white"
+                  >Mais informações</v-btn
+                >
+              </div>
+            </v-expand-transition>
+          </v-card>
+        </v-hover>
       </slide>
       <template #addons>
         <Navigation />
@@ -62,7 +77,6 @@ export default {
       },
     };
 
-
     return {
       breakpoints,
       props,
@@ -73,6 +87,16 @@ export default {
 </script>
 
 <style scoped>
+.v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  background-color: blueviolet;
+  height: 100%;
+}
+
 .carousel {
   text-align: left;
 }
