@@ -20,11 +20,9 @@
                 <p class="course__categorie">Ciências exatas e tecnologias</p>
                 <v-rating
                   v-model="rating"
-                  active-color="yellow-accent-4"
-                  color="white"
-                  size="18"
-                  half-increments
-                  hover
+                  active-color="blue"
+                  color="orange-lighten-1"
+                  readonly
                 ></v-rating>
                 <p class="course__description">
                   Os desafios colocados à preservação e segurança da informação
@@ -41,8 +39,6 @@
       <CourseCarousel title="Em destaque" :courses="topCourses" />
 
       <CourseCarousel title="Novidades" :courses="RecentlyAdded" />
-
-
     </v-main>
   </div>
 </template>
@@ -59,8 +55,8 @@ export default {
     CourseCarousel,
   },
   setup() {
+    const rating = ref(4);
     const coursesStore = useCoursesStore();
-    const rating = ref(0);
 
     const topCourses = computed(() => {
       const courses = coursesStore.getTop10Rated;
@@ -79,10 +75,10 @@ export default {
     });
 
     return {
-      rating,
       topCourses,
       RecentlyAdded,
       Video,
+      rating,
     };
   },
 };
@@ -162,6 +158,5 @@ export default {
   .overlay {
     height: 50vh;
   }
-  
 }
 </style>

@@ -30,28 +30,44 @@
   </v-container>
 </template>
 
-<script setup>
+<script>
 import { Carousel, Slide, Navigation } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 import CourseImage from "@/assets/Images/image.png";
 
-const props = defineProps({
-  title: String,
-  courses: Array,
-});
+export default {
+  components: {
+    Carousel,
+    Slide,
+    Navigation,
+  },
+  props: {
+    title: String,
+    courses: Array,
+  },
 
-const breakpoints = {
-  1024: {
-    itemsToShow: 5,
-  },
-  768: {
-    itemsToShow: 3,
-  },
-  600: {
-    itemsToShow: 2,
-  },
-  0: {
-    itemsToShow: 1.3,
+  setup(props) {
+    const breakpoints = {
+      1024: {
+        itemsToShow: 5,
+      },
+      768: {
+        itemsToShow: 3,
+      },
+      600: {
+        itemsToShow: 2,
+      },
+      0: {
+        itemsToShow: 1.3,
+      },
+    };
+
+
+    return {
+      breakpoints,
+      props,
+      CourseImage,
+    };
   },
 };
 </script>

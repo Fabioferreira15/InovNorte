@@ -5,7 +5,6 @@
         <v-img :src="Logo" max-width="45"></v-img>
       </v-app-bar-title>
 
-      <v-spacer></v-spacer>
       <SearchBar />
 
       <v-spacer></v-spacer>
@@ -26,6 +25,7 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import Logo from "@/assets/Images/Logo.svg";
 
 import SearchBar from "@/components/SearchBar.vue";
@@ -36,8 +36,10 @@ export default {
   },
 
   setup() {
+    const overlay = ref(false);
     return {
       Logo,
+      overlay,
     };
   },
 };
