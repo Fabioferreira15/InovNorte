@@ -38,69 +38,54 @@
           </v-container>
         </div>
       </v-container>
+      <CourseCarousel title="Em destaque" :courses="topCourses" />
 
-      <v-container fluid class="recomendations">
-        <h1 class="title">Em destaque</h1>
-        <carousel
-          ref="carousel"
-          :items-to-show="5"
-          :breakpoints="breakpoints"
-          class="custom-carousel"
-        >
-          <slide v-for="course in topCourses" :key="course.id">
-            <v-card class="course__card">
-              <v-container fluid class="course__card-container">
-                <v-img :src="Robot" cover class="course__card-img"></v-img>
+      <CourseCarousel title="Novidades" :courses="RecentlyAdded" />
 
-                <v-card-subtitle>{{ course.category }}</v-card-subtitle>
-                <v-card-title>{{ course.title }}</v-card-title>
-                <v-card-text>
-                  {{ course.duration }} | {{ course.cost }}
-                  <span class="course__card-rating"
-                    >{{ course.average_rating }}
-                  </span>
-                </v-card-text>
-              </v-container>
-            </v-card>
-          </slide>
-          <template #addons>
-            <Navigation />
-          </template>
-        </carousel>
-      </v-container>
+
     </v-main>
   </div>
 </template>
-<script setup>
+<script>
 import { onMounted, ref, computed } from "vue";
 import { useCoursesStore } from "@/stores/coursesStore";
 import NavBar from "@/components/NavBar.vue";
 import Video from "@/assets/video_example.mp4";
-import { Carousel, Slide, Navigation } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
-import Robot from "@/assets/Images/image.png";
+import CourseCarousel from "@/components/CourseCarousel.vue";
 
-const coursesStore = useCoursesStore();
-const breakpoints = {
-  1024: {
-    itemsToShow: 5,
+export default {
+  components: {
+    NavBar,
+    CourseCarousel,
   },
-  768: {
-    itemsToShow: 3,
-  },
-  600: {
-    itemsToShow: 2,
-  },
-  0: {
-    itemsToShow: 1.3,
+  setup() {
+    const coursesStore = useCoursesStore();
+    const rating = ref(0);
+
+    const topCourses = computed(() => {
+      const courses = coursesStore.getTop10Rated;
+      console.log("Top 10 Courses by Rating:", courses);
+      return courses;
+    });
+
+    const RecentlyAdded = computed(() => {
+      const courses = coursesStore.getRecentlyAdded;
+      console.log("Recently Added Courses:", courses);
+      return courses;
+    });
+
+    onMounted(() => {
+      coursesStore.fetchCourses();
+    });
+
+    return {
+      rating,
+      topCourses,
+      RecentlyAdded,
+      Video,
+    };
   },
 };
-const rating = ref(0);
-const topCourses = computed(() => coursesStore.getTop10Rated);
-
-onMounted(() => {
-  coursesStore.fetchCourses();
-});
 </script>
 
 <style scoped>
@@ -165,70 +150,6 @@ onMounted(() => {
   font-family: var(--font-text);
   font-weight: 200;
 }
-.carousel {
-  text-align: left;
-}
-
-.custom-carousel .v-card {
-  margin-right: 20px;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(4.6px);
-  -webkit-backdrop-filter: blur(4.6px);
-  border: 1px solid rgba(255, 255, 255, 0.17);
-  width: 300px;
-  height: 350px;
-  border-radius: 10px;
-}
-
-.title {
-  color: var(--color-text-light);
-  font-size: 2.4rem;
-  margin-top: 10rem;
-  margin-bottom: 2rem;
-  font-family: var(--font-title);
-  font-weight: 700;
-}
-
-.recomendations {
-  max-width: 1800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.v-card-subtitle {
-  font-size: 1.4rem;
-  font-family: var(--font-text);
-  font-weight: 200;
-  color: #a3a3a3;
-  padding-top: 2rem;
-}
-
-.v-card-title {
-  font-size: 1.6rem;
-  font-family: var(--font-title);
-  font-weight: 700;
-  color: var(--color-text-light);
-  white-space: normal;
-  padding-top: 0;
-}
-
-.v-card-text {
-  font-size: 1.4rem;
-  font-family: var(--font-text);
-  font-weight: 200;
-  color: #a3a3a3;
-  padding-top: 5rem;
-}
-
-.course__card-container {
-  padding: 0;
-}
-.course__card-img {
-  height: 10%;
-}
-.course__card-rating {
-  color: var(--color-text-light);
-}
 
 @media (max-width: 768px) {
   .bg-video {
@@ -241,15 +162,6 @@ onMounted(() => {
   .overlay {
     height: 50vh;
   }
-  .course__title {
-    font-size: 2.4rem;
-  }
-
-  .course__categorie {
-    font-size: 1.2rem;
-  }
-  .course__header-info {
-    height: 50vh;
-  }
+  
 }
 </style>

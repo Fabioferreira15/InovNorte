@@ -7,6 +7,7 @@ import EditProfileView from "../views/EditProfileView.vue";
 import CourseCatalogView from "../views/CourseCatalogView.vue";
 import SettingsView from "../views/SettingsView.vue";
 import LandingScrollView from "@/views/LandingScrollView.vue";
+import SearchResultView from "@/views/SearchResultView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,6 +51,11 @@ const router = createRouter({
       path: "/settings",
       name: "settings",
       component: SettingsView,
+    },
+    {
+      path: "/search-result",
+      name: "search-result",
+      component: SearchResultView,
     },
   ],
 });

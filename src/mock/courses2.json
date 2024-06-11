@@ -23,20 +23,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
-            "competencies": "Habilidades em análise epidemiológica e compreensão de políticas de saúde.",
-            "contents": {
-                "Módulo 1": "Introdução à Saúde Pública.",
-                "Módulo 2": "Epidemiologia Básica.",
-                "Módulo 3": "Políticas de Saúde.",
-                "Módulo 4": "Promoção da Saúde Comunitária."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre saúde pública e artigos acadêmicos."
-        },
-        "createdAt": "2024-02-23",
-        "id": 1
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 2",
@@ -62,20 +55,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
-            "competencies": "Habilidades em aplicar metodologias ativas e engajar alunos.",
-            "contents": {
-                "Módulo 1": "Fundamentos das Metodologias Ativas.",
-                "Módulo 2": "Técnicas de Engajamento de Alunos.",
-                "Módulo 3": "Ferramentas Digitais para Educação.",
-                "Módulo 4": "Avaliação de Resultados de Aprendizagem."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e projetos práticos.",
-            "bibliography": "Livros sobre educação e artigos acadêmicos."
-        },
-        "createdAt": "2024-05-13",
-        "id": 2
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Introdução à Análise de Negócios 3",
@@ -110,21 +96,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
-            "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
-            "contents": {
-                "Módulo 1": "Análise Financeira Avançada.",
-                "Módulo 2": "Gestão Estratégica.",
-                "Módulo 3": "Gestão de Projetos Complexos.",
-                "Módulo 4": "Inovação nos Negócios."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e workshops com profissionais de negócios."
-        },
-        "createdAt": "2023-09-12",
-        "updatedAt": "2024-06-07",
-        "id": 3
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 4",
@@ -150,20 +128,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
-            "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
-            "contents": {
-                "Módulo 1": "Fundamentos da Sustentabilidade.",
-                "Módulo 2": "Gestão de Recursos.",
-                "Módulo 3": "Estratégias para Sustentabilidade.",
-                "Módulo 4": "Avaliação de Impacto Ambiental."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre sustentabilidade e artigos acadêmicos."
-        },
-        "createdAt": "2024-05-23",
-        "id": 4
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 5",
@@ -198,21 +169,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
-                "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
-                "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
-                "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
-                "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
-            },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
-        },
-        "createdAt": "2023-12-04",
-        "updatedAt": "2023-10-25",
-        "id": 5
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Fundamentos da Saúde Pública 6",
@@ -238,20 +201,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
-            "competencies": "Capacidade de promover saúde comunitária e habilidades em pesquisa epidemiológica.",
-            "contents": {
-                "Módulo 1": "Saúde Comunitária.",
-                "Módulo 2": "Avanços em Epidemiologia.",
-                "Módulo 3": "Implementação de Políticas de Saúde.",
-                "Módulo 4": "Projetos de Promoção da Saúde."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e recursos online."
-        },
-        "createdAt": "2023-12-20",
-        "id": 6
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 7",
@@ -286,21 +242,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar novas metodologias de ensino para resultados melhores.",
-            "competencies": "Capacidade de inovar no ensino e engajar alunos em diferentes contextos.",
-            "contents": {
-                "Módulo 1": "Novas Metodologias de Ensino.",
-                "Módulo 2": "Engajamento em Sala de Aula.",
-                "Módulo 3": "Uso de Tecnologia na Educação.",
-                "Módulo 4": "Melhoria de Resultados Educacionais."
-            },
-            "methodologies": "Projetos práticos e uso de tecnologias educacionais.",
-            "assessment": "Projetos práticos e apresentações.",
-            "bibliography": "Recursos online e workshops com educadores."
-        },
-        "createdAt": "2023-10-05",
-        "updatedAt": "2023-09-01",
-        "id": 7
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Introdução à Análise de Negócios 8",
@@ -335,21 +283,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Ganhar compreensão dos fundamentos da análise de negócios.",
-            "competencies": "Habilidades em planejamento estratégico e gestão de projetos.",
-            "contents": {
-                "Módulo 1": "Introdução à Análise de Negócios.",
-                "Módulo 2": "Planejamento Estratégico.",
-                "Módulo 3": "Análise Financeira.",
-                "Módulo 4": "Gestão de Projetos."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre negócios e artigos acadêmicos."
-        },
-        "createdAt": "2023-10-03",
-        "updatedAt": "2023-09-06",
-        "id": 8
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 9",
@@ -384,21 +324,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
-            "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
-            "contents": {
-                "Módulo 1": "Fundamentos da Sustentabilidade.",
-                "Módulo 2": "Gestão de Recursos.",
-                "Módulo 3": "Estratégias para Sustentabilidade.",
-                "Módulo 4": "Avaliação de Impacto Ambiental."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre sustentabilidade e artigos acadêmicos."
-        },
-        "createdAt": "2023-10-16",
-        "updatedAt": "2023-09-25",
-        "id": 9
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 10",
@@ -424,20 +356,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
-                "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
-                "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
-                "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
-                "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
-            },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
-        },
-        "createdAt": "2023-11-24",
-        "id": 10
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Fundamentos da Saúde Pública 11",
@@ -472,21 +397,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
-            "competencies": "Habilidades em análise epidemiológica e compreensão de políticas de saúde.",
-            "contents": {
-                "Módulo 1": "Introdução à Saúde Pública.",
-                "Módulo 2": "Epidemiologia Básica.",
-                "Módulo 3": "Políticas de Saúde.",
-                "Módulo 4": "Promoção da Saúde Comunitária."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre saúde pública e artigos acadêmicos."
-        },
-        "createdAt": "2024-04-05",
-        "updatedAt": "2023-09-01",
-        "id": 11
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 12",
@@ -521,21 +438,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
-            "competencies": "Habilidades em aplicar metodologias ativas e engajar alunos.",
-            "contents": {
-                "Módulo 1": "Fundamentos das Metodologias Ativas.",
-                "Módulo 2": "Técnicas de Engajamento de Alunos.",
-                "Módulo 3": "Ferramentas Digitais para Educação.",
-                "Módulo 4": "Avaliação de Resultados de Aprendizagem."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e projetos práticos.",
-            "bibliography": "Livros sobre educação e artigos acadêmicos."
-        },
-        "createdAt": "2024-06-03",
-        "updatedAt": "2023-08-30",
-        "id": 12
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Introdução à Análise de Negócios 13",
@@ -570,21 +479,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
-            "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
-            "contents": {
-                "Módulo 1": "Análise Financeira Avançada.",
-                "Módulo 2": "Gestão Estratégica.",
-                "Módulo 3": "Gestão de Projetos Complexos.",
-                "Módulo 4": "Inovação nos Negócios."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e workshops com profissionais de negócios."
-        },
-        "createdAt": "2023-06-15",
-        "updatedAt": "2023-12-09",
-        "id": 13
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 14",
@@ -610,20 +511,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
-            "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
-            "contents": {
-                "Módulo 1": "Fundamentos da Sustentabilidade.",
-                "Módulo 2": "Gestão de Recursos.",
-                "Módulo 3": "Estratégias para Sustentabilidade.",
-                "Módulo 4": "Avaliação de Impacto Ambiental."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre sustentabilidade e artigos acadêmicos."
-        },
-        "createdAt": "2023-06-26",
-        "id": 14
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 15",
@@ -649,20 +543,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
-                "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
-                "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
-                "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
-                "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
-            },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
-        },
-        "createdAt": "2024-04-24",
-        "id": 15
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Fundamentos da Saúde Pública 16",
@@ -697,21 +584,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
-            "competencies": "Habilidades em análise epidemiológica e compreensão de políticas de saúde.",
-            "contents": {
-                "Módulo 1": "Introdução à Saúde Pública.",
-                "Módulo 2": "Epidemiologia Básica.",
-                "Módulo 3": "Políticas de Saúde.",
-                "Módulo 4": "Promoção da Saúde Comunitária."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre saúde pública e artigos acadêmicos."
-        },
-        "createdAt": "2024-04-22",
-        "updatedAt": "2023-11-01",
-        "id": 16
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 17",
@@ -737,20 +616,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
-            "competencies": "Habilidades em aplicar metodologias ativas e engajar alunos.",
-            "contents": {
-                "Módulo 1": "Fundamentos das Metodologias Ativas.",
-                "Módulo 2": "Técnicas de Engajamento de Alunos.",
-                "Módulo 3": "Ferramentas Digitais para Educação.",
-                "Módulo 4": "Avaliação de Resultados de Aprendizagem."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e projetos práticos.",
-            "bibliography": "Livros sobre educação e artigos acadêmicos."
-        },
-        "createdAt": "2023-06-25",
-        "id": 17
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Introdução à Análise de Negócios 18",
@@ -776,20 +648,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
-            "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
-            "contents": {
-                "Módulo 1": "Análise Financeira Avançada.",
-                "Módulo 2": "Gestão Estratégica.",
-                "Módulo 3": "Gestão de Projetos Complexos.",
-                "Módulo 4": "Inovação nos Negócios."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e workshops com profissionais de negócios."
-        },
-        "createdAt": "2023-12-27",
-        "id": 18
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 19",
@@ -815,20 +680,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar estratégias avançadas para minimizar impactos ambientais.",
-            "competencies": "Capacidade de desenvolver estratégias sustentáveis e realizar análises ambientais.",
-            "contents": {
-                "Módulo 1": "Sustentabilidade Avançada.",
-                "Módulo 2": "Recursos Renováveis.",
-                "Módulo 3": "Inovação em Sustentabilidade.",
-                "Módulo 4": "Estudos de Impacto Ambiental."
-            },
-            "methodologies": "Projetos práticos e uso de ferramentas de sustentabilidade.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Recursos online e workshops com profissionais de sustentabilidade."
-        },
-        "createdAt": "2023-12-23",
-        "id": 19
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 20",
@@ -863,21 +721,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
-                "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
-                "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
-                "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
-                "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
-            },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
-        },
-        "createdAt": "2024-03-11",
-        "updatedAt": "2024-02-16",
-        "id": 20
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Fundamentos da Saúde Pública 21",
@@ -903,20 +753,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
-            "competencies": "Capacidade de promover saúde comunitária e habilidades em pesquisa epidemiológica.",
-            "contents": {
-                "Módulo 1": "Saúde Comunitária.",
-                "Módulo 2": "Avanços em Epidemiologia.",
-                "Módulo 3": "Implementação de Políticas de Saúde.",
-                "Módulo 4": "Projetos de Promoção da Saúde."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e recursos online."
-        },
-        "createdAt": "2024-03-22",
-        "id": 21
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 22",
@@ -951,21 +794,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar novas metodologias de ensino para resultados melhores.",
-            "competencies": "Capacidade de inovar no ensino e engajar alunos em diferentes contextos.",
-            "contents": {
-                "Módulo 1": "Novas Metodologias de Ensino.",
-                "Módulo 2": "Engajamento em Sala de Aula.",
-                "Módulo 3": "Uso de Tecnologia na Educação.",
-                "Módulo 4": "Melhoria de Resultados Educacionais."
-            },
-            "methodologies": "Projetos práticos e uso de tecnologias educacionais.",
-            "assessment": "Projetos práticos e apresentações.",
-            "bibliography": "Recursos online e workshops com educadores."
-        },
-        "createdAt": "2024-01-18",
-        "updatedAt": "2023-09-01",
-        "id": 22
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Introdução à Análise de Negócios 23",
@@ -991,20 +826,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
-            "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
-            "contents": {
-                "Módulo 1": "Análise Financeira Avançada.",
-                "Módulo 2": "Gestão Estratégica.",
-                "Módulo 3": "Gestão de Projetos Complexos.",
-                "Módulo 4": "Inovação nos Negócios."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e workshops com profissionais de negócios."
-        },
-        "createdAt": "2023-09-12",
-        "id": 23
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 24",
@@ -1039,21 +867,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
-            "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
-            "contents": {
-                "Módulo 1": "Fundamentos da Sustentabilidade.",
-                "Módulo 2": "Gestão de Recursos.",
-                "Módulo 3": "Estratégias para Sustentabilidade.",
-                "Módulo 4": "Avaliação de Impacto Ambiental."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre sustentabilidade e artigos acadêmicos."
-        },
-        "createdAt": "2024-04-28",
-        "updatedAt": "2024-01-18",
-        "id": 24
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 25",
@@ -1088,21 +908,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
-                "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
-                "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
-                "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
-                "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
-            },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
-        },
-        "createdAt": "2023-11-05",
-        "updatedAt": "2024-01-06",
-        "id": 25
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Fundamentos da Saúde Pública 26",
@@ -1128,20 +940,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
-            "competencies": "Capacidade de promover saúde comunitária e habilidades em pesquisa epidemiológica.",
-            "contents": {
-                "Módulo 1": "Saúde Comunitária.",
-                "Módulo 2": "Avanços em Epidemiologia.",
-                "Módulo 3": "Implementação de Políticas de Saúde.",
-                "Módulo 4": "Projetos de Promoção da Saúde."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e recursos online."
-        },
-        "createdAt": "2024-01-27",
-        "id": 26
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 27",
@@ -1167,20 +972,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar novas metodologias de ensino para resultados melhores.",
-            "competencies": "Capacidade de inovar no ensino e engajar alunos em diferentes contextos.",
-            "contents": {
-                "Módulo 1": "Novas Metodologias de Ensino.",
-                "Módulo 2": "Engajamento em Sala de Aula.",
-                "Módulo 3": "Uso de Tecnologia na Educação.",
-                "Módulo 4": "Melhoria de Resultados Educacionais."
-            },
-            "methodologies": "Projetos práticos e uso de tecnologias educacionais.",
-            "assessment": "Projetos práticos e apresentações.",
-            "bibliography": "Recursos online e workshops com educadores."
-        },
-        "createdAt": "2023-06-21",
-        "id": 27
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Introdução à Análise de Negócios 28",
@@ -1215,21 +1013,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
-            "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
-            "contents": {
-                "Módulo 1": "Análise Financeira Avançada.",
-                "Módulo 2": "Gestão Estratégica.",
-                "Módulo 3": "Gestão de Projetos Complexos.",
-                "Módulo 4": "Inovação nos Negócios."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e workshops com profissionais de negócios."
-        },
-        "createdAt": "2024-05-16",
-        "updatedAt": "2023-12-11",
-        "id": 28
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 29",
@@ -1264,21 +1054,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar estratégias avançadas para minimizar impactos ambientais.",
-            "competencies": "Capacidade de desenvolver estratégias sustentáveis e realizar análises ambientais.",
-            "contents": {
-                "Módulo 1": "Sustentabilidade Avançada.",
-                "Módulo 2": "Recursos Renováveis.",
-                "Módulo 3": "Inovação em Sustentabilidade.",
-                "Módulo 4": "Estudos de Impacto Ambiental."
-            },
-            "methodologies": "Projetos práticos e uso de ferramentas de sustentabilidade.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Recursos online e workshops com profissionais de sustentabilidade."
-        },
-        "createdAt": "2024-03-13",
-        "updatedAt": "2023-11-05",
-        "id": 29
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 30",
@@ -1304,20 +1086,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
-                "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
-                "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
-                "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
-                "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
-            },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
-        },
-        "createdAt": "2023-12-15",
-        "id": 30
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Fundamentos da Saúde Pública 31",
@@ -1343,20 +1118,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
-            "competencies": "Habilidades em análise epidemiológica e compreensão de políticas de saúde.",
-            "contents": {
-                "Módulo 1": "Introdução à Saúde Pública.",
-                "Módulo 2": "Epidemiologia Básica.",
-                "Módulo 3": "Políticas de Saúde.",
-                "Módulo 4": "Promoção da Saúde Comunitária."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre saúde pública e artigos acadêmicos."
-        },
-        "createdAt": "2023-12-15",
-        "id": 31
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 32",
@@ -1391,21 +1159,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
-            "competencies": "Habilidades em aplicar metodologias ativas e engajar alunos.",
-            "contents": {
-                "Módulo 1": "Fundamentos das Metodologias Ativas.",
-                "Módulo 2": "Técnicas de Engajamento de Alunos.",
-                "Módulo 3": "Ferramentas Digitais para Educação.",
-                "Módulo 4": "Avaliação de Resultados de Aprendizagem."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e projetos práticos.",
-            "bibliography": "Livros sobre educação e artigos acadêmicos."
-        },
-        "createdAt": "2023-09-27",
-        "updatedAt": "2023-11-10",
-        "id": 32
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Introdução à Análise de Negócios 33",
@@ -1431,20 +1191,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
-            "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
-            "contents": {
-                "Módulo 1": "Análise Financeira Avançada.",
-                "Módulo 2": "Gestão Estratégica.",
-                "Módulo 3": "Gestão de Projetos Complexos.",
-                "Módulo 4": "Inovação nos Negócios."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e workshops com profissionais de negócios."
-        },
-        "createdAt": "2023-11-27",
-        "id": 33
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 34",
@@ -1470,20 +1223,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
-            "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
-            "contents": {
-                "Módulo 1": "Fundamentos da Sustentabilidade.",
-                "Módulo 2": "Gestão de Recursos.",
-                "Módulo 3": "Estratégias para Sustentabilidade.",
-                "Módulo 4": "Avaliação de Impacto Ambiental."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre sustentabilidade e artigos acadêmicos."
-        },
-        "createdAt": "2023-10-10",
-        "id": 34
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 35",
@@ -1518,21 +1264,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
-                "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
-                "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
-                "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
-                "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
-            },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
-        },
-        "createdAt": "2023-12-01",
-        "updatedAt": "2023-11-14",
-        "id": 35
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Fundamentos da Saúde Pública 36",
@@ -1567,21 +1305,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
-            "competencies": "Habilidades em análise epidemiológica e compreensão de políticas de saúde.",
-            "contents": {
-                "Módulo 1": "Introdução à Saúde Pública.",
-                "Módulo 2": "Epidemiologia Básica.",
-                "Módulo 3": "Políticas de Saúde.",
-                "Módulo 4": "Promoção da Saúde Comunitária."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre saúde pública e artigos acadêmicos."
-        },
-        "createdAt": "2024-03-26",
-        "updatedAt": "2023-07-29",
-        "id": 36
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 37",
@@ -1616,21 +1346,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
-            "competencies": "Habilidades em aplicar metodologias ativas e engajar alunos.",
-            "contents": {
-                "Módulo 1": "Fundamentos das Metodologias Ativas.",
-                "Módulo 2": "Técnicas de Engajamento de Alunos.",
-                "Módulo 3": "Ferramentas Digitais para Educação.",
-                "Módulo 4": "Avaliação de Resultados de Aprendizagem."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e projetos práticos.",
-            "bibliography": "Livros sobre educação e artigos acadêmicos."
-        },
-        "createdAt": "2023-09-13",
-        "updatedAt": "2023-07-22",
-        "id": 37
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Introdução à Análise de Negócios 38",
@@ -1665,21 +1387,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
-            "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
-            "contents": {
-                "Módulo 1": "Análise Financeira Avançada.",
-                "Módulo 2": "Gestão Estratégica.",
-                "Módulo 3": "Gestão de Projetos Complexos.",
-                "Módulo 4": "Inovação nos Negócios."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e workshops com profissionais de negócios."
-        },
-        "createdAt": "2023-11-23",
-        "updatedAt": "2024-01-22",
-        "id": 38
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 39",
@@ -1714,21 +1428,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
-            "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
-            "contents": {
-                "Módulo 1": "Fundamentos da Sustentabilidade.",
-                "Módulo 2": "Gestão de Recursos.",
-                "Módulo 3": "Estratégias para Sustentabilidade.",
-                "Módulo 4": "Avaliação de Impacto Ambiental."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre sustentabilidade e artigos acadêmicos."
-        },
-        "createdAt": "2024-01-28",
-        "updatedAt": "2024-05-26",
-        "id": 39
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 40",
@@ -1763,21 +1469,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
-                "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
-                "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
-                "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
-                "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
-            },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
-        },
-        "createdAt": "2024-05-01",
-        "updatedAt": "2023-10-01",
-        "id": 40
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Fundamentos da Saúde Pública 41",
@@ -1812,21 +1510,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
-            "competencies": "Capacidade de promover saúde comunitária e habilidades em pesquisa epidemiológica.",
-            "contents": {
-                "Módulo 1": "Saúde Comunitária.",
-                "Módulo 2": "Avanços em Epidemiologia.",
-                "Módulo 3": "Implementação de Políticas de Saúde.",
-                "Módulo 4": "Projetos de Promoção da Saúde."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e recursos online."
-        },
-        "createdAt": "2024-02-02",
-        "updatedAt": "2024-01-28",
-        "id": 41
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 42",
@@ -1861,21 +1551,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar novas metodologias de ensino para resultados melhores.",
-            "competencies": "Capacidade de inovar no ensino e engajar alunos em diferentes contextos.",
-            "contents": {
-                "Módulo 1": "Novas Metodologias de Ensino.",
-                "Módulo 2": "Engajamento em Sala de Aula.",
-                "Módulo 3": "Uso de Tecnologia na Educação.",
-                "Módulo 4": "Melhoria de Resultados Educacionais."
-            },
-            "methodologies": "Projetos práticos e uso de tecnologias educacionais.",
-            "assessment": "Projetos práticos e apresentações.",
-            "bibliography": "Recursos online e workshops com educadores."
-        },
-        "createdAt": "2024-01-24",
-        "updatedAt": "2024-04-16",
-        "id": 42
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Introdução à Análise de Negócios 43",
@@ -1901,20 +1583,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Ganhar compreensão dos fundamentos da análise de negócios.",
-            "competencies": "Habilidades em planejamento estratégico e gestão de projetos.",
-            "contents": {
-                "Módulo 1": "Introdução à Análise de Negócios.",
-                "Módulo 2": "Planejamento Estratégico.",
-                "Módulo 3": "Análise Financeira.",
-                "Módulo 4": "Gestão de Projetos."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre negócios e artigos acadêmicos."
-        },
-        "createdAt": "2023-11-19",
-        "id": 43
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 44",
@@ -1949,21 +1624,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
-            "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
-            "contents": {
-                "Módulo 1": "Fundamentos da Sustentabilidade.",
-                "Módulo 2": "Gestão de Recursos.",
-                "Módulo 3": "Estratégias para Sustentabilidade.",
-                "Módulo 4": "Avaliação de Impacto Ambiental."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre sustentabilidade e artigos acadêmicos."
-        },
-        "createdAt": "2023-12-28",
-        "updatedAt": "2024-03-29",
-        "id": 44
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 45",
@@ -1989,20 +1656,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
-                "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
-                "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
-                "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
-                "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
-            },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
-        },
-        "createdAt": "2023-06-22",
-        "id": 45
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Fundamentos da Saúde Pública 46",
@@ -2028,20 +1688,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
-            "competencies": "Capacidade de promover saúde comunitária e habilidades em pesquisa epidemiológica.",
-            "contents": {
-                "Módulo 1": "Saúde Comunitária.",
-                "Módulo 2": "Avanços em Epidemiologia.",
-                "Módulo 3": "Implementação de Políticas de Saúde.",
-                "Módulo 4": "Projetos de Promoção da Saúde."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e recursos online."
-        },
-        "createdAt": "2023-09-18",
-        "id": 46
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 47",
@@ -2076,21 +1729,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar novas metodologias de ensino para resultados melhores.",
-            "competencies": "Capacidade de inovar no ensino e engajar alunos em diferentes contextos.",
-            "contents": {
-                "Módulo 1": "Novas Metodologias de Ensino.",
-                "Módulo 2": "Engajamento em Sala de Aula.",
-                "Módulo 3": "Uso de Tecnologia na Educação.",
-                "Módulo 4": "Melhoria de Resultados Educacionais."
-            },
-            "methodologies": "Projetos práticos e uso de tecnologias educacionais.",
-            "assessment": "Projetos práticos e apresentações.",
-            "bibliography": "Recursos online e workshops com educadores."
-        },
-        "createdAt": "2023-07-13",
-        "updatedAt": "2023-09-20",
-        "id": 47
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Introdução à Análise de Negócios 48",
@@ -2116,20 +1761,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
-            "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
-            "contents": {
-                "Módulo 1": "Análise Financeira Avançada.",
-                "Módulo 2": "Gestão Estratégica.",
-                "Módulo 3": "Gestão de Projetos Complexos.",
-                "Módulo 4": "Inovação nos Negócios."
-            },
-            "methodologies": "Estudos de caso e projetos práticos.",
-            "assessment": "Projetos práticos e participação em discussões.",
-            "bibliography": "Artigos acadêmicos e workshops com profissionais de negócios."
-        },
-        "createdAt": "2023-08-20",
-        "id": 48
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 49",
@@ -2155,20 +1793,13 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
-            "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
-            "contents": {
-                "Módulo 1": "Fundamentos da Sustentabilidade.",
-                "Módulo 2": "Gestão de Recursos.",
-                "Módulo 3": "Estratégias para Sustentabilidade.",
-                "Módulo 4": "Avaliação de Impacto Ambiental."
-            },
-            "methodologies": "Aulas teóricas e estudos de caso.",
-            "assessment": "Testes teóricos e análise de estudos de caso.",
-            "bibliography": "Livros sobre sustentabilidade e artigos acadêmicos."
-        },
-        "createdAt": "2023-12-03",
-        "id": 49
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 50",
@@ -2194,19 +1825,12 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
-                "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
-                "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
-                "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
-                "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
-            },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
-        },
-        "createdAt": "2024-02-06",
-        "id": 50
+            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica, incentivando a pesquisa e a aplicação prática dos conteúdos aprendidos.",
+            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas avançadas, capacidade analítica e crítica, e habilidades interpessoais essenciais para a prática profissional.",
+            "Conteúdos": "Estudo aprofundado das bases teóricas, metodologias contemporâneas, e práticas inovadoras relevantes para a área de estudo.",
+            "Metodologias": "Combinação de aulas teóricas, estudos de caso práticos, trabalho colaborativo em projetos, e uso de tecnologia e recursos digitais para simulação de cenários reais.",
+            "Avaliação": "Avaliações contínuas por meio de testes, projetos práticos, e participação ativa em discussões e apresentações.",
+            "Bibliografia / recursos adicionais": "Acesso a uma extensa biblioteca digital, recursos online atualizados, e workshops com profissionais da área."
+        }
     }
 ]

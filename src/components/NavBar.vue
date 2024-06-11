@@ -4,6 +4,12 @@
       <v-app-bar-title>
         <v-img :src="Logo" max-width="45"></v-img>
       </v-app-bar-title>
+
+      <v-spacer></v-spacer>
+      <SearchBar />
+
+      <v-spacer></v-spacer>
+
       <v-btn icon @click="overlay = !overlay">
         <v-icon icon="fa-solid fa-bars"></v-icon>
       </v-btn>
@@ -21,11 +27,17 @@
 
 <script>
 import Logo from "@/assets/Images/Logo.svg";
+
+import SearchBar from "@/components/SearchBar.vue";
+
 export default {
-  data() {
+  components: {
+    SearchBar,
+  },
+
+  setup() {
     return {
       Logo,
-      overlay: false,
     };
   },
 };
@@ -34,6 +46,27 @@ export default {
 <style scoped>
 .navbar {
   backdrop-filter: blur(15.899999618530273px);
+}
+
+.search-container {
+  flex-grow: 1;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+}
+
+.search-suggestions .v-list-item {
+  cursor: pointer;
 }
 
 .navigation-menu {
