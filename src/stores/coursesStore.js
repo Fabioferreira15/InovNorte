@@ -4,12 +4,16 @@ export const useCoursesStore = defineStore("courses", {
   state: () => ({
     courses: [],
     filteredCourses: [],
+    paginatedCourses: [],
+    currentPage: 1,
+    perPage: 6,
+    totalPages: 0,
   }),
   getters: {
     getTop10Rated: (state) => {
       return [...state.courses]
         .sort((a, b) => b.average_rating - a.average_rating)
-        .slice(0,10)
+        .slice(0, 10);
     },
     courseTitles: (state) => {
       return state.courses.map((course) => course.title);
@@ -30,7 +34,7 @@ export const useCoursesStore = defineStore("courses", {
         const data = await response.json();
         if (Array.isArray(data.courses)) {
           this.courses = data.courses;
-          this.fileredCourses = data.courses;
+          this.filteredCourses = data.courses;
         } else {
           throw new Error("Erro a obter os cursos");
         }
@@ -38,10 +42,27 @@ export const useCoursesStore = defineStore("courses", {
         console.error("Erro a obter os cursos", error);
       }
     },
-    filterCourses(query){
+    filterCourses(query) {
       this.filteredCourses = this.courses.filter((course) => {
         return course.title.toLowerCase().includes(query.toLowerCase());
       });
-    }
+    },
+    async fetchPaginatedCourses(
+      page = this.currentPage,
+      perPage = this.perPage
+    ) {
+      try {
+        const response = await fetch(`/courses/page/${page}`);
+        if (!response.ok) {
+          throw new Error("Erro a obter os cursos");
+        }
+        const result = await response.json();
+        this.paginatedCourses = result.data;
+        this.totalPages = Math.ceil(result.total / perPage);
+        this.currentPage = page;
+      } catch (error) {
+        console.error("Erro a obter os cursos", error);
+      }
+    },
   },
 });
