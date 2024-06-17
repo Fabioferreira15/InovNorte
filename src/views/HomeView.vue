@@ -26,16 +26,16 @@
                   </h1>
                   <p class="course__categorie mt-md-6 mt-3">
                     {{ highlightedCourse.category }}
-                    <span
-                      ><v-rating
+                    <span>
+                      <v-rating
                         v-model="highlightedCourse.average_rating"
                         active-color="primary"
                         color="white"
                         half-increments
                         readonly
                         size="20"
-                      ></v-rating
-                    ></span>
+                      ></v-rating>
+                    </span>
                     <span>({{ highlightedCourse.total_reviews }})</span>
                   </p>
 
@@ -43,8 +43,13 @@
                     {{ highlightedCourse.description }}
                   </p>
                   <div class="mt-3 d-flex align-center">
-                    <v-btn color="primary">Inscrever</v-btn>
-                    <v-btn class="ml-5" variant="outlined" color="white"
+                    <v-btn color="primary" class="header__btn-primary btn">
+                      Inscrever</v-btn
+                    >
+                    <v-btn
+                      class="ml-5 header__btn-secondary btn"
+                      variant="outlined"
+                      color="white"
                       >Mais informações</v-btn
                     >
                   </div>
@@ -58,23 +63,46 @@
 
       <CourseCarousel title="Novidades" :courses="RecentlyAdded" />
 
-      <v-container>
-        <!-- categorias -->
+      <v-container fluid class="allcourses">
+        <v-row>
+          <v-col cols="12" class="d-flex align-center justify-center">
+            <v-btn
+              class="allcourses__btn btn"
+              color="primary"
+              :to="{ name: 'course-catalog' }"
+              >Ver todos os cursos</v-btn
+            >
+          </v-col>
+        </v-row>
+      </v-container>
+
+      <v-container fluid class="categories">
         <v-row>
           <v-col cols="12">
-            <h2 class="text-center">Categorias</h2>
+            <h2>Categorias</h2>
           </v-col>
         </v-row>
         <v-row>
           <v-col
             cols="12"
-            md="4"
+            md="3"
             v-for="category in categories"
             :key="category.id"
           >
-            <v-card>
-              <v-img :src="category.icon" height="200px"></v-img>
-              <v-card-title>{{ category.name }}</v-card-title>
+            <v-card class="card__categories">
+              <v-img
+                :src="category.image"
+                cover
+                class="card__categories-image"
+              ></v-img>
+
+              <v-container class="card_categories-info">
+                <v-card-title>{{ category.name }}</v-card-title>
+                <v-card-text class="mb-4">{{
+                  category.description
+                }}</v-card-text>
+                <v-btn color="primary">Explorar</v-btn>
+              </v-container>
             </v-card>
           </v-col>
         </v-row>
@@ -82,6 +110,7 @@
     </v-main>
   </div>
 </template>
+
 <script>
 import { onMounted, ref, computed, onUnmounted } from "vue";
 import { useCoursesStore } from "@/stores/coursesStore";
@@ -134,7 +163,7 @@ export default {
       });
 
       coursesStore.fetchCategories().then(() => {
-        categories.value = coursesStore.categories; 
+        categories.value = coursesStore.categories;
       });
     });
 
@@ -151,6 +180,17 @@ export default {
 </script>
 
 <style scoped>
+.v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  background-color: var(--color-primary-200);
+  height: 100%;
+  padding: 2rem;
+}
+
 .fade-enter-from {
   opacity: 0;
 }
@@ -211,7 +251,6 @@ export default {
   background-color: var(--color-background-dark);
   background-image: url("../assets/Images/backgrounds/Background-home.svg");
   background-size: cover;
-  height: 4000px;
   position: relative;
 }
 
@@ -260,6 +299,92 @@ export default {
   font-size: 1.6rem;
   font-family: var(--font-text);
   font-weight: 200;
+}
+
+.btn {
+  font-family: var(--font-text);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.header__btn-primary {
+  background-color: var(--color-primary-200);
+  color: var(--color-text-light);
+  transition: all 0.3s;
+}
+
+.header__btn-primary:hover {
+  box-shadow: 0px 4px 10px 0px var(--color-primary-200);
+}
+
+.header__btn-secondary {
+  color: var(--color-primary-200);
+}
+
+.categories {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categories h2 {
+  color: var(--color-text-light);
+  font-size: 2.4rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+.card__categories {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.6px);
+  -webkit-backdrop-filter: blur(4.6px);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.card__categories .v-card-title {
+  font-size: 1.6rem;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-text-light);
+  padding: 0;
+}
+
+.card__categories .v-card-text {
+  font-size: 1.4rem;
+  font-family: var(--font-text);
+  font-weight: 200;
+  color: #a3a3a3;
+  padding: 0;
+}
+
+.card__categories-image {
+  max-height: 200px;
+}
+
+.card_categories-info {
+  padding: 1rem;
+}
+
+.allcourses {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.allcourses__btn {
+  color: var(--color-text-light);
+  transition: all 0.3s;
+}
+
+.allcourses__btn:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 10px 0px var(--color-primary-200);
 }
 
 @media (max-width: 768px) {

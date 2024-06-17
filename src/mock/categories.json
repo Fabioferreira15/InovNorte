@@ -3,30 +3,30 @@
         "id": 1,
         "name": "Saúde",
         "description": "Cursos destinados à formação e aperfeiçoamento nos campos da saúde pública e privada.",
-        "icon": "https://example.com/path/to/health_category_icon.jpg"
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "id": 2,
-        "name": "Tecnologia da Informação",
+        "name": "Tecnologia",
         "description": "Explore cursos de desenvolvimento de software, análise de dados, cibersegurança, entre outros.",
-        "icon": "https://example.com/path/to/tech_category_icon.jpg"
+        "image": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VGVjbm9sb2dpYXxlbnwwfHwwfHx8MA%3D%3D"
     },
     {
         "id": 3,
         "name": "Negócios",
         "description": "Cursos que abrangem desde gestão empresarial até estratégias de marketing e finanças.",
-        "icon": "https://example.com/path/to/business_category_icon.jpg"
+        "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJ1c3NpbmVzc3xlbnwwfHwwfHx8MA%3D%3D"
     },
     {
         "id": 4,
         "name": "Educação",
         "description": "Formação pedagógica e cursos de capacitação para educadores e administradores educacionais.",
-        "icon": "https://example.com/path/to/education_category_icon.jpg"
+        "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
     },
     {
         "id": 5,
         "name": "Direito",
         "description": "Cursos focados em diferentes áreas do direito, preparando o aluno para os desafios da advocacia e legislação.",
-        "icon": "https://example.com/path/to/law_category_icon.jpg"
+        "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGF3fGVufDB8fDB8fHww"
     }
 ]
