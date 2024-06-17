@@ -25,14 +25,30 @@
             <v-expand-transition>
               <div
                 v-if="isHovering"
-                class="d-flex flex-column transition-fast-in-fast-out v-card--reveal"
+                class="d-flex flex-column align-start justify-space-between transition-fast-in-fast-out v-card--reveal"
               >
-                <p>{{ course.program.objectives }}</p>
+                <div class="objectives">
+                  <h1 class="mb-4">Objetivos</h1>
+                  <ul>
+                    <li
+                      v-for="objective in course.program.objectives.slice(0, 3)"
+                      :key="objective"
+                    >
+                      {{ objective }}
+                    </li>
+                  </ul>
+                </div>
 
-                <v-btn color="primary">Inscrever</v-btn>
-                <v-btn class="ml-5" variant="outlined" color="white"
-                  >Mais informações</v-btn
-                >
+                <div class="btns d-flex">
+                  <v-btn class="flex-grow-1" color="white">Inscrever</v-btn>
+                  <v-btn class="ml-5" variant="plain" color="white">
+                    <svg class="icon" width="24" height="24">
+                      <use
+                        xlink:href="../assets/coolicons-sprite.svg#Heart_01"
+                      ></use>
+                    </svg>
+                  </v-btn>
+                </div>
               </div>
             </v-expand-transition>
           </v-card>
@@ -93,8 +109,9 @@ export default {
   justify-content: center;
   position: absolute;
   width: 100%;
-  background-color: blueviolet;
+  background-color: var(--color-primary-200);
   height: 100%;
+  padding: 2rem;
 }
 
 .carousel {
@@ -160,6 +177,33 @@ export default {
 }
 .course__card-rating {
   color: var(--color-text-light);
+}
+
+.objectives h1 {
+  font-size: 1.6rem;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-text-light);
+}
+
+.objectives ul {
+  list-style: none;
+  padding: 0;
+}
+
+.objectives li {
+  font-size: 1.2rem;
+  font-family: var(--font-text);
+  font-weight: 200;
+  color: var(--color-text-light);
+}
+
+.objectives li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.btns {
+  width: 100%;
 }
 
 @media (max-width: 768px) {

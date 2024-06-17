@@ -23,7 +23,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
+            "objectives": [
+                "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
+                "Promover uma compreensão crítica sobre os determinantes sociais da saúde.",
+                "Capacitar os alunos para liderar iniciativas de saúde comunitária."
+            ],
             "competencies": "Habilidades em análise epidemiológica e compreensão de políticas de saúde.",
             "contents": {
                 "Módulo 1": "Introdução à Saúde Pública.",
@@ -62,7 +66,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
+            "objectives": [
+                "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
+                "Desenvolver estratégias para a inclusão efetiva no ambiente educacional.",
+                "Fomentar a criação de ambientes de aprendizagem inovadores e adaptativos."
+            ],
             "competencies": "Habilidades em aplicar metodologias ativas e engajar alunos.",
             "contents": {
                 "Módulo 1": "Fundamentos das Metodologias Ativas.",
@@ -110,7 +118,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+            "objectives": [
+                "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+                "Preparar os alunos para enfrentar desafios de negócios globais.",
+                "Enfatizar a importância da sustentabilidade e ética nos negócios."
+            ],
             "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
             "contents": {
                 "Módulo 1": "Análise Financeira Avançada.",
@@ -150,7 +162,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+            "objectives": [
+                "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+                "Explorar métodos para quantificar e mitigar impactos ambientais.",
+                "Promover a integração de práticas sustentáveis em modelos de negócios existentes."
+            ],
             "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
             "contents": {
                 "Módulo 1": "Fundamentos da Sustentabilidade.",
@@ -198,17 +214,22 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
+            "objectives": [
+                "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica.",
+                "Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
+                "Estimular a inovação através do entendimento de novas tecnologias.",
+                "Preparar os alunos para desenvolver soluções tecnológicas sustentáveis."
+            ],
+            "competencies": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
+            "contents": {
                 "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
                 "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
                 "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
                 "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
             },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
+            "methodologies": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
+            "assessment": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
+            "bibliography": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
         },
         "createdAt": "2023-12-04",
         "updatedAt": "2023-10-25",
@@ -238,7 +259,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
+            "objectives": [
+                "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
+                "Promover uma compreensão crítica sobre os determinantes sociais da saúde.",
+                "Capacitar os alunos para liderar iniciativas de saúde comunitária."
+            ],
             "competencies": "Capacidade de promover saúde comunitária e habilidades em pesquisa epidemiológica.",
             "contents": {
                 "Módulo 1": "Saúde Comunitária.",
@@ -286,7 +311,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar novas metodologias de ensino para resultados melhores.",
+            "objectives": [
+                "Implementar novas metodologias de ensino para resultados melhores.",
+                "Desenvolver estratégias para a inclusão efetiva no ambiente educacional.",
+                "Fomentar a criação de ambientes de aprendizagem inovadores e adaptativos."
+            ],
             "competencies": "Capacidade de inovar no ensino e engajar alunos em diferentes contextos.",
             "contents": {
                 "Módulo 1": "Novas Metodologias de Ensino.",
@@ -335,7 +364,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Ganhar compreensão dos fundamentos da análise de negócios.",
+            "objectives": [
+                "Ganhar compreensão dos fundamentos da análise de negócios.",
+                "Preparar os alunos para enfrentar desafios de negócios globais.",
+                "Enfatizar a importância da sustentabilidade e ética nos negócios."
+            ],
             "competencies": "Habilidades em planejamento estratégico e gestão de projetos.",
             "contents": {
                 "Módulo 1": "Introdução à Análise de Negócios.",
@@ -384,7 +417,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+            "objectives": [
+                "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+                "Explorar métodos para quantificar e mitigar impactos ambientais.",
+                "Promover a integração de práticas sustentáveis em modelos de negócios existentes."
+            ],
             "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
             "contents": {
                 "Módulo 1": "Fundamentos da Sustentabilidade.",
@@ -424,17 +461,22 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
+            "objectives": [
+                "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica.",
+                "Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
+                "Estimular a inovação através do entendimento de novas tecnologias.",
+                "Preparar os alunos para desenvolver soluções tecnológicas sustentáveis."
+            ],
+            "competencies": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
+            "contents": {
                 "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
                 "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
                 "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
                 "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
             },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
+            "methodologies": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
+            "assessment": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
+            "bibliography": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
         },
         "createdAt": "2023-11-24",
         "id": 10
@@ -472,7 +514,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
+            "objectives": [
+                "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
+                "Promover uma compreensão crítica sobre os determinantes sociais da saúde.",
+                "Capacitar os alunos para liderar iniciativas de saúde comunitária."
+            ],
             "competencies": "Habilidades em análise epidemiológica e compreensão de políticas de saúde.",
             "contents": {
                 "Módulo 1": "Introdução à Saúde Pública.",
@@ -521,7 +567,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
+            "objectives": [
+                "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
+                "Desenvolver estratégias para a inclusão efetiva no ambiente educacional.",
+                "Fomentar a criação de ambientes de aprendizagem inovadores e adaptativos."
+            ],
             "competencies": "Habilidades em aplicar metodologias ativas e engajar alunos.",
             "contents": {
                 "Módulo 1": "Fundamentos das Metodologias Ativas.",
@@ -570,7 +620,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+            "objectives": [
+                "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+                "Preparar os alunos para enfrentar desafios de negócios globais.",
+                "Enfatizar a importância da sustentabilidade e ética nos negócios."
+            ],
             "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
             "contents": {
                 "Módulo 1": "Análise Financeira Avançada.",
@@ -610,7 +664,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+            "objectives": [
+                "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+                "Explorar métodos para quantificar e mitigar impactos ambientais.",
+                "Promover a integração de práticas sustentáveis em modelos de negócios existentes."
+            ],
             "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
             "contents": {
                 "Módulo 1": "Fundamentos da Sustentabilidade.",
@@ -649,17 +707,22 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
+            "objectives": [
+                "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica.",
+                "Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
+                "Estimular a inovação através do entendimento de novas tecnologias.",
+                "Preparar os alunos para desenvolver soluções tecnológicas sustentáveis."
+            ],
+            "competencies": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
+            "contents": {
                 "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
                 "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
                 "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
                 "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
             },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
+            "methodologies": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
+            "assessment": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
+            "bibliography": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
         },
         "createdAt": "2024-04-24",
         "id": 15
@@ -697,7 +760,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
+            "objectives": [
+                "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
+                "Promover uma compreensão crítica sobre os determinantes sociais da saúde.",
+                "Capacitar os alunos para liderar iniciativas de saúde comunitária."
+            ],
             "competencies": "Habilidades em análise epidemiológica e compreensão de políticas de saúde.",
             "contents": {
                 "Módulo 1": "Introdução à Saúde Pública.",
@@ -737,7 +804,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
+            "objectives": [
+                "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
+                "Desenvolver estratégias para a inclusão efetiva no ambiente educacional.",
+                "Fomentar a criação de ambientes de aprendizagem inovadores e adaptativos."
+            ],
             "competencies": "Habilidades em aplicar metodologias ativas e engajar alunos.",
             "contents": {
                 "Módulo 1": "Fundamentos das Metodologias Ativas.",
@@ -776,7 +847,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+            "objectives": [
+                "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+                "Preparar os alunos para enfrentar desafios de negócios globais.",
+                "Enfatizar a importância da sustentabilidade e ética nos negócios."
+            ],
             "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
             "contents": {
                 "Módulo 1": "Análise Financeira Avançada.",
@@ -815,7 +890,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar estratégias avançadas para minimizar impactos ambientais.",
+            "objectives": [
+                "Implementar estratégias avançadas para minimizar impactos ambientais.",
+                "Explorar métodos para quantificar e mitigar impactos ambientais.",
+                "Promover a integração de práticas sustentáveis em modelos de negócios existentes."
+            ],
             "competencies": "Capacidade de desenvolver estratégias sustentáveis e realizar análises ambientais.",
             "contents": {
                 "Módulo 1": "Sustentabilidade Avançada.",
@@ -863,17 +942,22 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
+            "objectives": [
+                "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica.",
+                "Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
+                "Estimular a inovação através do entendimento de novas tecnologias.",
+                "Preparar os alunos para desenvolver soluções tecnológicas sustentáveis."
+            ],
+            "competencies": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
+            "contents": {
                 "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
                 "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
                 "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
                 "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
             },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
+            "methodologies": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
+            "assessment": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
+            "bibliography": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
         },
         "createdAt": "2024-03-11",
         "updatedAt": "2024-02-16",
@@ -903,7 +987,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
+            "objectives": [
+                "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
+                "Promover uma compreensão crítica sobre os determinantes sociais da saúde.",
+                "Capacitar os alunos para liderar iniciativas de saúde comunitária."
+            ],
             "competencies": "Capacidade de promover saúde comunitária e habilidades em pesquisa epidemiológica.",
             "contents": {
                 "Módulo 1": "Saúde Comunitária.",
@@ -951,7 +1039,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar novas metodologias de ensino para resultados melhores.",
+            "objectives": [
+                "Implementar novas metodologias de ensino para resultados melhores.",
+                "Desenvolver estratégias para a inclusão efetiva no ambiente educacional.",
+                "Fomentar a criação de ambientes de aprendizagem inovadores e adaptativos."
+            ],
             "competencies": "Capacidade de inovar no ensino e engajar alunos em diferentes contextos.",
             "contents": {
                 "Módulo 1": "Novas Metodologias de Ensino.",
@@ -991,7 +1083,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+            "objectives": [
+                "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+                "Preparar os alunos para enfrentar desafios de negócios globais.",
+                "Enfatizar a importância da sustentabilidade e ética nos negócios."
+            ],
             "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
             "contents": {
                 "Módulo 1": "Análise Financeira Avançada.",
@@ -1039,7 +1135,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+            "objectives": [
+                "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+                "Explorar métodos para quantificar e mitigar impactos ambientais.",
+                "Promover a integração de práticas sustentáveis em modelos de negócios existentes."
+            ],
             "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
             "contents": {
                 "Módulo 1": "Fundamentos da Sustentabilidade.",
@@ -1088,17 +1188,22 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
+            "objectives": [
+                "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica.",
+                "Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
+                "Estimular a inovação através do entendimento de novas tecnologias.",
+                "Preparar os alunos para desenvolver soluções tecnológicas sustentáveis."
+            ],
+            "competencies": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
+            "contents": {
                 "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
                 "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
                 "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
                 "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
             },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
+            "methodologies": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
+            "assessment": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
+            "bibliography": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
         },
         "createdAt": "2023-11-05",
         "updatedAt": "2024-01-06",
@@ -1128,7 +1233,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
+            "objectives": [
+                "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
+                "Promover uma compreensão crítica sobre os determinantes sociais da saúde.",
+                "Capacitar os alunos para liderar iniciativas de saúde comunitária."
+            ],
             "competencies": "Capacidade de promover saúde comunitária e habilidades em pesquisa epidemiológica.",
             "contents": {
                 "Módulo 1": "Saúde Comunitária.",
@@ -1167,7 +1276,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar novas metodologias de ensino para resultados melhores.",
+            "objectives": [
+                "Implementar novas metodologias de ensino para resultados melhores.",
+                "Desenvolver estratégias para a inclusão efetiva no ambiente educacional.",
+                "Fomentar a criação de ambientes de aprendizagem inovadores e adaptativos."
+            ],
             "competencies": "Capacidade de inovar no ensino e engajar alunos em diferentes contextos.",
             "contents": {
                 "Módulo 1": "Novas Metodologias de Ensino.",
@@ -1215,7 +1328,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+            "objectives": [
+                "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+                "Preparar os alunos para enfrentar desafios de negócios globais.",
+                "Enfatizar a importância da sustentabilidade e ética nos negócios."
+            ],
             "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
             "contents": {
                 "Módulo 1": "Análise Financeira Avançada.",
@@ -1264,7 +1381,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar estratégias avançadas para minimizar impactos ambientais.",
+            "objectives": [
+                "Implementar estratégias avançadas para minimizar impactos ambientais.",
+                "Explorar métodos para quantificar e mitigar impactos ambientais.",
+                "Promover a integração de práticas sustentáveis em modelos de negócios existentes."
+            ],
             "competencies": "Capacidade de desenvolver estratégias sustentáveis e realizar análises ambientais.",
             "contents": {
                 "Módulo 1": "Sustentabilidade Avançada.",
@@ -1304,17 +1425,22 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
+            "objectives": [
+                "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica.",
+                "Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
+                "Estimular a inovação através do entendimento de novas tecnologias.",
+                "Preparar os alunos para desenvolver soluções tecnológicas sustentáveis."
+            ],
+            "competencies": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
+            "contents": {
                 "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
                 "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
                 "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
                 "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
             },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
+            "methodologies": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
+            "assessment": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
+            "bibliography": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
         },
         "createdAt": "2023-12-15",
         "id": 30
@@ -1343,7 +1469,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
+            "objectives": [
+                "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
+                "Promover uma compreensão crítica sobre os determinantes sociais da saúde.",
+                "Capacitar os alunos para liderar iniciativas de saúde comunitária."
+            ],
             "competencies": "Habilidades em análise epidemiológica e compreensão de políticas de saúde.",
             "contents": {
                 "Módulo 1": "Introdução à Saúde Pública.",
@@ -1391,7 +1521,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
+            "objectives": [
+                "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
+                "Desenvolver estratégias para a inclusão efetiva no ambiente educacional.",
+                "Fomentar a criação de ambientes de aprendizagem inovadores e adaptativos."
+            ],
             "competencies": "Habilidades em aplicar metodologias ativas e engajar alunos.",
             "contents": {
                 "Módulo 1": "Fundamentos das Metodologias Ativas.",
@@ -1431,7 +1565,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+            "objectives": [
+                "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+                "Preparar os alunos para enfrentar desafios de negócios globais.",
+                "Enfatizar a importância da sustentabilidade e ética nos negócios."
+            ],
             "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
             "contents": {
                 "Módulo 1": "Análise Financeira Avançada.",
@@ -1470,7 +1608,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+            "objectives": [
+                "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+                "Explorar métodos para quantificar e mitigar impactos ambientais.",
+                "Promover a integração de práticas sustentáveis em modelos de negócios existentes."
+            ],
             "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
             "contents": {
                 "Módulo 1": "Fundamentos da Sustentabilidade.",
@@ -1518,17 +1660,22 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
+            "objectives": [
+                "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica.",
+                "Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
+                "Estimular a inovação através do entendimento de novas tecnologias.",
+                "Preparar os alunos para desenvolver soluções tecnológicas sustentáveis."
+            ],
+            "competencies": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
+            "contents": {
                 "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
                 "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
                 "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
                 "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
             },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
+            "methodologies": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
+            "assessment": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
+            "bibliography": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
         },
         "createdAt": "2023-12-01",
         "updatedAt": "2023-11-14",
@@ -1567,7 +1714,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
+            "objectives": [
+                "Aprofundar conhecimentos em saúde pública, incluindo epidemiologia e políticas de saúde.",
+                "Promover uma compreensão crítica sobre os determinantes sociais da saúde.",
+                "Capacitar os alunos para liderar iniciativas de saúde comunitária."
+            ],
             "competencies": "Habilidades em análise epidemiológica e compreensão de políticas de saúde.",
             "contents": {
                 "Módulo 1": "Introdução à Saúde Pública.",
@@ -1616,7 +1767,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
+            "objectives": [
+                "Aprofundar conhecimentos em metodologias ativas de aprendizagem.",
+                "Desenvolver estratégias para a inclusão efetiva no ambiente educacional.",
+                "Fomentar a criação de ambientes de aprendizagem inovadores e adaptativos."
+            ],
             "competencies": "Habilidades em aplicar metodologias ativas e engajar alunos.",
             "contents": {
                 "Módulo 1": "Fundamentos das Metodologias Ativas.",
@@ -1665,7 +1820,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+            "objectives": [
+                "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+                "Preparar os alunos para enfrentar desafios de negócios globais.",
+                "Enfatizar a importância da sustentabilidade e ética nos negócios."
+            ],
             "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
             "contents": {
                 "Módulo 1": "Análise Financeira Avançada.",
@@ -1714,7 +1873,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+            "objectives": [
+                "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+                "Explorar métodos para quantificar e mitigar impactos ambientais.",
+                "Promover a integração de práticas sustentáveis em modelos de negócios existentes."
+            ],
             "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
             "contents": {
                 "Módulo 1": "Fundamentos da Sustentabilidade.",
@@ -1763,17 +1926,22 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
+            "objectives": [
+                "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica.",
+                "Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
+                "Estimular a inovação através do entendimento de novas tecnologias.",
+                "Preparar os alunos para desenvolver soluções tecnológicas sustentáveis."
+            ],
+            "competencies": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
+            "contents": {
                 "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
                 "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
                 "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
                 "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
             },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
+            "methodologies": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
+            "assessment": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
+            "bibliography": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
         },
         "createdAt": "2024-05-01",
         "updatedAt": "2023-10-01",
@@ -1812,7 +1980,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
+            "objectives": [
+                "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
+                "Promover uma compreensão crítica sobre os determinantes sociais da saúde.",
+                "Capacitar os alunos para liderar iniciativas de saúde comunitária."
+            ],
             "competencies": "Capacidade de promover saúde comunitária e habilidades em pesquisa epidemiológica.",
             "contents": {
                 "Módulo 1": "Saúde Comunitária.",
@@ -1861,7 +2033,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar novas metodologias de ensino para resultados melhores.",
+            "objectives": [
+                "Implementar novas metodologias de ensino para resultados melhores.",
+                "Desenvolver estratégias para a inclusão efetiva no ambiente educacional.",
+                "Fomentar a criação de ambientes de aprendizagem inovadores e adaptativos."
+            ],
             "competencies": "Capacidade de inovar no ensino e engajar alunos em diferentes contextos.",
             "contents": {
                 "Módulo 1": "Novas Metodologias de Ensino.",
@@ -1901,7 +2077,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Ganhar compreensão dos fundamentos da análise de negócios.",
+            "objectives": [
+                "Ganhar compreensão dos fundamentos da análise de negócios.",
+                "Preparar os alunos para enfrentar desafios de negócios globais.",
+                "Enfatizar a importância da sustentabilidade e ética nos negócios."
+            ],
             "competencies": "Habilidades em planejamento estratégico e gestão de projetos.",
             "contents": {
                 "Módulo 1": "Introdução à Análise de Negócios.",
@@ -1949,7 +2129,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+            "objectives": [
+                "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+                "Explorar métodos para quantificar e mitigar impactos ambientais.",
+                "Promover a integração de práticas sustentáveis em modelos de negócios existentes."
+            ],
             "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
             "contents": {
                 "Módulo 1": "Fundamentos da Sustentabilidade.",
@@ -1989,17 +2173,22 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
+            "objectives": [
+                "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica.",
+                "Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
+                "Estimular a inovação através do entendimento de novas tecnologias.",
+                "Preparar os alunos para desenvolver soluções tecnológicas sustentáveis."
+            ],
+            "competencies": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
+            "contents": {
                 "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
                 "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
                 "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
                 "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
             },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
+            "methodologies": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
+            "assessment": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
+            "bibliography": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
         },
         "createdAt": "2023-06-22",
         "id": 45
@@ -2028,7 +2217,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
+            "objectives": [
+                "Explorar avanços em saúde comunitária e práticas epidemiológicas.",
+                "Promover uma compreensão crítica sobre os determinantes sociais da saúde.",
+                "Capacitar os alunos para liderar iniciativas de saúde comunitária."
+            ],
             "competencies": "Capacidade de promover saúde comunitária e habilidades em pesquisa epidemiológica.",
             "contents": {
                 "Módulo 1": "Saúde Comunitária.",
@@ -2076,7 +2269,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Implementar novas metodologias de ensino para resultados melhores.",
+            "objectives": [
+                "Implementar novas metodologias de ensino para resultados melhores.",
+                "Desenvolver estratégias para a inclusão efetiva no ambiente educacional.",
+                "Fomentar a criação de ambientes de aprendizagem inovadores e adaptativos."
+            ],
             "competencies": "Capacidade de inovar no ensino e engajar alunos em diferentes contextos.",
             "contents": {
                 "Módulo 1": "Novas Metodologias de Ensino.",
@@ -2116,7 +2313,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+            "objectives": [
+                "Desenvolver habilidades avançadas em análise financeira e gestão estratégica.",
+                "Preparar os alunos para enfrentar desafios de negócios globais.",
+                "Enfatizar a importância da sustentabilidade e ética nos negócios."
+            ],
             "competencies": "Capacidade de análise financeira detalhada e implementação de estratégias de negócios.",
             "contents": {
                 "Módulo 1": "Análise Financeira Avançada.",
@@ -2155,7 +2356,11 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "objectives": "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+            "objectives": [
+                "Aprofundar conhecimentos em práticas de sustentabilidade empresarial.",
+                "Explorar métodos para quantificar e mitigar impactos ambientais.",
+                "Promover a integração de práticas sustentáveis em modelos de negócios existentes."
+            ],
             "competencies": "Habilidades em gestão de recursos e análise de impacto ambiental.",
             "contents": {
                 "Módulo 1": "Fundamentos da Sustentabilidade.",
@@ -2194,17 +2399,22 @@
         "certification": "sim",
         "language": "Português",
         "program": {
-            "Objetivos": "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica. Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
-            "Competências a serem desenvolvidas": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
-            "Conteúdos": {
+            "objectives": [
+                "Aprofundar conhecimentos teóricos e práticos, preparando os alunos para desafios reais na área específica.",
+                "Exemplos incluem a resolução de problemas complexos de saúde pública, a implementação de políticas educacionais inovadoras, e o desenvolvimento de estratégias empresariais sustentáveis.",
+                "Estimular a inovação através do entendimento de novas tecnologias.",
+                "Preparar os alunos para desenvolver soluções tecnológicas sustentáveis."
+            ],
+            "competencies": "Desenvolvimento de habilidades técnicas como análise de dados e programação. Capacidade analítica e crítica, exemplificada pela análise de estudos de caso complexos. Habilidades interpessoais, como comunicação eficaz em equipes multidisciplinares e liderança.",
+            "contents": {
                 "Módulo 1": "Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados.",
                 "Módulo 2": "Metodologias e técnicas avançadas, com exemplos práticos.",
                 "Módulo 3": "Estudos de caso e aplicação prática, com projetos colaborativos.",
                 "Módulo 4": "Avaliação final e integração dos conhecimentos adquiridos."
             },
-            "Metodologias": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
-            "Avaliação": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
-            "Bibliografia / recursos adicionais": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
+            "methodologies": "Aulas teóricas expositivas, estudos de caso práticos baseados em situações reais, trabalho colaborativo em projetos de pesquisa, e uso de tecnologia como simulações e ferramentas de análise digital.",
+            "assessment": "Métodos de avaliação contínua incluem testes teóricos, projetos práticos em grupo, apresentações orais, e participação ativa em discussões online. Exemplos específicos incluem a criação de um plano de negócios ou a análise de um estudo de caso de saúde pública.",
+            "bibliography": "Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'."
         },
         "createdAt": "2024-02-06",
         "id": 50
