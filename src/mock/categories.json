@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Saúde",
+        "description": "Cursos destinados à formação e aperfeiçoamento nos campos da saúde pública e privada.",
+        "icon": "https://example.com/path/to/health_category_icon.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Tecnologia da Informação",
+        "description": "Explore cursos de desenvolvimento de software, análise de dados, cibersegurança, entre outros.",
+        "icon": "https://example.com/path/to/tech_category_icon.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Negócios",
+        "description": "Cursos que abrangem desde gestão empresarial até estratégias de marketing e finanças.",
+        "icon": "https://example.com/path/to/business_category_icon.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Educação",
+        "description": "Formação pedagógica e cursos de capacitação para educadores e administradores educacionais.",
+        "icon": "https://example.com/path/to/education_category_icon.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Direito",
+        "description": "Cursos focados em diferentes áreas do direito, preparando o aluno para os desafios da advocacia e legislação.",
+        "icon": "https://example.com/path/to/law_category_icon.jpg"
+    }
+]

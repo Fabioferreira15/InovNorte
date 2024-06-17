@@ -13,7 +13,12 @@
         <v-menu>
           <template v-slot:activator="{ props }">
             <v-btn icon v-bind="props">
-              <v-icon size="large" color="white">mdi-account</v-icon>
+              <v-icon size="large" color="white"
+                ><svg class="icon" width="24" height="24">
+                  <use
+                    xlink:href="../assets/coolicons-sprite.svg#User_02"
+                  ></use></svg
+              ></v-icon>
             </v-btn>
           </template>
           <v-list>
@@ -23,7 +28,11 @@
               :value="index"
             >
               <template v-slot:prepend>
-                <v-icon color="primary">{{ item.icon }}</v-icon>
+                <v-icon color="primary">
+                  <svg class="icon" width="24" height="24">
+                    <use :href="`${sprite}#${item.icon}`"></use>
+                  </svg>
+                </v-icon>
               </template>
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
@@ -31,11 +40,23 @@
         </v-menu>
 
         <v-btn icon>
-          <v-icon size="large" color="white">mdi-bell</v-icon>
+          <v-icon size="large" color="white">
+            <svg class="icon" width="24" height="24">
+              <use
+                xlink:href="../assets/coolicons-sprite.svg#Bell_Notification"
+              ></use>
+            </svg>
+          </v-icon>
         </v-btn>
 
         <v-btn icon @click="overlay = !overlay">
-          <v-icon size="large" color="white">mdi-menu</v-icon>
+          <v-icon size="large" color="white">
+            <svg class="icon" width="24" height="24">
+              <use
+                xlink:href="../assets/coolicons-sprite.svg#Hamburger_LG"
+              ></use>
+            </svg>
+          </v-icon>
         </v-btn>
       </div>
     </v-app-bar>
@@ -53,6 +74,7 @@
 <script>
 import { ref } from "vue";
 import Logo from "@/assets/Images/Logo.svg";
+import sprite from "@/assets/coolicons-sprite.svg";
 
 import SearchBar from "@/components/SearchBar.vue";
 
@@ -65,16 +87,17 @@ export default {
     const overlay = ref(false);
 
     const items = [
-      { title: "Perfil", icon: "mdi-account" },
-      { title: "Definições", icon: "mdi-cog" },
-      { title: "Favoritos", icon: "mdi-heart" },
-      { title: "Logout", icon: "mdi-logout" },
+      { title: "Perfil", icon: "User_02" },
+      { title: "Definições", icon: "Settings" },
+      { title: "Favoritos", icon: "Heart_01" },
+      { title: "Logout", icon: "Log_Out" },
     ];
 
     return {
       Logo,
       overlay,
       items,
+      sprite,
     };
   },
 };

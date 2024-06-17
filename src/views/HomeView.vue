@@ -57,11 +57,33 @@
       <CourseCarousel title="Em destaque" :courses="topCourses" />
 
       <CourseCarousel title="Novidades" :courses="RecentlyAdded" />
+
+      <v-container>
+        <!-- categorias -->
+        <v-row>
+          <v-col cols="12">
+            <h2 class="text-center">Categorias</h2>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col
+            cols="12"
+            md="4"
+            v-for="category in categories"
+            :key="category.id"
+          >
+            <v-card>
+              <v-img :src="category.icon" height="200px"></v-img>
+              <v-card-title>{{ category.name }}</v-card-title>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-main>
   </div>
 </template>
 <script>
-import { onMounted, ref, computed } from "vue";
+import { onMounted, ref, computed, onUnmounted } from "vue";
 import { useCoursesStore } from "@/stores/coursesStore";
 import NavBar from "@/components/NavBar.vue";
 import Video from "@/assets/video_example.mp4";
@@ -81,6 +103,7 @@ export default {
       description: "",
       rating: 0,
     });
+    const categories = ref([]);
 
     const topCourses = computed(() => {
       const courses = coursesStore.getTop10Rated;
@@ -109,6 +132,10 @@ export default {
         updateHighlightedCourse();
         setInterval(updateHighlightedCourse, 5000);
       });
+
+      coursesStore.fetchCategories().then(() => {
+        categories.value = coursesStore.categories; 
+      });
     });
 
     return {
@@ -117,6 +144,7 @@ export default {
       Video,
       rating,
       highlightedCourse,
+      categories,
     };
   },
 };

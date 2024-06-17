@@ -3,6 +3,7 @@ import { defineStore } from "pinia";
 export const useCoursesStore = defineStore("courses", {
   state: () => ({
     courses: [],
+    categories: [],
     filteredCourses: [],
     paginatedCourses: [],
     currentPage: 1,
@@ -32,7 +33,7 @@ export const useCoursesStore = defineStore("courses", {
           throw new Error("Erro a obter os cursos");
         }
         const data = await response.json();
-        if (Array.isArray(data.courses)) {
+        if (data.courses) {
           this.courses = data.courses;
           this.filteredCourses = data.courses;
         } else {
@@ -40,6 +41,23 @@ export const useCoursesStore = defineStore("courses", {
         }
       } catch (error) {
         console.error("Erro a obter os cursos", error);
+      }
+    },
+
+    async fetchCategories() {
+      try {
+        const response = await fetch("/categories");
+        if (!response.ok) {
+          throw new Error("Erro a obter as categorias");
+        }
+        const data = await response.json();
+        if (data.categories) {
+          this.categories = data.categories;
+        } else {
+          throw new Error("Erro a obter as categorias");
+        }
+      } catch (error) {
+        console.error("Erro a obter as categorias", error);
       }
     },
     filterCourses(query) {
