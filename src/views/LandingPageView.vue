@@ -105,39 +105,12 @@ export default {
       bookImage,
       botImage,
       comunity,
-      /*  user: {
-        id: '',
-        firstName: '',
-        lastName: '',
-      } */
     };
   },
-  /* methods: {
-    fetchUser() {
-      fetch("/user")
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          this.user = data;
-        })
-        .catch((error) => {
-          console.error("Error fetching user:", error);
-        });
-    },
-  },
-  mounted() {
-    this.fetchUser();
-  }, */
 };
 </script>
 
 <style scoped>
-
-
 .background {
   background-color: var(--color-background-dark);
   background-image: url("../assets/Images/backgrounds/Background.svg");
@@ -156,7 +129,7 @@ export default {
 
 .description {
   font-family: var(--font-text);
-  font-weight: 400;
+  font-weight: 200;
   font-size: 2rem;
   width: 60%;
   display: block;
@@ -183,6 +156,7 @@ export default {
   padding: 2rem;
   width: 100%;
   max-width: 350px;
+  min-height: 280px;
   transition: transform 0.3s;
 }
 
@@ -201,6 +175,7 @@ export default {
 .features .v-card-text {
   font-family: var(--font-text);
   font-size: 1.6rem;
+  font-weight: 200;
   color: #f8f9fa;
   text-align: center;
   line-height: 1.5;
