@@ -79,7 +79,7 @@
       <v-container fluid class="categories">
         <v-row>
           <v-col cols="12">
-            <h2>Categorias</h2>
+            <h2>Explora as nossas categorias</h2>
           </v-col>
         </v-row>
         <v-row>
@@ -108,15 +108,18 @@
         </v-row>
       </v-container>
     </v-main>
+
+    <Search />
   </div>
 </template>
 
 <script>
-import { onMounted, ref, computed, onUnmounted } from "vue";
+import { onMounted, ref, computed } from "vue";
 import { useCoursesStore } from "@/stores/coursesStore";
 import NavBar from "@/components/NavBar.vue";
 import Video from "@/assets/video_example.mp4";
 import CourseCarousel from "@/components/CourseCarousel.vue";
+
 
 export default {
   components: {
