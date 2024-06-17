@@ -1,61 +1,51 @@
 <template>
   <div class="courseCatalog">
-    <v-container fluid>
-      <v-row>
-        <v-col cols="12">
-          <NavBar />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12" class="d-flex justify-end">
-          <v-btn icon @click="drawer = !drawer">
-            <v-icon>mdi-filter-variant</v-icon>
-          </v-btn>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12" md="3">
-          <v-navigation-drawer
-            v-model="drawer"
-            app
-            temporary
-            :permanent="!isMobile"
-            class="drawer"
-          >
+    <nav>
+      <Navbar />
+    </nav>
+
+    <v-main>
+      <v-container>
+        <FilterBar :toggleFilterSidebar="toggleFilterSidebar" />
+      </v-container>
+
+      <div class="content">
+        <v-navigation-drawer
+          v-model="isFilterSidebarVisible"
+          class="filter-sidebar"
+        >
+          <div class="sidebar-content">
             <Filters />
-          </v-navigation-drawer>
-        </v-col>
-        <v-col cols="12" md="9">
-          <Courses />
-        </v-col>
-      </v-row>
-    </v-container>
+          </div>
+        </v-navigation-drawer>
+        <Courses />
+      </div>
+    </v-main>
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
-import Filters from "@/components/Filters.vue";
+import Navbar from "@/components/NavBar.vue";
 import Courses from "@/components/Courses.vue";
-import { ref, computed } from "vue";
-import { useDisplay } from "vuetify/lib/framework";
+import FilterBar from "@/components/FilterBar.vue";
+import Filters from "@/components/Filters.vue";
 
 export default {
   components: {
-    NavBar,
-    Filters,
+    Navbar,
     Courses,
+    FilterBar,
+    Filters,
   },
-
-  setup() {
-    const drawer = ref(false);
-    const { mobile } = useDisplay();
-    const isMobile = computed(() => mobile.value);
-
+  data() {
     return {
-      drawer,
-      isMobile,
+      isFilterSidebarVisible: false,
     };
+  },
+  methods: {
+    toggleFilterSidebar() {
+      this.isFilterSidebarVisible = !this.isFilterSidebarVisible;
+    },
   },
 };
 </script>
@@ -68,9 +58,15 @@ export default {
   position: relative;
   min-height: 100vh;
 }
-.drawer {
-  background-color: var(--color-background-dark);
-  color: var(--color-text-light);
+
+.filter-sidebar {
+  width: 300px;
+  background-color: transparent;
   border: none;
+  color: var(--color-text-light);
+}
+
+.sidebar-content {
+  padding: 20px;
 }
 </style>
