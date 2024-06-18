@@ -43,7 +43,11 @@
                     {{ highlightedCourse.description }}
                   </p>
                   <div class="mt-3 d-flex align-center">
-                    <v-btn color="primary" class="header__btn-primary btn">
+                    <v-btn
+                      color="primary"
+                      class="header__btn-primary btn"
+                      @click="openCourse(highlightedCourse)"
+                    >
                       Inscrever</v-btn
                     >
                     <v-btn
@@ -119,8 +123,7 @@ import { useCoursesStore } from "@/stores/coursesStore";
 import NavBar from "@/components/NavBar.vue";
 import Video from "@/assets/video_example.mp4";
 import CourseCarousel from "@/components/CourseCarousel.vue";
-
-
+import { useRouter } from "vue-router";
 export default {
   components: {
     NavBar,
@@ -136,6 +139,7 @@ export default {
       rating: 0,
     });
     const categories = ref([]);
+    const router = useRouter();
 
     const topCourses = computed(() => {
       const courses = coursesStore.getTop10Rated;
@@ -159,6 +163,13 @@ export default {
       highlightedCourse.value = getRandomCourse();
     };
 
+    const openCourse = (course) => {
+      router.push({
+        name: "course",
+        params: { name: course.title, id: course.id },
+      });
+    };
+
     onMounted(() => {
       coursesStore.fetchCourses().then(() => {
         updateHighlightedCourse();
@@ -177,6 +188,7 @@ export default {
       rating,
       highlightedCourse,
       categories,
+      openCourse,
     };
   },
 };
@@ -386,8 +398,8 @@ export default {
 }
 
 .allcourses__btn:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 4px 10px 0px var(--color-primary-200);
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px var(--color-primary-100);
 }
 
 @media (max-width: 768px) {

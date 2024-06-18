@@ -16,7 +16,7 @@
               @mouseenter="showVideo[course.id] = true"
               @mouseleave="showVideo[course.id] = false"
             >
-              <v-container fluid class="course__card-container">
+              <v-container fluid class="course__card-container ">
                 <transition name="fade" mode="out-in">
                   <template v-if="showVideo[course.id]">
                     <video autoplay muted loop class="course__card-video">
@@ -34,19 +34,26 @@
                 </transition>
 
                 <v-card-subtitle>{{ course.category }}</v-card-subtitle>
-                <v-card-title>{{ course.title }}</v-card-title>
-                <v-card-text>
-                  {{ course.duration }} | {{ course.cost }}
-                  <span class="course__card-rating">{{
-                    course.average_rating
-                  }}</span>
-                  <span>({{ course.total_reviews }})</span>
-                </v-card-text>
+                <div class=" info">
+                  <v-card-title>{{ course.title }}</v-card-title>
+                  <v-card-text >
+                    {{ course.duration }} | {{ course.cost }}
+                    <span class="course__card-rating">{{
+                      course.average_rating
+                    }}</span>
+                    <span>({{ course.total_reviews }})</span>
+                  </v-card-text>
+                </div>
               </v-container>
             </v-card>
           </template>
 
-          <v-card max-width="300" class="v-card--reveal">
+          <v-card
+            max-width="300"
+            class="v-card--reveal"
+            @mouseenter="showVideo[course.id] = true"
+            @mouseleave="showVideo[course.id] = false"
+          >
             <v-card-text class="objectives__card-title">
               <h1>Objetivos</h1>
               <ul>
@@ -89,8 +96,7 @@ import "vue3-carousel/dist/carousel.css";
 import CourseImage from "@/assets/Images/image.png";
 import { ref } from "vue";
 import Video from "@/assets/video_example.mp4";
-import { useRouter } from 'vue-router'
-
+import { useRouter } from "vue-router";
 
 export default {
   components: {
@@ -104,9 +110,7 @@ export default {
   },
 
   setup(props) {
-
-    const router = useRouter()
-
+    const router = useRouter();
 
     const breakpoints = {
       1024: {
@@ -127,7 +131,10 @@ export default {
     const showVideo = ref({});
 
     const openCourse = (course) => {
-      router.push({ name: 'course', params: {name: course.title, id: course.id } })
+      router.push({
+        name: "course",
+        params: { name: course.title, id: course.id },
+      });
     };
 
     return {
@@ -270,6 +277,10 @@ export default {
 
 .btns {
   width: 100%;
+}
+
+.info {
+  height: 100%;
 }
 
 @media (max-width: 768px) {
