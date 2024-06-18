@@ -8,51 +8,68 @@
       class="custom-carousel"
     >
       <slide v-for="course in courses" :key="course.id">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card class="course__card" v-bind="props">
-            <v-container fluid class="course__card-container">
-              <v-img :src="CourseImage" cover class="course__card-img"></v-img>
-              <v-card-subtitle>{{ course.category }}</v-card-subtitle>
-              <v-card-title>{{ course.title }}</v-card-title>
-              <v-card-text>
-                {{ course.duration }} | {{ course.cost }}
-                <span class="course__card-rating">{{
-                  course.average_rating
-                }}</span>
-                <span>({{ course.total_reviews }})</span>
-              </v-card-text>
-            </v-container>
-            <v-expand-transition>
-              <div
-                v-if="isHovering"
-                class="d-flex flex-column align-start justify-space-between transition-fast-in-fast-out v-card--reveal"
-              >
-                <div class="objectives">
-                  <h1 class="mb-4">Objetivos</h1>
-                  <ul>
-                    <li
-                      v-for="objective in course.program.objectives.slice(0, 3)"
-                      :key="objective"
-                    >
-                      {{ objective }}
-                    </li>
-                  </ul>
-                </div>
+        <v-menu open-on-hover location="end" transition="scroll-x-transition">
+          <template v-slot:activator="{ props }">
+            <v-card
+              class="course__card"
+              v-bind="props"
+              @mouseenter="showVideo[course.id] = true"
+              @mouseleave="showVideo[course.id] = false"
+            >
+              <v-container fluid class="course__card-container">
+                <transition name="fade" mode="out-in">
+                  <template v-if="showVideo[course.id]">
+                    <video autoplay muted loop class="course__card-video">
+                      <source :src="Video" type="video/mp4" />
+                      Your browser does not support the video.
+                    </video>
+                  </template>
+                  <template v-else>
+                    <v-img
+                      :src="CourseImage"
+                      cover
+                      class="course__card-img"
+                    ></v-img>
+                  </template>
+                </transition>
 
-                <div class="btns d-flex">
-                  <v-btn class="flex-grow-1" color="white">Inscrever</v-btn>
-                  <v-btn class="ml-5" variant="plain" color="white">
-                    <svg class="icon" width="24" height="24">
-                      <use
-                        xlink:href="../assets/coolicons-sprite.svg#Heart_01"
-                      ></use>
-                    </svg>
-                  </v-btn>
-                </div>
-              </div>
-            </v-expand-transition>
+                <v-card-subtitle>{{ course.category }}</v-card-subtitle>
+                <v-card-title>{{ course.title }}</v-card-title>
+                <v-card-text>
+                  {{ course.duration }} | {{ course.cost }}
+                  <span class="course__card-rating">{{
+                    course.average_rating
+                  }}</span>
+                  <span>({{ course.total_reviews }})</span>
+                </v-card-text>
+              </v-container>
+            </v-card>
+          </template>
+
+          <v-card max-width="300" class="v-card--reveal">
+            <v-card-text class="objectives__card-title">
+              <h1>Objetivos</h1>
+              <ul>
+                <li
+                  v-for="objective in course.program.objectives.slice(0, 3)"
+                  :key="objective"
+                >
+                  {{ objective }}
+                </li>
+              </ul>
+            </v-card-text>
+            <div class="btns d-flex">
+              <v-btn class="flex-grow-1" color="white">Inscrever</v-btn>
+              <v-btn class="ml-5" variant="plain" color="white">
+                <svg class="icon" width="24" height="24">
+                  <use
+                    xlink:href="../assets/coolicons-sprite.svg#Heart_01"
+                  ></use>
+                </svg>
+              </v-btn>
+            </div>
           </v-card>
-        </v-hover>
+        </v-menu>
       </slide>
       <template #addons>
         <Navigation />
@@ -65,6 +82,8 @@
 import { Carousel, Slide, Navigation } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 import CourseImage from "@/assets/Images/image.png";
+import { ref } from "vue";
+import Video from "@/assets/video_example.mp4";
 
 export default {
   components: {
@@ -93,24 +112,49 @@ export default {
       },
     };
 
+    const menu = ref(true);
+    const showVideo = ref({});
+
     return {
       breakpoints,
       props,
       CourseImage,
+      menu,
+      Video,
+      showVideo,
     };
   },
 };
 </script>
 
 <style scoped>
-.v-card--reveal {
-  align-items: center;
-  bottom: 0;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.objectives__card-title {
+  padding: 2rem !important;
+}
+
+.objectives__card-title h1 {
+  color: var(--color-text-light);
+}
+
+.objectives__card-title li {
+  color: var(--color-text-light);
+}
+
+.v-menu > .v-overlay__content > .v-card,
+.v-menu > .v-overlay__content > .v-sheet,
+.v-menu > .v-overlay__content > .v-list {
   background-color: var(--color-primary-200);
-  height: 100%;
+}
+
+.btns {
   padding: 2rem;
 }
 
@@ -174,6 +218,12 @@ export default {
 }
 .course__card-img {
   height: 10%;
+}
+
+.course__card-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .course__card-rating {
   color: var(--color-text-light);
