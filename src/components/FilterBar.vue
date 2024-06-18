@@ -2,16 +2,20 @@
   <v-container class="filter-bar" fluid>
     <v-row align="center" class="flex-wrap">
       <v-col cols="12" md="auto">
-        <v-btn @click="toggleFilterSidebar" class="toggle-button"
-          >Filtros</v-btn
-        >
+        <v-btn @click="toggleFilterSidebar" class="toggle-button" icon flat>
+          <v-icon>
+            <svg class="icon" width="100" height="100">
+              <use xlink:href="../assets/coolicons-sprite.svg#Filter"></use>
+            </svg>
+          </v-icon>
+        </v-btn>
       </v-col>
       <v-col cols="12" md="auto" class="chips-container">
         <v-chip-group v-model="selectedFilters" multiple class="filter-chips">
           <v-chip
             v-for="filter in categories"
             :key="filter.id"
-            class="filter-chip"
+            class="filter-chip d-flex align-center justify-center"
             filter
           >
             {{ filter.name }}
@@ -19,13 +23,15 @@
         </v-chip-group>
       </v-col>
       <v-spacer></v-spacer>
-      <v-col cols="12" md="auto" class="sort-select-container">
+      <v-col class="sort-select-container">
         <v-select
           v-model="sortOption"
           :items="sortOptions"
+          variant="outlined"
           label="Ordenar"
           class="sort-select"
-          dense
+          hide-details
+          :menu-props="{ contentClass: 'custom-select-background' }"
         ></v-select>
       </v-col>
     </v-row>
@@ -67,7 +73,10 @@ export default {
 }
 .toggle-button {
   margin-right: 1rem;
+  color: var(--color-text-light);
+  background-color: transparent;
 }
+
 .chips-container {
   display: flex;
   flex-wrap: wrap;
@@ -75,22 +84,52 @@ export default {
 .filter-chip {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+  background-color: var(--color-primary-600);
+  min-width: 10rem;
+  font-family: var(--font-text);
+  font-size: 1.4rem !important;
+  font-weight: 300;
+  color: var(--color-text-dark);
 }
+
+.sort-select-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
 .sort-select {
-  margin-left: auto;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: var(--color-background);
+  border-radius: 8px;
+  font-family: var(--font-text);
+  font-size: 1.87rem;
 }
-@media (max-width: 600px) {
-  .toggle-button {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  .chips-container {
-    width: 100%;
-    justify-content: center;
-  }
-  .sort-select-container {
-    width: 100%;
-    margin-top: 1rem;
-  }
+
+.sort-select .v-input__control {
+  border-radius: 8px;
+  background-color: var(--color-background);
+  padding: 0.5rem;
+}
+
+.sort-select .v-select__selections {
+  padding-left: 0.5rem;
+}
+
+.sort-select .v-input__append-inner {
+  margin-right: 0.5rem;
+}
+
+.sort-select .v-list-item {
+  font-family: var(--font-text);
+  font-size: 1.4rem;
+}
+.v-input {
+  color: var(--color-text-light) !important;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4.6px);
+  -webkit-backdrop-filter: blur(4.6px);
 }
 </style>

@@ -6,6 +6,9 @@
 
     <v-main>
       <v-container>
+        <h1 class="page__title">Catálogo de cursos</h1>
+      </v-container>
+      <v-container fluid>
         <FilterBar :toggleFilterSidebar="toggleFilterSidebar" />
       </v-container>
 
@@ -25,6 +28,7 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import Navbar from "@/components/NavBar.vue";
 import Courses from "@/components/Courses.vue";
 import FilterBar from "@/components/FilterBar.vue";
@@ -37,15 +41,17 @@ export default {
     FilterBar,
     Filters,
   },
-  data() {
-    return {
-      isFilterSidebarVisible: false,
+  setup() {
+    const isFilterSidebarVisible = ref(false);
+
+    const toggleFilterSidebar = () => {
+      isFilterSidebarVisible.value = !isFilterSidebarVisible.value;
     };
-  },
-  methods: {
-    toggleFilterSidebar() {
-      this.isFilterSidebarVisible = !this.isFilterSidebarVisible;
-    },
+
+    return {
+      isFilterSidebarVisible,
+      toggleFilterSidebar,
+    };
   },
 };
 </script>
@@ -57,6 +63,13 @@ export default {
   background-size: cover;
   position: relative;
   min-height: 100vh;
+}
+
+.page__title {
+  font-family: var(--font-title);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-text-light);
 }
 
 .filter-sidebar {

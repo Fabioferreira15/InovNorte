@@ -2,7 +2,9 @@
   <nav>
     <v-app-bar flat color="rgba(251, 251, 254, 0.06)" class="navbar" dense>
       <v-app-bar-title>
-        <v-img :src="Logo" max-width="45"></v-img>
+        <router-link to="/">
+          <v-img :src="Logo" max-width="45"></v-img>
+        </router-link>
       </v-app-bar-title>
 
       <SearchBar />
