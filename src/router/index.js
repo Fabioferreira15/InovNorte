@@ -8,6 +8,7 @@ import CourseCatalogView from "../views/CourseCatalogView.vue";
 import SettingsView from "../views/SettingsView.vue";
 import LandingScrollView from "@/views/LandingScrollView.vue";
 import SearchResultView from "@/views/SearchResultView.vue";
+import Course from "@/views/CourseView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -57,6 +58,11 @@ const router = createRouter({
       name: "search-result",
       component: SearchResultView,
     },
+    {
+      path: "/course/:name/:id",
+      name: "course",
+      component: Course,
+    }
   ],
 });
 

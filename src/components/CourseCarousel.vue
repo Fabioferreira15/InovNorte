@@ -59,7 +59,12 @@
               </ul>
             </v-card-text>
             <div class="btns d-flex">
-              <v-btn class="flex-grow-1" color="white">Inscrever</v-btn>
+              <v-btn
+                class="flex-grow-1"
+                color="white"
+                @click="openCourse(course)"
+                >Inscrever</v-btn
+              >
               <v-btn class="ml-5" variant="plain" color="white">
                 <svg class="icon" width="24" height="24">
                   <use
@@ -84,6 +89,8 @@ import "vue3-carousel/dist/carousel.css";
 import CourseImage from "@/assets/Images/image.png";
 import { ref } from "vue";
 import Video from "@/assets/video_example.mp4";
+import { useRouter } from 'vue-router'
+
 
 export default {
   components: {
@@ -97,6 +104,10 @@ export default {
   },
 
   setup(props) {
+
+    const router = useRouter()
+
+
     const breakpoints = {
       1024: {
         itemsToShow: 5,
@@ -115,6 +126,10 @@ export default {
     const menu = ref(true);
     const showVideo = ref({});
 
+    const openCourse = (course) => {
+      router.push({ name: 'course', params: {name: course.title, id: course.id } })
+    };
+
     return {
       breakpoints,
       props,
@@ -122,6 +137,7 @@ export default {
       menu,
       Video,
       showVideo,
+      openCourse,
     };
   },
 };

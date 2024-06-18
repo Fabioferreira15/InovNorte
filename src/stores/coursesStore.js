@@ -24,6 +24,9 @@ export const useCoursesStore = defineStore("courses", {
         .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
         .slice(0, 10);
     },
+    getCourseById: (state) => (id) => {
+      return state.courses.find((course) => course.id === id);
+    },
   },
   actions: {
     async fetchCourses() {
