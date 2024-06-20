@@ -13,12 +13,13 @@
       <v-col cols="12" md="auto" class="chips-container">
         <v-chip-group v-model="selectedFilters" multiple class="filter-chips">
           <v-chip
-            v-for="filter in categories"
-            :key="filter.id"
+            v-for="category in categories"
+            :key="category.id"
+            :value="category.id"
             class="filter-chip d-flex align-center justify-center"
             filter
           >
-            {{ filter.name }}
+            {{ category.name }}
           </v-chip>
         </v-chip-group>
       </v-col>
@@ -31,7 +32,6 @@
           label="Ordenar"
           class="sort-select"
           hide-details
-          :menu-props="{ contentClass: 'custom-select-background' }"
         ></v-select>
       </v-col>
     </v-row>
@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed, watch } from "vue";
 import { useCoursesStore } from "@/stores/coursesStore";
 
 export default {
@@ -48,12 +48,33 @@ export default {
     const coursesStore = useCoursesStore();
     const categories = ref([]);
     const selectedFilters = ref([]);
-    const sortOption = ref(null);
-    const sortOptions = ref(["Opção 1", "Opção 2", "Opção 3"]);
+    const sortOptions = ref([
+      "Avaliações",
+      "Data de Início",
+      "Data de Criação",
+      "Total de avaliações",
+    ]);
 
     onMounted(async () => {
       await coursesStore.fetchCategories();
       categories.value = coursesStore.categories;
+    });
+
+    const sortOption = computed({
+      get: () => coursesStore.sortOption,
+      set: (value) => {
+        coursesStore.setSortOption(value);
+      },
+    });
+
+    watch(selectedFilters, (newFilters) => {
+      const categoryNames = newFilters
+        .map((id) => {
+          const category = categories.value.find((cat) => cat.id === id);
+          return category ? category.name : null;
+        })
+        .filter((name) => name !== null); 
+      coursesStore.setCategoriesFilter(categoryNames);
     });
 
     return {

@@ -7,10 +7,11 @@ export const handlers = [
   http.get("/courses", () => {
     return HttpResponse.json({
       courses,
+      total: courses.length,
     });
   }),
 
-  http.get("/courses/page/:page", (req, res) => {
+/*   http.get("/courses/page/:page", (req, res) => {
     const page = parseInt(req.params.page, 10);
     const perPage = 6;
     const start = (page - 1) * perPage;
@@ -19,7 +20,7 @@ export const handlers = [
     const total = courses.length;
 
     return HttpResponse.json({ data, total });
-  }),
+  }), */
 
   /* categorias */
   http.get("/categories", () => {

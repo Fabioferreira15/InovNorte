@@ -3,29 +3,60 @@ import { defineStore } from "pinia";
 export const useCoursesStore = defineStore("courses", {
   state: () => ({
     courses: [],
+    allCourses: [],
     categories: [],
-    filteredCourses: [],
-    paginatedCourses: [],
+    selectedCategories: [],
+    searchResults: [],
     currentPage: 1,
     perPage: 6,
     totalPages: 0,
+    sortOption: null,
   }),
   getters: {
     getTop10Rated: (state) => {
-      return [...state.courses]
+      return [...state.allCourses]
         .sort((a, b) => b.average_rating - a.average_rating)
         .slice(0, 10);
     },
     courseTitles: (state) => {
-      return state.courses.map((course) => course.title);
+      return state.allCourses.map((course) => course.title);
     },
     getRecentlyAdded: (state) => {
-      return [...state.courses]
+      return [...state.allCourses]
         .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
         .slice(0, 10);
     },
     getCourseById: (state) => (id) => {
-      return state.courses.find((course) => course.id === id);
+      return state.allCourses.find((course) => course.id === id);
+    },
+    paginatedCourses: (state) => {
+      const start = (state.currentPage - 1) * state.perPage;
+      const end = start + state.perPage;
+      return state.courses.slice(start, end);
+    },
+    filteredAndSortedCourses: (state) => {
+      let filtered = state.allCourses.filter(
+        (course) =>
+          state.selectedCategories.length === 0 ||
+          state.selectedCategories.includes(course.category)
+      );
+
+      switch (state.sortOption) {
+        case "Avaliações":
+          return filtered.sort((a, b) => b.average_rating - a.average_rating);
+        case "Data de Início":
+          return filtered.sort(
+            (a, b) => new Date(a.start_date) - new Date(b.start_date)
+          );
+        case "Data de Criação":
+          return filtered.sort(
+            (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+          );
+        case "Total de avaliações":
+          return filtered.sort((a, b) => b.total_reviews - a.total_reviews);
+        default:
+          return filtered;
+      }
     },
   },
   actions: {
@@ -37,14 +68,35 @@ export const useCoursesStore = defineStore("courses", {
         }
         const data = await response.json();
         if (data.courses) {
-          this.courses = data.courses;
-          this.filteredCourses = data.courses;
+          this.allCourses = data.courses;
+          this.applySorting();
         } else {
           throw new Error("Erro a obter os cursos");
         }
       } catch (error) {
         console.error("Erro a obter os cursos", error);
       }
+    },
+
+    applySorting() {
+      this.courses = this.filteredAndSortedCourses;
+      this.totalPages = Math.ceil(
+        this.courses.length / this.perPage
+      );
+    },
+    setCurrentPage(page) {
+      this.currentPage = page;
+    },
+    setSortOption(option) {
+      this.sortOption = option;
+      this.applySorting();
+      this.setCurrentPage(1);
+    },
+
+    setCategoriesFilter(categories) {
+      this.selectedCategories = categories;
+      this.applySorting();
+      this.setCurrentPage(1);
     },
 
     async fetchCategories() {
@@ -63,27 +115,10 @@ export const useCoursesStore = defineStore("courses", {
         console.error("Erro a obter as categorias", error);
       }
     },
-    filterCourses(query) {
-      this.filteredCourses = this.courses.filter((course) => {
+    SearchCourses(query) {
+      this.searchResults = this.courses.filter((course) => {
         return course.title.toLowerCase().includes(query.toLowerCase());
       });
-    },
-    async fetchPaginatedCourses(
-      page = this.currentPage,
-      perPage = this.perPage
-    ) {
-      try {
-        const response = await fetch(`/courses/page/${page}`);
-        if (!response.ok) {
-          throw new Error("Erro a obter os cursos");
-        }
-        const result = await response.json();
-        this.paginatedCourses = result.data;
-        this.totalPages = Math.ceil(result.total / perPage);
-        this.currentPage = page;
-      } catch (error) {
-        console.error("Erro a obter os cursos", error);
-      }
     },
   },
 });

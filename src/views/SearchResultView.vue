@@ -29,7 +29,7 @@ export default {
 
     onMounted(() => {
       const searchQuery = route.query.q;
-      coursesStore.filterCourses(searchQuery);
+      coursesStore.searchCourses(searchQuery);
     });
 
     return {

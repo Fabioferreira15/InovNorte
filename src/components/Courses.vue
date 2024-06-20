@@ -39,7 +39,7 @@
               >
             </v-card-text>
             <div class="d-flex flex-row align-center btns mt-auto">
-              <v-btn color="primary">Inscrever</v-btn>
+              <v-btn color="primary" @click="openCourse(course)">Inscrever</v-btn>
               <v-btn icon flat class="favourite">
                 <v-icon size="large">mdi-heart-outline</v-icon>
               </v-btn>
@@ -58,7 +58,6 @@
     :length="totalPages"
     :total-visible="4"
     color="primary"
-    @update:model-value="fetchPaginatedCourses"
   ></v-pagination>
 </template>
 
@@ -66,33 +65,46 @@
 import { useCoursesStore } from "@/stores/coursesStore";
 import { onMounted, computed, ref, watch } from "vue";
 import CourseImage from "@/assets/Images/image.png";
+import { useCourseNavigation } from "@/composables/courseNavigation";
 
 export default {
   setup() {
     const coursesStore = useCoursesStore();
+    const { openCourse } = useCourseNavigation();
 
     const paginatedCourses = computed(() => coursesStore.paginatedCourses);
-    const currentPage = ref(coursesStore.currentPage);
+    const currentPage = computed({
+      get: () => coursesStore.currentPage,
+      set: (value) => coursesStore.setCurrentPage(value),
+    });
     const totalPages = computed(() => coursesStore.totalPages);
 
-    const fetchPaginatedCourses = (page) => {
-      coursesStore.fetchPaginatedCourses(page);
-    };
+    const sortOption = computed({
+      get: () => coursesStore.sortOption,
+      set: (value) => {
+        coursesStore.setSortOption(value);
+      },
+    });
 
     onMounted(() => {
-      fetchPaginatedCourses(currentPage.value);
+      if (!coursesStore.allCourses.length) {
+        coursesStore.fetchCourses().then(() => {
+          coursesStore.applySorting();
+        });
+      }
     });
 
     watch(currentPage, (newPage) => {
-      fetchPaginatedCourses(newPage);
+      coursesStore.setCurrentPage(newPage);
     });
 
     return {
       paginatedCourses,
       currentPage,
       totalPages,
-      fetchPaginatedCourses,
+      sortOption,
       CourseImage,
+      openCourse
     };
   },
 };

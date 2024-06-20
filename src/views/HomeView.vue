@@ -113,7 +113,6 @@
       </v-container>
     </v-main>
 
-    <Search />
   </div>
 </template>
 
@@ -124,6 +123,8 @@ import NavBar from "@/components/NavBar.vue";
 import Video from "@/assets/video_example.mp4";
 import CourseCarousel from "@/components/CourseCarousel.vue";
 import { useRouter } from "vue-router";
+import { useCourseNavigation } from "@/composables/courseNavigation";
+
 export default {
   components: {
     NavBar,
@@ -139,7 +140,7 @@ export default {
       rating: 0,
     });
     const categories = ref([]);
-    const router = useRouter();
+    const { openCourse } = useCourseNavigation();
 
     const topCourses = computed(() => {
       const courses = coursesStore.getTop10Rated;
@@ -154,7 +155,7 @@ export default {
     });
 
     const getRandomCourse = () => {
-      const allCourses = coursesStore.courses;
+      const allCourses = coursesStore.allCourses;
       const randomIndex = Math.floor(Math.random() * allCourses.length);
       return allCourses[randomIndex];
     };
@@ -163,12 +164,7 @@ export default {
       highlightedCourse.value = getRandomCourse();
     };
 
-    const openCourse = (course) => {
-      router.push({
-        name: "course",
-        params: { name: course.title, id: course.id },
-      });
-    };
+
 
     onMounted(() => {
       coursesStore.fetchCourses().then(() => {

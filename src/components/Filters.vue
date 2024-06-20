@@ -48,9 +48,19 @@
 </template>
 
 <script>
+import { ref } from "vue";
+
 export default {
   setup() {
-    return {};
+    const starRating = ref(null);
+    const difficulty = ref(null);
+    const price = ref(null);
+
+    return {
+      starRating,
+      difficulty,
+      price,
+    };
   },
 };
 </script>

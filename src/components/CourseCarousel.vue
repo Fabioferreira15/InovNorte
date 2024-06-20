@@ -16,7 +16,7 @@
               @mouseenter="showVideo[course.id] = true"
               @mouseleave="showVideo[course.id] = false"
             >
-              <v-container fluid class="course__card-container ">
+              <v-container fluid class="course__card-container">
                 <transition name="fade" mode="out-in">
                   <template v-if="showVideo[course.id]">
                     <video autoplay muted loop class="course__card-video">
@@ -34,9 +34,9 @@
                 </transition>
 
                 <v-card-subtitle>{{ course.category }}</v-card-subtitle>
-                <div class=" info">
+                <div class="info">
                   <v-card-title>{{ course.title }}</v-card-title>
-                  <v-card-text >
+                  <v-card-text>
                     {{ course.duration }} | {{ course.cost }}
                     <span class="course__card-rating">{{
                       course.average_rating
@@ -96,7 +96,7 @@ import "vue3-carousel/dist/carousel.css";
 import CourseImage from "@/assets/Images/image.png";
 import { ref } from "vue";
 import Video from "@/assets/video_example.mp4";
-import { useRouter } from "vue-router";
+import { useCourseNavigation } from "@/composables/courseNavigation";
 
 export default {
   components: {
@@ -110,7 +110,7 @@ export default {
   },
 
   setup(props) {
-    const router = useRouter();
+    const { openCourse } = useCourseNavigation();
 
     const breakpoints = {
       1024: {
@@ -129,13 +129,6 @@ export default {
 
     const menu = ref(true);
     const showVideo = ref({});
-
-    const openCourse = (course) => {
-      router.push({
-        name: "course",
-        params: { name: course.title, id: course.id },
-      });
-    };
 
     return {
       breakpoints,
