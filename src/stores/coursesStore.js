@@ -7,6 +7,7 @@ export const useCoursesStore = defineStore("courses", {
     categories: [],
     selectedCategories: [],
     searchResults: [],
+    sortedSearchResults: [],
     currentPage: 1,
     perPage: 6,
     totalPages: 0,
@@ -33,6 +34,11 @@ export const useCoursesStore = defineStore("courses", {
       const start = (state.currentPage - 1) * state.perPage;
       const end = start + state.perPage;
       return state.courses.slice(start, end);
+    },
+    paginatedSearchResults: (state) => {
+      const start = (state.currentPage - 1) * state.perPage;
+      const end = start + state.perPage;
+      return state.sortedSearchResults.slice(start, end);
     },
     filteredAndSortedCourses: (state) => {
       let filtered = state.allCourses.filter(
@@ -80,9 +86,7 @@ export const useCoursesStore = defineStore("courses", {
 
     applySorting() {
       this.courses = this.filteredAndSortedCourses;
-      this.totalPages = Math.ceil(
-        this.courses.length / this.perPage
-      );
+      this.totalPages = Math.ceil(this.courses.length / this.perPage);
     },
     setCurrentPage(page) {
       this.currentPage = page;
@@ -115,10 +119,39 @@ export const useCoursesStore = defineStore("courses", {
         console.error("Erro a obter as categorias", error);
       }
     },
-    SearchCourses(query) {
-      this.searchResults = this.courses.filter((course) => {
+    searchCourses(query) {
+      this.searchResults = this.allCourses.filter((course) => {
         return course.title.toLowerCase().includes(query.toLowerCase());
       });
+      this.applySearchSorting();
+    },
+    applySearchSorting() {
+      this.sortedSearchResults = this.sortCourses(
+        this.searchResults,
+        this.sortOption
+      );
+      this.totalPages = Math.ceil(
+        this.sortedSearchResults.length / this.perPage
+      );
+      this.setCurrentPage(1);
+    },
+    sortCourses(courses, sortOption) {
+      switch (sortOption) {
+        case "Avaliações":
+          return courses.sort((a, b) => b.average_rating - a.average_rating);
+        case "Data de Início":
+          return courses.sort(
+            (a, b) => new Date(a.start_date) - new Date(b.start_date)
+          );
+        case "Data de Criação":
+          return courses.sort(
+            (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+          );
+        case "Total de avaliações":
+          return courses.sort((a, b) => b.total_reviews - a.total_reviews);
+        default:
+          return courses;
+      }
     },
   },
 });

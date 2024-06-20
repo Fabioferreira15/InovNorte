@@ -1,15 +1,10 @@
 <template>
-  <!-- <div>
-    <p v-if="course">{{ course.title }}</p>
-    <p v-else>Loading...</p>
-  </div> -->
-
   <div class="courseView">
     <nav>
       <NavBar />
     </nav>
 
-    <v-main>
+    <v-main v-if="course">
       <v-container fluid class="video-container">
         <video autoplay muted loop class="bg-video">
           <source :src="Video" type="video/mp4" />
@@ -38,6 +33,7 @@
                   </span>
                   <span>({{ course.total_reviews }})</span>
                 </p>
+                <p class="course__description">{{ course.short_desc }}</p>
 
                 <p class="course__cost mt-4">
                   {{ course.cost }}
@@ -50,12 +46,9 @@
                   >
                     Inscrever</v-btn
                   >
-                  <v-btn
-                    class="ml-5 header__btn-secondary btn"
-                    variant="outlined"
-                    color="white"
-                    >favoritos</v-btn
-                  >
+                  <v-btn icon flat class="favourite">
+                    <v-icon size="large">mdi-heart-outline</v-icon>
+                  </v-btn>
                 </div>
               </div>
             </v-col>
@@ -66,7 +59,7 @@
       <v-container fluid>
         <v-row>
           <v-col>
-            <v-tabs v-model="tab" bg-color="primary" grow>
+            <v-tabs v-model="tab" color="white" grow>
               <v-tab v-for="tab in tabs" :key="tab.value" :value="tab.value">
                 {{ tab.title }}
               </v-tab>
@@ -76,24 +69,34 @@
               <v-tabs-window-item value="description">
                 <v-container>
                   <v-row>
-                    <v-col>
-                      <h2>Descrição</h2>
+                    <v-col cols="12">
+                      <h2 class="title">Descrição</h2>
                     </v-col>
-                    <v-col>
-                      <p>{{ course.description }}</p>
+                    <v-col cols="12">
+                      <p class="content">
+                        {{ course.description }}
+                      </p>
                     </v-col>
                   </v-row>
 
                   <v-row>
-                    <v-col>
-                      <h2>Objetivos</h2>
+                    <v-col cols="12">
+                      <h2 class="title">Objetivos</h2>
                     </v-col>
-                    <v-col>
-                      <ul>
+                    <v-col cols="12">
+                      <ul class="columns">
                         <li
+                          class="content"
                           v-for="objective in course.program.objectives"
                           :key="objective"
                         >
+                          <v-icon small color="white" class="mr-2">
+                            <svg class="icon" width="24" height="24">
+                              <use
+                                xlink:href="../assets/coolicons-sprite.svg#Checkbox_Check"
+                              ></use>
+                            </svg>
+                          </v-icon>
                           {{ objective }}
                         </li>
                       </ul>
@@ -101,15 +104,23 @@
                   </v-row>
 
                   <v-row>
-                    <v-col>
-                      <h2>Conteúdos</h2>
+                    <v-col cols="12">
+                      <h2 class="title">Conteúdos</h2>
                     </v-col>
-                    <v-col>
+                    <v-col cols="12">
                       <ul>
                         <li
+                          class="content"
                           v-for="module in course.program.contents"
                           :key="module"
                         >
+                          <v-icon color="white" class="mr-2">
+                            <svg class="icon" width="24" height="24">
+                              <use
+                                xlink:href="../assets/coolicons-sprite.svg#Checkbox_Check"
+                              ></use>
+                            </svg>
+                          </v-icon>
                           {{ module }}
                         </li>
                       </ul>
@@ -121,19 +132,19 @@
               <v-tabs-window-item value="details">
                 <v-container>
                   <v-row>
-                    <v-col>
-                      <h2>Metodologias</h2>
+                    <v-col cols="12">
+                      <h2 class="title">Metodologias</h2>
                     </v-col>
-                    <v-col>
-                     <p>{{ course.program.methodologies }}</p> 
+                    <v-col cols="12">
+                      <p class="content">{{ course.program.methodologies }}</p>
                     </v-col>
                   </v-row>
                   <v-row> </v-row>
-                  <v-col>
-                    <h2>Avaliação</h2>
+                  <v-col cols="12">
+                    <h2 class="title">Avaliação</h2>
                   </v-col>
-                  <v-col>
-                    <p>{{ course.program.assessment }}</p>
+                  <v-col cols="12">
+                    <p class="content">{{ course.program.assessment }}</p>
                   </v-col>
                 </v-container>
               </v-tabs-window-item>
@@ -141,32 +152,45 @@
               <v-tabs-window-item value="resources">
                 <v-container>
                   <v-row>
-                    <v-col>
-                      <h2>Bibliografia</h2>
+                    <v-col cols="12">
+                      <h2 class="title">Bibliografia</h2>
                     </v-col>
-                    <v-col>
-                      <p> {{ course.program.bibliography }} </p>
+                    <v-col cols="12">
+                      <p class="content">{{ course.program.bibliography }}</p>
                     </v-col>
-                    <v-col>
-                      <h2>Recursos adicionais</h2>
+                    <v-col cols="12">
+                      <h2 class="title">Recursos adicionais</h2>
                     </v-col>
                   </v-row>
                 </v-container>
               </v-tabs-window-item>
-              <v-tabs-window-item value="reviews"> 
+              <v-tabs-window-item value="reviews">
                 <v-container>
                   <v-row>
-                    <v-col>
-                      <h2>Reviews</h2>
+                    <v-col cols="12">
+                      <h2 class="title">Reviews</h2>
                     </v-col>
-                    <v-col>
-                      <p>{{ course.reviews }}</p>
+                    <v-col cols="12">
+                      <v-container v-if="course.reviews">
+                        <p>{{ course.reviews }}</p>
+                      </v-container>
+                      <v-container v-else>
+                        <p>Não existem reviews para este curso.</p>
+                      </v-container>
                     </v-col>
                   </v-row>
                 </v-container>
-                
-               </v-tabs-window-item>
+              </v-tabs-window-item>
             </v-tabs-window>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+    <v-main v-else>
+      <v-container>
+        <v-row>
+          <v-col>
+            <p>Loading...</p>
           </v-col>
         </v-row>
       </v-container>
@@ -304,6 +328,50 @@ export default {
   font-family: var(--font-text);
   font-weight: 200;
 }
+.course__description {
+  color: var(--color-text-light);
+  font-size: 1.6rem;
+  font-family: var(--font-text);
+  font-weight: 200;
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+}
+
+.content {
+  font-family: var(--font-text);
+  font-size: 1.6rem;
+  font-weight: 200;
+  color: var(--color-text-light);
+  line-height: 2;
+}
+
+.v-tabs {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.6px);
+  -webkit-backdrop-filter: blur(4.6px);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+}
+.columns {
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.favourite {
+  background-color: transparent;
+  color: var(--color-text-light);
+}
 
 @media (max-width: 768px) {
   .bg-video {
@@ -333,6 +401,18 @@ export default {
 
   .course__cost {
     font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .content {
+    font-size: 1.2rem;
+  }
+
+  .columns {
+    column-count: 1;
   }
 }
 </style>

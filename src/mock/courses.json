@@ -45,7 +45,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Livros sobre saúde pública e artigos acadêmicos., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2024-02-23",
-        "id": 1
+        "id": 1,
+        "short_desc": "Fundamentos da Saúde Pública 1 oferecido por Carlos Mendes, focado em Introdução à Saúde Pública, Epidemiologia Básica, Políticas de Saúde, Promoção da Saúde Comunitária."
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 2",
@@ -93,7 +94,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Livros sobre educação e artigos acadêmicos., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2024-05-13",
-        "id": 2
+        "id": 2,
+        "short_desc": "Metodologias Ativas de Aprendizagem 2 oferecido por Maria Fernandes, focado em Fundamentos das Metodologias Ativas, Técnicas de Engajamento de Alunos, Ferramentas Digitais para Educação, Avaliação de Resultados de Aprendizagem."
     },
     {
         "title": "Introdução à Análise de Negócios 3",
@@ -113,11 +115,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ana Cardoso",
+                    "image_url": "https://example.com/images/ana.png"
+                }
             }
         ],
         "average_rating": 3.9,
@@ -151,7 +161,8 @@
         },
         "createdAt": "2023-09-12",
         "updatedAt": "2024-06-07",
-        "id": 3
+        "id": 3,
+        "short_desc": "Introdução à Análise de Negócios 3 oferecido por João Silva, focado em Análise Financeira Avançada, Gestão Estratégica, Gestão de Projetos Complexos, Inovação nos Negócios."
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 4",
@@ -199,7 +210,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Livros sobre sustentabilidade e artigos acadêmicos., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2024-05-23",
-        "id": 4
+        "id": 4,
+        "short_desc": "Estratégias de Sustentabilidade Empresarial 4 oferecido por Ana Costa, focado em Fundamentos da Sustentabilidade, Gestão de Recursos, Estratégias para Sustentabilidade, Avaliação de Impacto Ambiental."
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 5",
@@ -219,11 +231,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Marta Sousa",
+                    "image_url": "https://example.com/images/marta.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Luís Silva",
+                    "image_url": "https://example.com/images/luis.png"
+                }
             }
         ],
         "average_rating": 4.9,
@@ -257,7 +277,8 @@
         },
         "createdAt": "2023-12-04",
         "updatedAt": "2023-10-25",
-        "id": 5
+        "id": 5,
+        "short_desc": "Desenvolvimento de Aplicações Móveis 5 oferecido por Ricardo Santos, focado em Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados, Metodologias e técnicas avançadas, com exemplos práticos, Estudos de caso e aplicação prática, com projetos colaborativos, Avaliação final e integração dos conhecimentos adquiridos."
     },
     {
         "title": "Fundamentos da Saúde Pública 6",
@@ -305,7 +326,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Artigos acadêmicos e recursos online., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-12-20",
-        "id": 6
+        "id": 6,
+        "short_desc": "Fundamentos da Saúde Pública 6 oferecido por Prof. Saúde 6, focado em Saúde Comunitária, Avanços em Epidemiologia, Implementação de Políticas de Saúde, Projetos de Promoção da Saúde."
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 7",
@@ -325,11 +347,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "João Martins",
+                    "image_url": "https://example.com/images/joao.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Luís Silva",
+                    "image_url": "https://example.com/images/luis.png"
+                }
             }
         ],
         "average_rating": 3.7,
@@ -363,7 +393,8 @@
         },
         "createdAt": "2023-10-05",
         "updatedAt": "2023-09-01",
-        "id": 7
+        "id": 7,
+        "short_desc": "Metodologias Ativas de Aprendizagem 7 oferecido por Prof. Educação 7, focado em Novas Metodologias de Ensino, Engajamento em Sala de Aula, Uso de Tecnologia na Educação, Melhoria de Resultados Educacionais."
     },
     {
         "title": "Introdução à Análise de Negócios 8",
@@ -383,11 +414,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "João Martins",
+                    "image_url": "https://example.com/images/joao.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             }
         ],
         "average_rating": 4.2,
@@ -421,7 +460,8 @@
         },
         "createdAt": "2023-10-03",
         "updatedAt": "2023-09-06",
-        "id": 8
+        "id": 8,
+        "short_desc": "Introdução à Análise de Negócios 8 oferecido por Prof. Negócios 8, focado em Introdução à Análise de Negócios, Planejamento Estratégico, Análise Financeira, Gestão de Projetos."
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 9",
@@ -441,11 +481,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Marta Sousa",
+                    "image_url": "https://example.com/images/marta.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             }
         ],
         "average_rating": 4.3,
@@ -479,7 +527,8 @@
         },
         "createdAt": "2023-10-16",
         "updatedAt": "2023-09-25",
-        "id": 9
+        "id": 9,
+        "short_desc": "Estratégias de Sustentabilidade Empresarial 9 oferecido por Prof. Sustentabilidade 9, focado em Fundamentos da Sustentabilidade, Gestão de Recursos, Estratégias para Sustentabilidade, Avaliação de Impacto Ambiental."
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 10",
@@ -527,7 +576,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-11-24",
-        "id": 10
+        "id": 10,
+        "short_desc": "Desenvolvimento de Aplicações Móveis 10 oferecido por Prof. Tecnologia 10, focado em Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados, Metodologias e técnicas avançadas, com exemplos práticos, Estudos de caso e aplicação prática, com projetos colaborativos, Avaliação final e integração dos conhecimentos adquiridos."
     },
     {
         "title": "Fundamentos da Saúde Pública 11",
@@ -547,11 +597,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "João Martins",
+                    "image_url": "https://example.com/images/joao.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ana Cardoso",
+                    "image_url": "https://example.com/images/ana.png"
+                }
             }
         ],
         "average_rating": 4.6,
@@ -585,7 +643,8 @@
         },
         "createdAt": "2024-04-05",
         "updatedAt": "2023-09-01",
-        "id": 11
+        "id": 11,
+        "short_desc": "Fundamentos da Saúde Pública 11 oferecido por Prof. Saúde 11, focado em Introdução à Saúde Pública, Epidemiologia Básica, Políticas de Saúde, Promoção da Saúde Comunitária."
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 12",
@@ -605,11 +664,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ana Cardoso",
+                    "image_url": "https://example.com/images/ana.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ana Cardoso",
+                    "image_url": "https://example.com/images/ana.png"
+                }
             }
         ],
         "average_rating": 4.0,
@@ -643,7 +710,8 @@
         },
         "createdAt": "2024-06-03",
         "updatedAt": "2023-08-30",
-        "id": 12
+        "id": 12,
+        "short_desc": "Metodologias Ativas de Aprendizagem 12 oferecido por Prof. Educação 12, focado em Fundamentos das Metodologias Ativas, Técnicas de Engajamento de Alunos, Ferramentas Digitais para Educação, Avaliação de Resultados de Aprendizagem."
     },
     {
         "title": "Introdução à Análise de Negócios 13",
@@ -663,11 +731,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "João Martins",
+                    "image_url": "https://example.com/images/joao.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Marta Sousa",
+                    "image_url": "https://example.com/images/marta.png"
+                }
             }
         ],
         "average_rating": 3.2,
@@ -701,7 +777,8 @@
         },
         "createdAt": "2023-06-15",
         "updatedAt": "2023-12-09",
-        "id": 13
+        "id": 13,
+        "short_desc": "Introdução à Análise de Negócios 13 oferecido por Prof. Negócios 13, focado em Análise Financeira Avançada, Gestão Estratégica, Gestão de Projetos Complexos, Inovação nos Negócios."
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 14",
@@ -749,7 +826,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Livros sobre sustentabilidade e artigos acadêmicos., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-06-26",
-        "id": 14
+        "id": 14,
+        "short_desc": "Estratégias de Sustentabilidade Empresarial 14 oferecido por Prof. Sustentabilidade 14, focado em Fundamentos da Sustentabilidade, Gestão de Recursos, Estratégias para Sustentabilidade, Avaliação de Impacto Ambiental."
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 15",
@@ -797,7 +875,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2024-04-24",
-        "id": 15
+        "id": 15,
+        "short_desc": "Desenvolvimento de Aplicações Móveis 15 oferecido por Prof. Tecnologia 15, focado em Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados, Metodologias e técnicas avançadas, com exemplos práticos, Estudos de caso e aplicação prática, com projetos colaborativos, Avaliação final e integração dos conhecimentos adquiridos."
     },
     {
         "title": "Fundamentos da Saúde Pública 16",
@@ -817,11 +896,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Luís Silva",
+                    "image_url": "https://example.com/images/luis.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "João Martins",
+                    "image_url": "https://example.com/images/joao.png"
+                }
             }
         ],
         "average_rating": 4.6,
@@ -855,7 +942,8 @@
         },
         "createdAt": "2024-04-22",
         "updatedAt": "2023-11-01",
-        "id": 16
+        "id": 16,
+        "short_desc": "Fundamentos da Saúde Pública 16 oferecido por Prof. Saúde 16, focado em Introdução à Saúde Pública, Epidemiologia Básica, Políticas de Saúde, Promoção da Saúde Comunitária."
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 17",
@@ -903,7 +991,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Livros sobre educação e artigos acadêmicos., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-06-25",
-        "id": 17
+        "id": 17,
+        "short_desc": "Metodologias Ativas de Aprendizagem 17 oferecido por Prof. Educação 17, focado em Fundamentos das Metodologias Ativas, Técnicas de Engajamento de Alunos, Ferramentas Digitais para Educação, Avaliação de Resultados de Aprendizagem."
     },
     {
         "title": "Introdução à Análise de Negócios 18",
@@ -951,7 +1040,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Artigos acadêmicos e workshops com profissionais de negócios., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-12-27",
-        "id": 18
+        "id": 18,
+        "short_desc": "Introdução à Análise de Negócios 18 oferecido por Prof. Negócios 18, focado em Análise Financeira Avançada, Gestão Estratégica, Gestão de Projetos Complexos, Inovação nos Negócios."
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 19",
@@ -999,7 +1089,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Recursos online e workshops com profissionais de sustentabilidade., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-12-23",
-        "id": 19
+        "id": 19,
+        "short_desc": "Estratégias de Sustentabilidade Empresarial 19 oferecido por Prof. Sustentabilidade 19, focado em Sustentabilidade Avançada, Recursos Renováveis, Inovação em Sustentabilidade, Estudos de Impacto Ambiental."
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 20",
@@ -1019,11 +1110,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Luís Silva",
+                    "image_url": "https://example.com/images/luis.png"
+                }
             }
         ],
         "average_rating": 4.5,
@@ -1057,7 +1156,8 @@
         },
         "createdAt": "2024-03-11",
         "updatedAt": "2024-02-16",
-        "id": 20
+        "id": 20,
+        "short_desc": "Desenvolvimento de Aplicações Móveis 20 oferecido por Prof. Tecnologia 20, focado em Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados, Metodologias e técnicas avançadas, com exemplos práticos, Estudos de caso e aplicação prática, com projetos colaborativos, Avaliação final e integração dos conhecimentos adquiridos."
     },
     {
         "title": "Fundamentos da Saúde Pública 21",
@@ -1105,7 +1205,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Artigos acadêmicos e recursos online., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2024-03-22",
-        "id": 21
+        "id": 21,
+        "short_desc": "Fundamentos da Saúde Pública 21 oferecido por Prof. Saúde 21, focado em Saúde Comunitária, Avanços em Epidemiologia, Implementação de Políticas de Saúde, Projetos de Promoção da Saúde."
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 22",
@@ -1125,11 +1226,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ana Cardoso",
+                    "image_url": "https://example.com/images/ana.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Marta Sousa",
+                    "image_url": "https://example.com/images/marta.png"
+                }
             }
         ],
         "average_rating": 3.1,
@@ -1163,7 +1272,8 @@
         },
         "createdAt": "2024-01-18",
         "updatedAt": "2023-09-01",
-        "id": 22
+        "id": 22,
+        "short_desc": "Metodologias Ativas de Aprendizagem 22 oferecido por Prof. Educação 22, focado em Novas Metodologias de Ensino, Engajamento em Sala de Aula, Uso de Tecnologia na Educação, Melhoria de Resultados Educacionais."
     },
     {
         "title": "Introdução à Análise de Negócios 23",
@@ -1211,7 +1321,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Artigos acadêmicos e workshops com profissionais de negócios., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-09-12",
-        "id": 23
+        "id": 23,
+        "short_desc": "Introdução à Análise de Negócios 23 oferecido por Prof. Negócios 23, focado em Análise Financeira Avançada, Gestão Estratégica, Gestão de Projetos Complexos, Inovação nos Negócios."
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 24",
@@ -1231,11 +1342,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "João Martins",
+                    "image_url": "https://example.com/images/joao.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             }
         ],
         "average_rating": 4.1,
@@ -1269,7 +1388,8 @@
         },
         "createdAt": "2024-04-28",
         "updatedAt": "2024-01-18",
-        "id": 24
+        "id": 24,
+        "short_desc": "Estratégias de Sustentabilidade Empresarial 24 oferecido por Prof. Sustentabilidade 24, focado em Fundamentos da Sustentabilidade, Gestão de Recursos, Estratégias para Sustentabilidade, Avaliação de Impacto Ambiental."
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 25",
@@ -1289,11 +1409,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Marta Sousa",
+                    "image_url": "https://example.com/images/marta.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Luís Silva",
+                    "image_url": "https://example.com/images/luis.png"
+                }
             }
         ],
         "average_rating": 3.6,
@@ -1327,7 +1455,8 @@
         },
         "createdAt": "2023-11-05",
         "updatedAt": "2024-01-06",
-        "id": 25
+        "id": 25,
+        "short_desc": "Desenvolvimento de Aplicações Móveis 25 oferecido por Prof. Tecnologia 25, focado em Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados, Metodologias e técnicas avançadas, com exemplos práticos, Estudos de caso e aplicação prática, com projetos colaborativos, Avaliação final e integração dos conhecimentos adquiridos."
     },
     {
         "title": "Fundamentos da Saúde Pública 26",
@@ -1375,7 +1504,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Artigos acadêmicos e recursos online., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2024-01-27",
-        "id": 26
+        "id": 26,
+        "short_desc": "Fundamentos da Saúde Pública 26 oferecido por Prof. Saúde 26, focado em Saúde Comunitária, Avanços em Epidemiologia, Implementação de Políticas de Saúde, Projetos de Promoção da Saúde."
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 27",
@@ -1423,7 +1553,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Recursos online e workshops com educadores., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-06-21",
-        "id": 27
+        "id": 27,
+        "short_desc": "Metodologias Ativas de Aprendizagem 27 oferecido por Prof. Educação 27, focado em Novas Metodologias de Ensino, Engajamento em Sala de Aula, Uso de Tecnologia na Educação, Melhoria de Resultados Educacionais."
     },
     {
         "title": "Introdução à Análise de Negócios 28",
@@ -1443,11 +1574,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Luís Silva",
+                    "image_url": "https://example.com/images/luis.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             }
         ],
         "average_rating": 3.3,
@@ -1481,7 +1620,8 @@
         },
         "createdAt": "2024-05-16",
         "updatedAt": "2023-12-11",
-        "id": 28
+        "id": 28,
+        "short_desc": "Introdução à Análise de Negócios 28 oferecido por Prof. Negócios 28, focado em Análise Financeira Avançada, Gestão Estratégica, Gestão de Projetos Complexos, Inovação nos Negócios."
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 29",
@@ -1501,11 +1641,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             }
         ],
         "average_rating": 3.2,
@@ -1539,7 +1687,8 @@
         },
         "createdAt": "2024-03-13",
         "updatedAt": "2023-11-05",
-        "id": 29
+        "id": 29,
+        "short_desc": "Estratégias de Sustentabilidade Empresarial 29 oferecido por Prof. Sustentabilidade 29, focado em Sustentabilidade Avançada, Recursos Renováveis, Inovação em Sustentabilidade, Estudos de Impacto Ambiental."
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 30",
@@ -1587,7 +1736,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-12-15",
-        "id": 30
+        "id": 30,
+        "short_desc": "Desenvolvimento de Aplicações Móveis 30 oferecido por Prof. Tecnologia 30, focado em Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados, Metodologias e técnicas avançadas, com exemplos práticos, Estudos de caso e aplicação prática, com projetos colaborativos, Avaliação final e integração dos conhecimentos adquiridos."
     },
     {
         "title": "Fundamentos da Saúde Pública 31",
@@ -1635,7 +1785,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Livros sobre saúde pública e artigos acadêmicos., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-12-15",
-        "id": 31
+        "id": 31,
+        "short_desc": "Fundamentos da Saúde Pública 31 oferecido por Prof. Saúde 31, focado em Introdução à Saúde Pública, Epidemiologia Básica, Políticas de Saúde, Promoção da Saúde Comunitária."
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 32",
@@ -1655,11 +1806,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ana Cardoso",
+                    "image_url": "https://example.com/images/ana.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             }
         ],
         "average_rating": 4.0,
@@ -1693,7 +1852,8 @@
         },
         "createdAt": "2023-09-27",
         "updatedAt": "2023-11-10",
-        "id": 32
+        "id": 32,
+        "short_desc": "Metodologias Ativas de Aprendizagem 32 oferecido por Prof. Educação 32, focado em Fundamentos das Metodologias Ativas, Técnicas de Engajamento de Alunos, Ferramentas Digitais para Educação, Avaliação de Resultados de Aprendizagem."
     },
     {
         "title": "Introdução à Análise de Negócios 33",
@@ -1741,7 +1901,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Artigos acadêmicos e workshops com profissionais de negócios., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-11-27",
-        "id": 33
+        "id": 33,
+        "short_desc": "Introdução à Análise de Negócios 33 oferecido por Prof. Negócios 33, focado em Análise Financeira Avançada, Gestão Estratégica, Gestão de Projetos Complexos, Inovação nos Negócios."
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 34",
@@ -1789,7 +1950,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Livros sobre sustentabilidade e artigos acadêmicos., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-10-10",
-        "id": 34
+        "id": 34,
+        "short_desc": "Estratégias de Sustentabilidade Empresarial 34 oferecido por Prof. Sustentabilidade 34, focado em Fundamentos da Sustentabilidade, Gestão de Recursos, Estratégias para Sustentabilidade, Avaliação de Impacto Ambiental."
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 35",
@@ -1809,11 +1971,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Luís Silva",
+                    "image_url": "https://example.com/images/luis.png"
+                }
             }
         ],
         "average_rating": 3.1,
@@ -1847,7 +2017,8 @@
         },
         "createdAt": "2023-12-01",
         "updatedAt": "2023-11-14",
-        "id": 35
+        "id": 35,
+        "short_desc": "Desenvolvimento de Aplicações Móveis 35 oferecido por Prof. Tecnologia 35, focado em Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados, Metodologias e técnicas avançadas, com exemplos práticos, Estudos de caso e aplicação prática, com projetos colaborativos, Avaliação final e integração dos conhecimentos adquiridos."
     },
     {
         "title": "Fundamentos da Saúde Pública 36",
@@ -1867,11 +2038,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             }
         ],
         "average_rating": 4.4,
@@ -1905,7 +2084,8 @@
         },
         "createdAt": "2024-03-26",
         "updatedAt": "2023-07-29",
-        "id": 36
+        "id": 36,
+        "short_desc": "Fundamentos da Saúde Pública 36 oferecido por Prof. Saúde 36, focado em Introdução à Saúde Pública, Epidemiologia Básica, Políticas de Saúde, Promoção da Saúde Comunitária."
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 37",
@@ -1925,11 +2105,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Marta Sousa",
+                    "image_url": "https://example.com/images/marta.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ana Cardoso",
+                    "image_url": "https://example.com/images/ana.png"
+                }
             }
         ],
         "average_rating": 3.4,
@@ -1963,7 +2151,8 @@
         },
         "createdAt": "2023-09-13",
         "updatedAt": "2023-07-22",
-        "id": 37
+        "id": 37,
+        "short_desc": "Metodologias Ativas de Aprendizagem 37 oferecido por Prof. Educação 37, focado em Fundamentos das Metodologias Ativas, Técnicas de Engajamento de Alunos, Ferramentas Digitais para Educação, Avaliação de Resultados de Aprendizagem."
     },
     {
         "title": "Introdução à Análise de Negócios 38",
@@ -1983,11 +2172,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Luís Silva",
+                    "image_url": "https://example.com/images/luis.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ana Cardoso",
+                    "image_url": "https://example.com/images/ana.png"
+                }
             }
         ],
         "average_rating": 4.6,
@@ -2021,7 +2218,8 @@
         },
         "createdAt": "2023-11-23",
         "updatedAt": "2024-01-22",
-        "id": 38
+        "id": 38,
+        "short_desc": "Introdução à Análise de Negócios 38 oferecido por Prof. Negócios 38, focado em Análise Financeira Avançada, Gestão Estratégica, Gestão de Projetos Complexos, Inovação nos Negócios."
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 39",
@@ -2041,11 +2239,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Marta Sousa",
+                    "image_url": "https://example.com/images/marta.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "João Martins",
+                    "image_url": "https://example.com/images/joao.png"
+                }
             }
         ],
         "average_rating": 4.1,
@@ -2079,7 +2285,8 @@
         },
         "createdAt": "2024-01-28",
         "updatedAt": "2024-05-26",
-        "id": 39
+        "id": 39,
+        "short_desc": "Estratégias de Sustentabilidade Empresarial 39 oferecido por Prof. Sustentabilidade 39, focado em Fundamentos da Sustentabilidade, Gestão de Recursos, Estratégias para Sustentabilidade, Avaliação de Impacto Ambiental."
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 40",
@@ -2099,11 +2306,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Luís Silva",
+                    "image_url": "https://example.com/images/luis.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ana Cardoso",
+                    "image_url": "https://example.com/images/ana.png"
+                }
             }
         ],
         "average_rating": 4.5,
@@ -2137,7 +2352,8 @@
         },
         "createdAt": "2024-05-01",
         "updatedAt": "2023-10-01",
-        "id": 40
+        "id": 40,
+        "short_desc": "Desenvolvimento de Aplicações Móveis 40 oferecido por Prof. Tecnologia 40, focado em Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados, Metodologias e técnicas avançadas, com exemplos práticos, Estudos de caso e aplicação prática, com projetos colaborativos, Avaliação final e integração dos conhecimentos adquiridos."
     },
     {
         "title": "Fundamentos da Saúde Pública 41",
@@ -2157,11 +2373,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "João Martins",
+                    "image_url": "https://example.com/images/joao.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ana Cardoso",
+                    "image_url": "https://example.com/images/ana.png"
+                }
             }
         ],
         "average_rating": 3.4,
@@ -2195,7 +2419,8 @@
         },
         "createdAt": "2024-02-02",
         "updatedAt": "2024-01-28",
-        "id": 41
+        "id": 41,
+        "short_desc": "Fundamentos da Saúde Pública 41 oferecido por Prof. Saúde 41, focado em Saúde Comunitária, Avanços em Epidemiologia, Implementação de Políticas de Saúde, Projetos de Promoção da Saúde."
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 42",
@@ -2215,11 +2440,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             }
         ],
         "average_rating": 4.4,
@@ -2253,7 +2486,8 @@
         },
         "createdAt": "2024-01-24",
         "updatedAt": "2024-04-16",
-        "id": 42
+        "id": 42,
+        "short_desc": "Metodologias Ativas de Aprendizagem 42 oferecido por Prof. Educação 42, focado em Novas Metodologias de Ensino, Engajamento em Sala de Aula, Uso de Tecnologia na Educação, Melhoria de Resultados Educacionais."
     },
     {
         "title": "Introdução à Análise de Negócios 43",
@@ -2301,7 +2535,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Livros sobre negócios e artigos acadêmicos., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-11-19",
-        "id": 43
+        "id": 43,
+        "short_desc": "Introdução à Análise de Negócios 43 oferecido por Prof. Negócios 43, focado em Introdução à Análise de Negócios, Planejamento Estratégico, Análise Financeira, Gestão de Projetos."
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 44",
@@ -2321,11 +2556,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             }
         ],
         "average_rating": 3.6,
@@ -2359,7 +2602,8 @@
         },
         "createdAt": "2023-12-28",
         "updatedAt": "2024-03-29",
-        "id": 44
+        "id": 44,
+        "short_desc": "Estratégias de Sustentabilidade Empresarial 44 oferecido por Prof. Sustentabilidade 44, focado em Fundamentos da Sustentabilidade, Gestão de Recursos, Estratégias para Sustentabilidade, Avaliação de Impacto Ambiental."
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 45",
@@ -2407,7 +2651,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-06-22",
-        "id": 45
+        "id": 45,
+        "short_desc": "Desenvolvimento de Aplicações Móveis 45 oferecido por Prof. Tecnologia 45, focado em Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados, Metodologias e técnicas avançadas, com exemplos práticos, Estudos de caso e aplicação prática, com projetos colaborativos, Avaliação final e integração dos conhecimentos adquiridos."
     },
     {
         "title": "Fundamentos da Saúde Pública 46",
@@ -2455,7 +2700,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Artigos acadêmicos e recursos online., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-09-18",
-        "id": 46
+        "id": 46,
+        "short_desc": "Fundamentos da Saúde Pública 46 oferecido por Prof. Saúde 46, focado em Saúde Comunitária, Avanços em Epidemiologia, Implementação de Políticas de Saúde, Projetos de Promoção da Saúde."
     },
     {
         "title": "Metodologias Ativas de Aprendizagem 47",
@@ -2475,11 +2721,19 @@
         "reviews": [
             {
                 "comentário": "Excelente curso, muito prático e informativo!",
-                "nota": 5
+                "nota": 5,
+                "user": {
+                    "name": "Ricardo Gomes",
+                    "image_url": "https://example.com/images/ricardo.png"
+                }
             },
             {
                 "comentário": "Bom material, mas esperava mais interacções em tempo real.",
-                "nota": 4
+                "nota": 4,
+                "user": {
+                    "name": "Marta Sousa",
+                    "image_url": "https://example.com/images/marta.png"
+                }
             }
         ],
         "average_rating": 4.6,
@@ -2513,7 +2767,8 @@
         },
         "createdAt": "2023-07-13",
         "updatedAt": "2023-09-20",
-        "id": 47
+        "id": 47,
+        "short_desc": "Metodologias Ativas de Aprendizagem 47 oferecido por Prof. Educação 47, focado em Novas Metodologias de Ensino, Engajamento em Sala de Aula, Uso de Tecnologia na Educação, Melhoria de Resultados Educacionais."
     },
     {
         "title": "Introdução à Análise de Negócios 48",
@@ -2561,7 +2816,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Artigos acadêmicos e workshops com profissionais de negócios., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-08-20",
-        "id": 48
+        "id": 48,
+        "short_desc": "Introdução à Análise de Negócios 48 oferecido por Prof. Negócios 48, focado em Análise Financeira Avançada, Gestão Estratégica, Gestão de Projetos Complexos, Inovação nos Negócios."
     },
     {
         "title": "Estratégias de Sustentabilidade Empresarial 49",
@@ -2609,7 +2865,8 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Livros sobre sustentabilidade e artigos acadêmicos., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2023-12-03",
-        "id": 49
+        "id": 49,
+        "short_desc": "Estratégias de Sustentabilidade Empresarial 49 oferecido por Prof. Sustentabilidade 49, focado em Fundamentos da Sustentabilidade, Gestão de Recursos, Estratégias para Sustentabilidade, Avaliação de Impacto Ambiental."
     },
     {
         "title": "Desenvolvimento de Aplicações Móveis 50",
@@ -2657,6 +2914,7 @@
             "bibliography": "A bibliografia do curso incluirá A bibliografia do curso incluirá Principais livros e artigos acadêmicos, recursos online como bases de dados digitais, e workshops conduzidos por profissionais experientes. Referências específicas incluem títulos como 'Fundamentos de Saúde Pública' e 'Estratégias Empresariais Sustentáveis'., oferecendo uma base sólida de conhecimento., oferecendo uma base sólida de conhecimento."
         },
         "createdAt": "2024-02-06",
-        "id": 50
+        "id": 50,
+        "short_desc": "Desenvolvimento de Aplicações Móveis 50 oferecido por Prof. Tecnologia 50, focado em Introdução e conceitos básicos, incluindo uma visão geral dos temas abordados, Metodologias e técnicas avançadas, com exemplos práticos, Estudos de caso e aplicação prática, com projetos colaborativos, Avaliação final e integração dos conhecimentos adquiridos."
     }
 ]

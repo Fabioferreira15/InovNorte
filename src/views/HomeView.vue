@@ -40,7 +40,7 @@
                   </p>
 
                   <p class="course__description mt-4">
-                    {{ highlightedCourse.description }}
+                    {{ highlightedCourse.short_desc }}
                   </p>
                   <div class="mt-3 d-flex align-center">
                     <v-btn
@@ -399,10 +399,10 @@ export default {
 
 @media (max-width: 768px) {
   .bg-video {
-    height: 50vh;
+    height: 40vh;
   }
   .video-container {
-    height: 50vh;
+    height: 40vh;
   }
 
   .overlay {
