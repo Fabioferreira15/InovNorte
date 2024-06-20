@@ -122,7 +122,6 @@ import { useCoursesStore } from "@/stores/coursesStore";
 import NavBar from "@/components/NavBar.vue";
 import Video from "@/assets/video_example.mp4";
 import CourseCarousel from "@/components/CourseCarousel.vue";
-import { useRouter } from "vue-router";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 
 export default {
