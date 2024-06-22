@@ -1,9 +1,10 @@
-import { http, HttpResponse } from "msw";
+import { http, HttpResponse} from "msw";
 import courses from "./courses.json";
 import categories from "./categories.json";
+import users from "./users.json";
+
 
 export const handlers = [
-  /* Cursos */
   http.get("/courses", () => {
     return HttpResponse.json({
       courses,
@@ -11,21 +12,28 @@ export const handlers = [
     });
   }),
 
-/*   http.get("/courses/page/:page", (req, res) => {
-    const page = parseInt(req.params.page, 10);
-    const perPage = 6;
-    const start = (page - 1) * perPage;
-    const end = start + perPage;
-    const data = courses.slice(start, end);
-    const total = courses.length;
-
-    return HttpResponse.json({ data, total });
-  }), */
-
-  /* categorias */
   http.get("/categories", () => {
     return HttpResponse.json({
       categories,
     });
+  }),
+
+  http.post("/login", async ({request}) => {
+    const { username, password } = await request.json();
+    const user = users.users.find(
+      (user) => user.username === username && user.password === password
+    );
+
+    if (user) {
+      return HttpResponse.json({
+        message: "Login efetuado com sucesso",
+        user
+      });
+      
+    } else {
+      return HttpResponse.json({
+        message: "Credenciais inválidas",
+      },401);
+    }
   }),
 ];

@@ -28,6 +28,7 @@
               v-for="(item, index) in items"
               :key="index"
               :value="index"
+              @click="item.title === 'Logout' ? logout() : null"
             >
               <template v-slot:prepend>
                 <v-icon color="primary">
@@ -77,8 +78,9 @@
 import { ref } from "vue";
 import Logo from "@/assets/Images/Logo.svg";
 import sprite from "@/assets/coolicons-sprite.svg";
-
 import SearchBar from "@/components/SearchBar.vue";
+import { useAuthStore } from "@/stores/authStore";
+import { useRouter } from "vue-router";
 
 export default {
   components: {
@@ -87,6 +89,8 @@ export default {
 
   setup() {
     const overlay = ref(false);
+    const authStore = useAuthStore();
+    const router = useRouter();
 
     const items = [
       { title: "Perfil", icon: "User_02" },
@@ -95,11 +99,19 @@ export default {
       { title: "Logout", icon: "Log_Out" },
     ];
 
+    const logout = () => {
+      authStore.logout();
+      alert("Logout realizado com sucesso!");
+      router.push("/");
+
+    };
+
     return {
       Logo,
       overlay,
       items,
       sprite,
+      logout,
     };
   },
 };

@@ -18,7 +18,7 @@
       <div class="overlay">
         <v-container fluid class="info">
           <v-row class="d-flex align-center course__header-info">
-            <v-col cols="12" xl="5">
+            <v-col cols="12" md="5">
               <transition name="slide-fade" mode="out-in">
                 <div :key="highlightedCourse.id">
                   <h1 class="course__title">
@@ -112,7 +112,6 @@
         </v-row>
       </v-container>
     </v-main>
-
   </div>
 </template>
 
@@ -162,8 +161,6 @@ export default {
     const updateHighlightedCourse = () => {
       highlightedCourse.value = getRandomCourse();
     };
-
-
 
     onMounted(() => {
       coursesStore.fetchCourses().then(() => {
@@ -397,7 +394,7 @@ export default {
   box-shadow: 0 5px 15px var(--color-primary-100);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .bg-video {
     height: 40vh;
   }
@@ -415,6 +412,9 @@ export default {
   .course__header-info {
     height: 0;
   }
+}
+
+@media (max-width: 768px) {
   .course__title {
     font-size: 2rem;
   }
