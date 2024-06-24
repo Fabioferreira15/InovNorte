@@ -4,19 +4,34 @@
             "id": 1,
             "username": "utilizador1",
             "password": "senha1",
-            "email": "utilizador1@example.com"
+            "email": "utilizador1@example.com",
+            "interests": [
+                "tecnologia",
+                "educação"
+            ],
+            "preferred_format": "online"
         },
         {
             "id": 2,
             "username": "utilizador2",
             "password": "senha2",
-            "email": "utilizador2@example.com"
+            "email": "utilizador2@example.com",
+            "interests": [
+                "saúde",
+                "negócios"
+            ],
+            "preferred_format": "online"
         },
         {
             "id": 3,
             "username": "utilizador3",
             "password": "senha3",
-            "email": "utilizador3@example.com"
+            "email": "utilizador3@example.com",
+            "interests": [
+                "sustentabilidade",
+                "tecnologia"
+            ],
+            "preferred_format": "online"
         }
     ]
 }

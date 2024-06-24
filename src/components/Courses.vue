@@ -126,6 +126,7 @@ export default {
 
 .course__card-img {
   border-radius: 5px;
+  height: 100%;
 }
 
 .course__card-title {

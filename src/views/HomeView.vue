@@ -63,9 +63,76 @@
           </v-row>
         </v-container>
       </div>
+
+      <v-container fluid>
+        <v-row>
+          <v-col cols="12">
+            <h1 class="user__message">
+              Bem-vindo de volta <span>{{ userName }}</span>
+            </h1>
+          </v-col>
+        </v-row>
+        <v-row class="mt-6">
+          <v-col cols="12">
+            <h2 class="title">A nossa escolha para ti</h2>
+          </v-col>
+        </v-row>
+        <div class="OurPick">
+          <v-row>
+            <v-col cols="12" md="2">
+              <v-img :src="CourseImage" cover class="course__card-img"></v-img>
+            </v-col>
+            <v-col cols="12" md="9" class="d-flex flex-column justify-center">
+              <v-card-title class="course__card-title">{{
+                getBestCourseForUser.title
+              }}</v-card-title>
+              <v-card-subtitle class="course__card-category">{{
+                getBestCourseForUser.category
+              }}</v-card-subtitle>
+              <v-card-subtitle class="course__card-trainer">{{
+                getBestCourseForUser.trainer
+              }}</v-card-subtitle>
+              <v-card-text class="mt-4 rating d-flex align-center">
+                <v-rating
+                  v-model="getBestCourseForUser.average_rating"
+                  active-color="primary"
+                  color="white"
+                  half-increments
+                  readonly
+                  size="23"
+                  class="mr-4"
+                ></v-rating>
+                <span class="course__card-rating">{{
+                  getBestCourseForUser.average_rating
+                }}</span>
+                <span class="course__card-total"
+                  >({{ getBestCourseForUser.total_reviews }})</span
+                >
+              </v-card-text>
+              <div class="d-flex flex-row align-center btns mt-auto">
+                <v-btn color="primary" @click="openCourse(getBestCourseForUser)"
+                  >Inscrever</v-btn
+                >
+                <v-btn icon flat class="favourite">
+                  <v-icon size="large">mdi-heart-outline</v-icon>
+                </v-btn>
+              </div>
+            </v-col>
+            <v-col cols="12" md="1" class="d-flex justify-end price">
+              <p>{{ getBestCourseForUser.cost }}</p>
+            </v-col>
+          </v-row>
+        </div>
+      </v-container>
+
       <CourseCarousel title="Em destaque" :courses="topCourses" />
 
       <CourseCarousel title="Novidades" :courses="RecentlyAdded" />
+
+      <CourseCarousel
+        title="Baseado nos teus interesses"
+        :courses="BasedOnInterests"
+      />
 
       <v-container fluid class="allcourses">
         <v-row>
@@ -116,12 +183,13 @@
 </template>
 
 <script>
-import { onMounted, ref, computed } from "vue";
+import { onMounted, ref, computed, watch } from "vue";
 import { useCoursesStore } from "@/stores/coursesStore";
 import NavBar from "@/components/NavBar.vue";
 import Video from "@/assets/video_example.mp4";
 import CourseCarousel from "@/components/CourseCarousel.vue";
 import { useCourseNavigation } from "@/composables/courseNavigation";
+import CourseImage from "@/assets/Images/image.png";
 
 export default {
   components: {
@@ -142,14 +210,21 @@ export default {
 
     const topCourses = computed(() => {
       const courses = coursesStore.getTop10Rated;
-      console.log("Top 10 Courses by Rating:", courses);
       return courses;
     });
 
     const RecentlyAdded = computed(() => {
       const courses = coursesStore.getRecentlyAdded;
-      console.log("Recently Added Courses:", courses);
       return courses;
+    });
+
+    const BasedOnInterests = computed(() => {
+      const courses = coursesStore.getBasedOnUserInterests;
+      return courses;
+    });
+    const getBestCourseForUser = computed(() => {
+      const course = coursesStore.getBestForUser;
+      return course;
     });
 
     const getRandomCourse = () => {
@@ -161,6 +236,9 @@ export default {
     const updateHighlightedCourse = () => {
       highlightedCourse.value = getRandomCourse();
     };
+
+    const user = JSON.parse(localStorage.getItem("user"));
+    const userName = user.username;
 
     onMounted(() => {
       coursesStore.fetchCourses().then(() => {
@@ -181,6 +259,10 @@ export default {
       highlightedCourse,
       categories,
       openCourse,
+      userName,
+      BasedOnInterests,
+      getBestCourseForUser,
+      CourseImage,
     };
   },
 };
@@ -392,6 +474,97 @@ export default {
 .allcourses__btn:hover {
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 5px 15px var(--color-primary-100);
+}
+
+.course__card-img {
+  border-radius: 5px;
+  height: 100%;
+}
+
+.course__card-title {
+  color: var(--color-text-light);
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: var(--font-title);
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+.course__card-category {
+  font-size: 1.4rem;
+  font-weight: 200;
+  font-family: var(--font-text);
+  color: var(--color-text-light);
+  padding: 0;
+}
+
+.course__card-trainer {
+  font-size: 1.4rem;
+  font-weight: 200;
+  font-family: var(--font-text);
+  color: var(--color-text-light);
+  padding: 0;
+}
+
+.v-card-text {
+  padding: 0;
+}
+
+.favourite {
+  background-color: transparent;
+  color: var(--color-text-light);
+}
+.rating {
+  font-family: var(--font-text);
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: var(--color-text-light);
+}
+
+.course__card-total {
+  color: #8c8c8c;
+}
+
+.btns {
+  height: 100%;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: var(--font-title);
+  color: var(--color-text-light);
+  text-transform: capitalize;
+}
+
+.OurPick {
+  padding: 2rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.6px);
+  -webkit-backdrop-filter: blur(4.6px);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+}
+
+.title {
+  color: var(--color-text-light);
+  font-size: 2.4rem;
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+.user__message {
+  color: var(--color-text-light);
+  font-size: 4rem;
+  font-family: var(--font-title);
+  font-weight: 700;
+  margin-top: 5rem;
+}
+
+.user__message span {
+  -webkit-text-decoration: var(--color-primary-200) double underline;
+  text-decoration: var(--color-primary-200) double underline;
 }
 
 @media (max-width: 960px) {

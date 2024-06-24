@@ -64,6 +64,38 @@ export const useCoursesStore = defineStore("courses", {
           return filtered;
       }
     },
+    getBestForUser: (state) => {
+      const user = JSON.parse(localStorage.getItem("user"));
+      const interests = user.interests;
+      const preferredFormat = user.preferred_format;
+
+      const filteredCourses = state.allCourses.filter((course) => {
+        return (
+          interests.some((interest) => course.tags.includes(interest)) &&
+          course.format === preferredFormat
+        );
+      });
+
+      if (filteredCourses.length > 0) {
+        return filteredCourses.sort(
+          (a, b) => b.average_rating - a.average_rating
+        )[0];
+      }
+
+      return state.allCourses.sort(
+        (a, b) => b.average_rating - a.average_rating
+      )[0];
+    },
+    getBasedOnUserInterests: (state) => {
+      const user = JSON.parse(localStorage.getItem("user"));
+      const interests = user.interests;
+
+      return [...state.allCourses]
+        .filter((course) => {
+          return interests.some((interest) => course.tags.includes(interest));
+        })
+        .slice(0, 10);
+    },
   },
   actions: {
     async fetchCourses() {

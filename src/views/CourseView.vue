@@ -14,7 +14,7 @@
       <div class="overlay">
         <v-container fluid class="info">
           <v-row class="d-flex align-center course__header-info">
-            <v-col cols="12" xl="5">
+            <v-col cols="12" md="5">
               <div :key="course.id">
                 <h1 class="course__title">
                   {{ course.title }}
