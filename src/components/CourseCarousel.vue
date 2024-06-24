@@ -9,12 +9,13 @@
     >
       <slide v-for="course in courses" :key="course.id">
         <v-menu open-on-hover location="end" transition="scroll-x-transition">
-          <template v-slot:activator="{ props }">
+          <template v-slot:activator="{ props, on }">
             <v-card
               class="course__card"
               v-bind="props"
               @mouseenter="showVideo[course.id] = true"
               @mouseleave="showVideo[course.id] = false"
+              v-on="{ ...on, click: () => openCourse(course) }"
             >
               <v-container fluid class="course__card-container">
                 <transition name="fade" mode="out-in">
@@ -243,29 +244,6 @@ export default {
 }
 .course__card-rating {
   color: var(--color-text-light);
-}
-
-.objectives h1 {
-  font-size: 1.6rem;
-  font-family: var(--font-title);
-  font-weight: 700;
-  color: var(--color-text-light);
-}
-
-.objectives ul {
-  list-style: none;
-  padding: 0;
-}
-
-.objectives li {
-  font-size: 1.2rem;
-  font-family: var(--font-text);
-  font-weight: 200;
-  color: var(--color-text-light);
-}
-
-.objectives li:not(:last-child) {
-  margin-bottom: 1rem;
 }
 
 .btns {

@@ -28,11 +28,12 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import Navbar from "@/components/NavBar.vue";
 import Courses from "@/components/Courses.vue";
 import FilterBar from "@/components/FilterBar.vue";
 import Filters from "@/components/Filters.vue";
+import { useCoursesStore } from "@/stores/coursesStore";
 
 export default {
   components: {
@@ -42,11 +43,18 @@ export default {
     Filters,
   },
   setup() {
+    const coursesStore = useCoursesStore();
     const isFilterSidebarVisible = ref(false);
 
     const toggleFilterSidebar = () => {
       isFilterSidebarVisible.value = !isFilterSidebarVisible.value;
     };
+
+    onMounted(() => {
+      if (coursesStore.allCourses.length === 0) {
+        coursesStore.fetchCourses();
+      }
+    });
 
     return {
       isFilterSidebarVisible,

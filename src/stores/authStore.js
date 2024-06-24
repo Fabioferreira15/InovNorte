@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { useCoursesStore } from "./coursesStore";
 
 export const useAuthStore = defineStore("auth", {
   state: () => ({
@@ -28,6 +29,10 @@ export const useAuthStore = defineStore("auth", {
           this.isLoggedIn = true;
           localStorage.setItem("user", JSON.stringify(data.user));
           localStorage.setItem("isLoggedIn", true);
+
+          const coursesStore = useCoursesStore();
+          await coursesStore.fetchBestForUser(data.user.id);
+          await coursesStore.fetchInterestsCourses(data.user.id);
         } else {
           this.isLoggedIn = false;
           throw new Error(data.message);
@@ -42,6 +47,8 @@ export const useAuthStore = defineStore("auth", {
       localStorage.removeItem("isLoggedIn");
       this.user = null;
       this.isLoggedIn = false;
+      const coursesStore = useCoursesStore();
+      coursesStore.clearUserBest();
     },
   },
 });

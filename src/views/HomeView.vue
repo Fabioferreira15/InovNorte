@@ -4,7 +4,10 @@
       <NavBar />
     </nav>
 
-    <v-main class="main">
+    <v-main v-if="coursesStore.isLoading">
+      <SkeletonLoader />
+    </v-main>
+    <v-main v-else class="main">
       <v-container fluid class="video-container">
         <transition name="fade" mode="out-in">
           <div :key="highlightedCourse.id">
@@ -54,6 +57,7 @@
                       class="ml-5 header__btn-secondary btn"
                       variant="outlined"
                       color="white"
+                      @click="openCourse(highlightedCourse)"
                       >Mais informações</v-btn
                     >
                   </div>
@@ -77,10 +81,26 @@
             <h2 class="title">A nossa escolha para ti</h2>
           </v-col>
         </v-row>
-        <div class="OurPick">
+        <v-card
+          class="OurPick"
+          @mouseenter="showVideo[getBestCourseForUser.id] = true"
+          @mouseleave="showVideo[getBestCourseForUser.id] = false"
+        >
           <v-row>
             <v-col cols="12" md="2">
-              <v-img :src="CourseImage" cover class="course__card-img"></v-img>
+              <template v-if="showVideo[getBestCourseForUser.id]">
+                <video autoplay muted loop class="course__card-video">
+                  <source :src="Video" type="video/mp4" />
+                  Your browser does not support the video.
+                </video>
+              </template>
+              <template v-else>
+                <v-img
+                  :src="CourseImage"
+                  cover
+                  class="course__card-img"
+                ></v-img>
+              </template>
             </v-col>
             <v-col cols="12" md="9" class="d-flex flex-column justify-center">
               <v-card-title class="course__card-title">{{
@@ -122,7 +142,7 @@
               <p>{{ getBestCourseForUser.cost }}</p>
             </v-col>
           </v-row>
-        </div>
+        </v-card>
       </v-container>
 
       <CourseCarousel title="Em destaque" :courses="topCourses" />
@@ -190,11 +210,13 @@ import Video from "@/assets/video_example.mp4";
 import CourseCarousel from "@/components/CourseCarousel.vue";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 import CourseImage from "@/assets/Images/image.png";
+import SkeletonLoader from "@/components/SkeletonLoader.vue";
 
 export default {
   components: {
     NavBar,
     CourseCarousel,
+    SkeletonLoader,
   },
   setup() {
     const rating = ref(3);
@@ -209,28 +231,25 @@ export default {
     const { openCourse } = useCourseNavigation();
 
     const topCourses = computed(() => {
-      const courses = coursesStore.getTop10Rated;
-      return courses;
+      return coursesStore.top10Rated;
     });
 
     const RecentlyAdded = computed(() => {
-      const courses = coursesStore.getRecentlyAdded;
-      return courses;
+      return coursesStore.recentCourses;
     });
 
     const BasedOnInterests = computed(() => {
-      const courses = coursesStore.getBasedOnUserInterests;
-      return courses;
+      return coursesStore.interestsCourses;
     });
     const getBestCourseForUser = computed(() => {
-      const course = coursesStore.getBestForUser;
-      return course;
+      return coursesStore.bestForUser;
     });
 
     const getRandomCourse = () => {
-      const allCourses = coursesStore.allCourses;
-      const randomIndex = Math.floor(Math.random() * allCourses.length);
-      return allCourses[randomIndex];
+      const randomIndex = Math.floor(
+        Math.random() * coursesStore.randomCourses.length
+      );
+      return coursesStore.randomCourses[randomIndex];
     };
 
     const updateHighlightedCourse = () => {
@@ -240,16 +259,43 @@ export default {
     const user = JSON.parse(localStorage.getItem("user"));
     const userName = user.username;
 
+    const showVideo = ref({});
+
     onMounted(() => {
-      coursesStore.fetchCourses().then(() => {
+      if (coursesStore.randomCourses.length === 0) {
+        coursesStore.fetchRandomCourses().then(() => {
+          updateHighlightedCourse();
+          setInterval(updateHighlightedCourse, 5000);
+        });
+      } else {
         updateHighlightedCourse();
         setInterval(updateHighlightedCourse, 5000);
-      });
+      }
 
-      coursesStore.fetchCategories().then(() => {
-        categories.value = coursesStore.categories;
-      });
+      if (coursesStore.bestForUser === null) {
+        coursesStore.fetchBestForUser(user.id);
+      }
+
+      if (coursesStore.interestsCourses.length === 0) {
+        coursesStore.fetchInterestsCourses(user.id);
+      }
+
+      if (coursesStore.categories.length === 0) {
+        coursesStore.fetchCategories().then(() => {
+          categories.value = coursesStore.categories;
+        });
+      }
+
+      if (coursesStore.top10Rated.length === 0) {
+        coursesStore.fetchTop10Rated();
+      }
+
+      if (coursesStore.recentCourses.length === 0) {
+        coursesStore.fetchRecentlyAdded();
+      }
     });
+
+    watch(user)
 
     return {
       topCourses,
@@ -263,6 +309,8 @@ export default {
       BasedOnInterests,
       getBestCourseForUser,
       CourseImage,
+      showVideo,
+      coursesStore,
     };
   },
 };
@@ -565,6 +613,13 @@ export default {
 .user__message span {
   -webkit-text-decoration: var(--color-primary-200) double underline;
   text-decoration: var(--color-primary-200) double underline;
+}
+
+.course__card-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 @media (max-width: 960px) {
