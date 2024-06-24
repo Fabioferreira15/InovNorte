@@ -25,7 +25,7 @@
         </v-row>
       </v-container>
 
-      <v-container>
+      <v-container fluid>
         <v-card
           class="course-item"
           variant="flat"
@@ -205,6 +205,7 @@ export default {
 
 .course__card-img {
   border-radius: 5px;
+  height: 100%;
 }
 
 .course__card-title {
