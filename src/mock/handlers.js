@@ -216,4 +216,24 @@ export const handlers = [
       total: filteredCourses.length,
     });
   }),
+
+  http.get("/courses/:courseId", async ({ params }) => {
+    await delay(2000);
+    const courseId = params.courseId;
+    const course = courses.find((course) => course.id.toString() === courseId);
+
+    if (!course) {
+      return HttpResponse.json(
+        {
+          message: "Curso não encontrado",
+        },
+        404
+      );
+    }
+
+    return HttpResponse.json({
+      course,
+    });
+  }),
+
 ];

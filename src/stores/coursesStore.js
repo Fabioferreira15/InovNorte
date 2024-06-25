@@ -3,6 +3,7 @@ import { defineStore } from "pinia";
 export const useCoursesStore = defineStore("courses", {
   state: () => ({
     courses: [],
+    course: null,
     randomCourses: [],
     recentCourses: [],
     allCourses: [],
@@ -35,7 +36,7 @@ export const useCoursesStore = defineStore("courses", {
       return state.allCourses.find((course) => course.id === id);
     },
     paginatedCourses: (state) => {
-      return state.courses
+      return state.courses;
     },
     paginatedSearchResults: (state) => {
       const start = (state.currentPage - 1) * state.perPage;
@@ -55,9 +56,11 @@ export const useCoursesStore = defineStore("courses", {
             (state.filters.price === "free" && course.cost === "gratuito") ||
             (state.filters.price === "paid" && course.cost === "pago")) &&
           (state.filters.duration === null ||
-            (state.filters.duration === "short" && course.duration === "curto") ||
-            (state.filters.duration === "medium" && course.duration==='médio' )||
-            (state.filters.duration === "long" && course.duration==='longo'))
+            (state.filters.duration === "short" &&
+              course.duration === "curto") ||
+            (state.filters.duration === "medium" &&
+              course.duration === "médio") ||
+            (state.filters.duration === "long" && course.duration === "longo"))
       );
 
       switch (state.sortOption) {
@@ -89,17 +92,20 @@ export const useCoursesStore = defineStore("courses", {
     },
   },
   actions: {
-    async fetchData(endpoint, params,mutation, error) {
+    async fetchData(endpoint, params, mutation, error) {
       this.isLoading = true;
       this.error = null;
       try {
         const url = new URL(endpoint, window.location.origin);
-        Object.keys(params).forEach(key => {
-          if (params[key] !== null && params[key] !== undefined && params[key] !== "") {
+        Object.keys(params).forEach((key) => {
+          if (
+            params[key] !== null &&
+            params[key] !== undefined &&
+            params[key] !== ""
+          ) {
             url.searchParams.append(key, params[key]);
           }
         });
-
 
         const response = await fetch(url);
         if (!response.ok) {
@@ -150,6 +156,7 @@ export const useCoursesStore = defineStore("courses", {
     async fetchInterestsCourses(userId) {
       await this.fetchData(
         `/courses/interests/${userId}`,
+        {},
         "interestsCourses",
         "Erro a obter os cursos recomendados para o utilizador"
       );
@@ -166,9 +173,13 @@ export const useCoursesStore = defineStore("courses", {
         duration: this.filters.duration,
         sortOption: this.sortOption,
         q: this.searchQuery,
-      }
-      await this.fetchData("/courses", params ,"allCourses", "Erro a obter os cursos");
-
+      };
+      await this.fetchData(
+        "/courses",
+        params,
+        "allCourses",
+        "Erro a obter os cursos"
+      );
     },
 
     async fetchCategories() {
@@ -177,6 +188,15 @@ export const useCoursesStore = defineStore("courses", {
         {},
         "categories",
         "Erro a obter as categorias"
+      );
+    },
+
+    async fetchCourseById(courseId) {
+      await this.fetchData(
+        `/courses/${courseId}`,
+        {},
+        "course",
+        "Erro a obter o curso"
       );
     },
 
@@ -205,7 +225,7 @@ export const useCoursesStore = defineStore("courses", {
     },
 
     searchCourses(query) {
-      this.searchQuery = query
+      this.searchQuery = query;
       this.fetchCourses();
     },
     applySearchSorting() {

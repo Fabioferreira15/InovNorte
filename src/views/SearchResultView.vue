@@ -107,7 +107,7 @@ import { useCoursesStore } from "@/stores/coursesStore";
 import NavBar from "@/components/NavBar.vue";
 import CourseImage from "@/assets/Images/image.png";
 import { useCourseNavigation } from "@/composables/courseNavigation";
-import SkeletonLoader from "@/components/skeletonLoaders/SearchResults.vue";
+import SkeletonLoader from "@/components/skeletonLoaders/SearchResultsSkeleton.vue";
 
 export default {
   components: {

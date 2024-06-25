@@ -4,7 +4,11 @@
       <NavBar />
     </nav>
 
-    <v-main v-if="course">
+    <v-main v-if="coursesStore.isLoading">
+      <SkeletonLoader />
+    </v-main>
+
+    <v-main v-else>
       <v-container fluid class="video-container">
         <video autoplay muted loop class="bg-video">
           <source :src="Video" type="video/mp4" />
@@ -186,36 +190,30 @@
         </v-row>
       </v-container>
     </v-main>
-    <v-main v-else>
-      <v-container>
-        <v-row>
-          <v-col>
-            <p>Loading...</p>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
   </div>
 </template>
 
 <script>
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useCoursesStore } from "@/stores/coursesStore";
+import { useCourseNavigation } from "@/composables/courseNavigation";
 import NavBar from "@/components/NavBar.vue";
 import Video from "@/assets/video_example.mp4";
+import SkeletonLoader from "@/components/skeletonLoaders/HomeSkeleton.vue"
+
 
 export default {
   components: {
     NavBar,
+    SkeletonLoader,
   },
 
   setup() {
     const route = useRoute();
-    const router = useRouter();
     const coursesStore = useCoursesStore();
-    const course = ref(null);
     const tab = ref(null);
+    const { openCourse } = useCourseNavigation();
 
     const tabs = [
       { value: "description", title: "Descrição" },
@@ -224,33 +222,16 @@ export default {
       { value: "reviews", title: "Reviews" },
     ];
 
-    const loadCourse = async () => {
-      const id = Number(route.params.id);
-
-      let loadedCourse = coursesStore.getCourseById(id);
-      if (!loadedCourse) {
-        await coursesStore.fetchCourses();
-        loadedCourse = coursesStore.getCourseById(id);
-      }
-
-      if (loadedCourse) {
-        course.value = loadedCourse;
-
-        if (route.params.name !== loadedCourse.title) {
-          router.replace({
-            name: "course",
-            params: { name: loadedCourse.title, id: loadedCourse.id },
-          });
-        }
-      }
-    };
+    const course = computed(() => {
+      return coursesStore.course;
+    });
 
     onMounted(() => {
-      loadCourse();
+      coursesStore.fetchCourseById(route.params.id);
     });
 
     watch(route, () => {
-      loadCourse();
+      coursesStore.fetchCourseById(route.params.id);
     });
 
     return {
@@ -258,6 +239,8 @@ export default {
       Video,
       tab,
       tabs,
+      openCourse,
+      coursesStore,
     };
   },
 };

@@ -68,7 +68,7 @@
         </v-container>
       </div>
 
-      <v-container fluid>
+      <v-container>
         <v-row>
           <v-col cols="12">
             <h1 class="user__message">
@@ -210,7 +210,7 @@ import Video from "@/assets/video_example.mp4";
 import CourseCarousel from "@/components/CourseCarousel.vue";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 import CourseImage from "@/assets/Images/image.png";
-import SkeletonLoader from "@/components/SkeletonLoader.vue";
+import SkeletonLoader from "@/components/skeletonLoaders/HomeSkeleton.vue"
 
 export default {
   components: {
