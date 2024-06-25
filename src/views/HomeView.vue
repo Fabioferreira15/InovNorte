@@ -295,8 +295,6 @@ export default {
       }
     });
 
-    watch(user)
-
     return {
       topCourses,
       RecentlyAdded,

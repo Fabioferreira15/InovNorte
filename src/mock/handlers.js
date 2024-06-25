@@ -26,7 +26,7 @@ export const handlers = [
     });
   }),
 
-  http.get("/toprated", async () => {
+  http.get("/courses/toprated", async () => {
     await delay(2000);
     const top10Rated = [...courses]
       .sort((a, b) => b.average_rating - a.average_rating)

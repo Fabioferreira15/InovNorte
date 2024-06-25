@@ -18,6 +18,13 @@ export const useCoursesStore = defineStore("courses", {
     totalPages: 0,
     sortOption: null,
     isLoading: false,
+    error: null,
+    filters: {
+      starRating: null,
+      difficulty: null,
+      price: null,
+      duration: null,
+    },
   }),
   getters: {
     courseTitles: (state) => {
@@ -39,8 +46,19 @@ export const useCoursesStore = defineStore("courses", {
     filteredAndSortedCourses: (state) => {
       let filtered = state.allCourses.filter(
         (course) =>
-          state.selectedCategories.length === 0 ||
-          state.selectedCategories.includes(course.category)
+          (state.selectedCategories.length === 0 ||
+            state.selectedCategories.includes(course.category)) &&
+          (state.filters.starRating === null ||
+            course.average_rating >= state.filters.starRating) &&
+          (state.filters.difficulty === null ||
+            course.difficulty === state.filters.difficulty) &&
+          (state.filters.price === null ||
+            (state.filters.price === "free" && course.cost === "gratuito") ||
+            (state.filters.price === "paid" && course.cost === "pago")) &&
+          (state.filters.duration === null ||
+            (state.filters.duration === "short" && course.duration === "curto") ||
+            (state.filters.duration === "medium" && course.duration==='médio' )||
+            (state.filters.duration === "long" && course.duration==='longo'))
       );
 
       switch (state.sortOption) {
@@ -72,126 +90,69 @@ export const useCoursesStore = defineStore("courses", {
     },
   },
   actions: {
-    async fetchTop10Rated() {
+    async fetchData(endpoint, mutation, error) {
       this.isLoading = true;
+      this.error = null;
       try {
-        const response = await fetch("/toprated");
+        const response = await fetch(endpoint);
         if (!response.ok) {
-          throw new Error("Erro a obter os cursos mais bem avaliados");
+          throw new Error(error);
         }
         const data = await response.json();
-        if (data.courses) {
-          this.top10Rated = data.courses;
-          this.isLoading = false;
-        } else {
-          throw new Error("Erro a obter os cursos mais bem avaliados");
-        }
+        this[mutation] = data.courses || data.course || data.categories;
       } catch (error) {
-        throw new Error("Erro a obter os cursos mais bem avaliados");
-      }
-    },
-
-    async fetchRandomCourses() {
-      this.isLoading = true;
-      try {
-        const response = await fetch("/courses/random");
-        if (!response.ok) {
-          throw new Error("Erro a obter os cursos aleatórios");
-        }
-        const data = await response.json();
-        if (data.courses) {
-          this.randomCourses = data.courses;
-          this.isLoading = false;
-        } else {
-          throw new Error("Erro a obter os cursos aleatórios");
-        }
-      } catch (error) {
-        throw new Error("Erro a obter os cursos aleatórios");
-      }
-    },
-
-    async fetchRecentlyAdded() {
-      this.isLoading = true;
-      try {
-        const response = await fetch("/courses/recents");
-        if (!response.ok) {
-          throw new Error("Erro a obter os cursos recentemente adicionados");
-        }
-        const data = await response.json();
-        if (data.courses) {
-          this.recentCourses = data.courses;
-          this.isLoading = false;
-        } else {
-          throw new Error("Erro a obter os cursos recentemente adicionados");
-        }
-      } catch (error) {
-        throw new Error("Erro a obter os cursos recentemente adicionados");
-      }
-    },
-
-    async fetchBestForUser(userId) {
-      this.loading = true;
-      try {
-        const response = await fetch(`/courses/best/${userId}`);
-        if (!response.ok) {
-          throw new Error("Erro a obter o melhor curso para o utilizador");
-        }
-        const data = await response.json();
-        if (data.course) {
-          this.bestForUser = data.course;
-          this.loading = false;
-        } else {
-          throw new Error("Erro a obter o melhor curso para o utilizador");
-        }
-      } catch (error) {
-        throw new Error("Erro a obter o melhor curso para o utilizador");
-      }
-    },
-
-    async fetchInterestsCourses(userId) {
-      this.loading = true;
-      try {
-        const response = await fetch(`/courses/interests/${userId}`);
-        if (!response.ok) {
-          throw new Error(
-            "Erro a obter os cursos com base nos interesses do utilizador"
-          );
-        }
-        const data = await response.json();
-        if (data.courses) {
-          this.interestsCourses = data.courses;
-          this.loading = false;
-        } else {
-          throw new Error(
-            "Erro a obter os cursos com base nos interesses do utilizador"
-          );
-        }
-      } catch (error) {
-        throw new Error(
-          "Erro a obter os cursos com base nos interesses do utilizador"
-        );
-      }
-    },
-
-    async fetchCourses() {
-      this.isLoading = true;
-      try {
-        const response = await fetch("/courses");
-        if (!response.ok) {
-          throw new Error("Erro a obter os cursos");
-        }
-        const data = await response.json();
-        if (data.courses) {
-          this.allCourses = data.courses;
-          this.applySorting();
-        } else {
-          throw new Error("Erro a obter os cursos");
-        }
-      } catch (error) {
-        console.error("Erro a obter os cursos", error);
+        this.error = error.message;
       } finally {
         this.isLoading = false;
       }
+    },
+
+    async fetchTop10Rated() {
+      await this.fetchData(
+        "/courses/toprated",
+        "top10Rated",
+        "Erro a obter os cursos mais bem avaliados"
+      );
+    },
+    async fetchRandomCourses() {
+      await this.fetchData(
+        "/courses/random",
+        "randomCourses",
+        "Erro a obter os cursos aleatórios"
+      );
+    },
+    async fetchRecentlyAdded() {
+      await this.fetchData(
+        "/courses/recents",
+        "recentCourses",
+        "Erro a obter os cursos recentemente adicionados"
+      );
+    },
+    async fetchBestForUser(userId) {
+      await this.fetchData(
+        `/courses/best/${userId}`,
+        "bestForUser",
+        "Erro a obter os cursos recomendados para o utilizador"
+      );
+    },
+    async fetchInterestsCourses(userId) {
+      await this.fetchData(
+        `/courses/interests/${userId}`,
+        "interestsCourses",
+        "Erro a obter os cursos recomendados para o utilizador"
+      );
+    },
+    async fetchCourses() {
+      await this.fetchData("/courses", "allCourses", "Erro a obter os cursos");
+      this.applySorting();
+    },
+
+    async fetchCategories() {
+      await this.fetchData(
+        "/categories",
+        "categories",
+        "Erro a obter as categorias"
+      );
     },
 
     applySorting() {
@@ -213,22 +174,12 @@ export const useCoursesStore = defineStore("courses", {
       this.setCurrentPage(1);
     },
 
-    async fetchCategories() {
-      try {
-        const response = await fetch("/categories");
-        if (!response.ok) {
-          throw new Error("Erro a obter as categorias");
-        }
-        const data = await response.json();
-        if (data.categories) {
-          this.categories = data.categories;
-        } else {
-          throw new Error("Erro a obter as categorias");
-        }
-      } catch (error) {
-        console.error("Erro a obter as categorias", error);
-      }
+    setFilters(filters) {
+      this.filters = { ...this.filters, ...filters };
+      this.applySorting();
+      this.setCurrentPage(1);
     },
+
     searchCourses(query) {
       this.searchResults = this.allCourses.filter((course) => {
         return course.title.toLowerCase().includes(query.toLowerCase());
@@ -265,7 +216,6 @@ export const useCoursesStore = defineStore("courses", {
     },
     clearUserBest() {
       this.bestForUser = null;
-      
     },
   },
 });
