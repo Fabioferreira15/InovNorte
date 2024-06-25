@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <!-- Filtros de Avaliações -->
     <v-row>
       <v-col>
         <h1>Avaliações</h1>
@@ -17,6 +18,7 @@
       </v-col>
     </v-row>
 
+    <!-- Filtros de Dificuldade -->
     <v-row>
       <v-col>
         <h1>Dificuldade</h1>
@@ -24,15 +26,16 @@
         <v-row>
           <v-col>
             <v-radio-group v-model="difficulty" row>
-              <v-radio label="Iniciante" value="easy"></v-radio>
-              <v-radio label="Intermediário" value="medium"></v-radio>
-              <v-radio label="Avançado" value="hard"></v-radio>
+              <v-radio label="Iniciante" value="iniciante"></v-radio>
+              <v-radio label="Intermediário" value="intermediário"></v-radio>
+              <v-radio label="Avançado" value="avançado"></v-radio>
             </v-radio-group>
           </v-col>
         </v-row>
       </v-col>
     </v-row>
 
+    <!-- Filtros de Preço -->
     <v-row>
       <v-col>
         <h1>Preço</h1>
@@ -48,6 +51,7 @@
       </v-col>
     </v-row>
 
+    <!-- Filtros de Duração -->
     <v-row>
       <v-col>
         <h1>Duração</h1>
@@ -64,6 +68,7 @@
       </v-col>
     </v-row>
 
+    <!-- Botão para Resetar Filtros -->
     <v-row>
       <v-col class="text-center">
         <v-btn @click="resetFilters">Resetar Filtros</v-btn>
@@ -73,31 +78,37 @@
 </template>
 
 <script>
-import { ref, watch } from "vue";
+import { ref, watch, computed, onMounted } from "vue";
 import { useCoursesStore } from "@/stores/coursesStore";
 
 export default {
   setup() {
     const coursesStore = useCoursesStore();
-    const starRating = ref(null);
-    const difficulty = ref(null);
-    const price = ref(null);
-    const duration = ref(null);
+
+    const starRating = ref(coursesStore.filters.starRating);
+    const difficulty = ref(coursesStore.filters.difficulty);
+    const price = ref(coursesStore.filters.price);
+    const duration = ref(coursesStore.filters.duration);
+    const isLoading = computed(() => coursesStore.isLoading);
 
     watch(starRating, (newValue) => {
       coursesStore.setFilters({ starRating: newValue });
+      coursesStore.fetchCourses(); // Fetch courses whenever filter changes
     });
 
     watch(difficulty, (newValue) => {
       coursesStore.setFilters({ difficulty: newValue });
+      coursesStore.fetchCourses(); // Fetch courses whenever filter changes
     });
 
     watch(price, (newValue) => {
       coursesStore.setFilters({ price: newValue });
+      coursesStore.fetchCourses(); // Fetch courses whenever filter changes
     });
 
     watch(duration, (newValue) => {
       coursesStore.setFilters({ duration: newValue });
+      coursesStore.fetchCourses(); // Fetch courses whenever filter changes
     });
 
     const resetFilters = () => {
@@ -111,7 +122,12 @@ export default {
         price: null,
         duration: null,
       });
+      coursesStore.fetchCourses(); // Fetch courses after resetting filters
     };
+
+    onMounted(() => {
+      coursesStore.fetchCourses(); // Fetch courses on component mount
+    });
 
     return {
       starRating,
@@ -119,9 +135,17 @@ export default {
       price,
       duration,
       resetFilters,
+      isLoading,
     };
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+</style>

@@ -64,17 +64,18 @@ export default {
       get: () => coursesStore.sortOption,
       set: (value) => {
         coursesStore.setSortOption(value);
+        coursesStore.fetchCourses(); // Atualiza os cursos ao mudar a ordenação
       },
     });
 
     watch(selectedFilters, (newFilters) => {
-      const categoryNames = newFilters
-        .map((id) => {
-          const category = categories.value.find((cat) => cat.id === id);
-          return category ? category.name : null;
-        })
-        .filter((name) => name !== null); 
-      coursesStore.setCategoriesFilter(categoryNames);
+      const selectedCategories = newFilters.map((id) => {
+        const category = categories.value.find((cat) => cat.id === id);
+        return category ? category.name : null;
+      }).filter((name) => name !== null);
+
+      coursesStore.setCategoriesFilter(selectedCategories);
+      coursesStore.fetchCourses(); // Atualiza os cursos ao mudar os filtros de categoria
     });
 
     return {
@@ -86,6 +87,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 .filter-bar {

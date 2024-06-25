@@ -26,6 +26,11 @@
       </v-container>
 
       <v-container fluid>
+        <v-row v-if="coursesStore.isLoading">
+          <v-col v-for="n in coursesStore.perPage" :key="n" cols="12">
+            <SkeletonLoader />
+          </v-col>
+        </v-row>
         <v-card
           class="course-item"
           variant="flat"
@@ -102,10 +107,12 @@ import { useCoursesStore } from "@/stores/coursesStore";
 import NavBar from "@/components/NavBar.vue";
 import CourseImage from "@/assets/Images/image.png";
 import { useCourseNavigation } from "@/composables/courseNavigation";
+import SkeletonLoader from "@/components/skeletonLoaders/SearchResults.vue";
 
 export default {
   components: {
     NavBar,
+    SkeletonLoader,
   },
   setup() {
     const route = useRoute();
@@ -122,12 +129,13 @@ export default {
 
     const sortOption = ref();
 
-    const paginatedCourses = computed(
-      () => coursesStore.paginatedSearchResults
-    );
+    const paginatedCourses = computed(() => coursesStore.allCourses);
     const currentPage = computed({
       get: () => coursesStore.currentPage,
-      set: (value) => coursesStore.setCurrentPage(value),
+      set: (value) => {
+        coursesStore.setCurrentPage(value);
+        coursesStore.fetchCourses();
+      },
     });
     const totalPages = computed(() => coursesStore.totalPages);
 
@@ -138,7 +146,7 @@ export default {
 
     const applySearchSorting = () => {
       coursesStore.sortOption = sortOption.value;
-      coursesStore.applySearchSorting();
+      coursesStore.fetchCourses();
     };
 
     onMounted(async () => {
@@ -156,6 +164,10 @@ export default {
       applySearchSorting();
     });
 
+    watch(currentPage, () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
     return {
       searchQuery,
       paginatedCourses,
@@ -165,6 +177,7 @@ export default {
       sortOptions,
       sortOption,
       openCourse,
+      coursesStore,
     };
   },
 };

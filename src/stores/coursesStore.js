@@ -19,6 +19,7 @@ export const useCoursesStore = defineStore("courses", {
     sortOption: null,
     isLoading: false,
     error: null,
+    searchQuery: "",
     filters: {
       starRating: null,
       difficulty: null,
@@ -34,9 +35,7 @@ export const useCoursesStore = defineStore("courses", {
       return state.allCourses.find((course) => course.id === id);
     },
     paginatedCourses: (state) => {
-      const start = (state.currentPage - 1) * state.perPage;
-      const end = start + state.perPage;
-      return state.courses.slice(start, end);
+      return state.courses
     },
     paginatedSearchResults: (state) => {
       const start = (state.currentPage - 1) * state.perPage;
@@ -90,16 +89,25 @@ export const useCoursesStore = defineStore("courses", {
     },
   },
   actions: {
-    async fetchData(endpoint, mutation, error) {
+    async fetchData(endpoint, params,mutation, error) {
       this.isLoading = true;
       this.error = null;
       try {
-        const response = await fetch(endpoint);
+        const url = new URL(endpoint, window.location.origin);
+        Object.keys(params).forEach(key => {
+          if (params[key] !== null && params[key] !== undefined && params[key] !== "") {
+            url.searchParams.append(key, params[key]);
+          }
+        });
+
+
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error(error);
         }
         const data = await response.json();
         this[mutation] = data.courses || data.course || data.categories;
+        this.totalPages = Math.ceil(data.total / this.perPage);
       } catch (error) {
         this.error = error.message;
       } finally {
@@ -110,6 +118,7 @@ export const useCoursesStore = defineStore("courses", {
     async fetchTop10Rated() {
       await this.fetchData(
         "/courses/toprated",
+        {},
         "top10Rated",
         "Erro a obter os cursos mais bem avaliados"
       );
@@ -117,6 +126,7 @@ export const useCoursesStore = defineStore("courses", {
     async fetchRandomCourses() {
       await this.fetchData(
         "/courses/random",
+        {},
         "randomCourses",
         "Erro a obter os cursos aleatórios"
       );
@@ -124,6 +134,7 @@ export const useCoursesStore = defineStore("courses", {
     async fetchRecentlyAdded() {
       await this.fetchData(
         "/courses/recents",
+        {},
         "recentCourses",
         "Erro a obter os cursos recentemente adicionados"
       );
@@ -131,6 +142,7 @@ export const useCoursesStore = defineStore("courses", {
     async fetchBestForUser(userId) {
       await this.fetchData(
         `/courses/best/${userId}`,
+        {},
         "bestForUser",
         "Erro a obter os cursos recomendados para o utilizador"
       );
@@ -143,13 +155,26 @@ export const useCoursesStore = defineStore("courses", {
       );
     },
     async fetchCourses() {
-      await this.fetchData("/courses", "allCourses", "Erro a obter os cursos");
-      this.applySorting();
+      this.allCourses = [];
+      const params = {
+        page: this.currentPage,
+        perPage: this.perPage,
+        category: this.selectedCategories.join(","),
+        rating: this.filters.starRating,
+        difficulty: this.filters.difficulty,
+        price: this.filters.price,
+        duration: this.filters.duration,
+        sortOption: this.sortOption,
+        q: this.searchQuery,
+      }
+      await this.fetchData("/courses", params ,"allCourses", "Erro a obter os cursos");
+
     },
 
     async fetchCategories() {
       await this.fetchData(
         "/categories",
+        {},
         "categories",
         "Erro a obter as categorias"
       );
@@ -176,15 +201,12 @@ export const useCoursesStore = defineStore("courses", {
 
     setFilters(filters) {
       this.filters = { ...this.filters, ...filters };
-      this.applySorting();
-      this.setCurrentPage(1);
+      this.fetchCourses();
     },
 
     searchCourses(query) {
-      this.searchResults = this.allCourses.filter((course) => {
-        return course.title.toLowerCase().includes(query.toLowerCase());
-      });
-      this.applySearchSorting();
+      this.searchQuery = query
+      this.fetchCourses();
     },
     applySearchSorting() {
       this.sortedSearchResults = this.sortCourses(

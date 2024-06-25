@@ -38,11 +38,93 @@ export const handlers = [
     });
   }),
 
-  http.get("/courses", async () => {
+  http.get("/courses", async ({ request }) => {
     await delay(2000);
+
+    const url = new URL(request.url);
+    const params = url.searchParams;
+    const page = parseInt(params.get("page")) || 1;
+    const perPage = parseInt(params.get("perPage")) || 6;
+    const category = params.get("category");
+    const rating = params.get("rating");
+    const difficulty = params.get("difficulty");
+    const price = params.get("price");
+    const duration = params.get("duration");
+    const sortOption = params.get("sortOption");
+    const searchQuery = params.get("q");
+
+    let filteredCourses = courses;
+
+    if (searchQuery) {
+      filteredCourses = filteredCourses.filter((course) =>
+        course.title.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
+    if (category) {
+      filteredCourses = filteredCourses.filter(
+        (course) => course.category === category
+      );
+    }
+
+    if (rating) {
+      filteredCourses = filteredCourses.filter(
+        (course) => course.average_rating >= rating
+      );
+    }
+
+    if (difficulty) {
+      filteredCourses = filteredCourses.filter(
+        (course) => course.recommended_level === difficulty
+      );
+    }
+
+    if (price) {
+      filteredCourses = filteredCourses.filter((course) =>
+        price === "free" ? course.cost === "gratuito" : course.cost === "pago"
+      );
+    }
+
+    if (duration) {
+      filteredCourses = filteredCourses.filter((course) => {
+        if (duration === "short") return course.duration === "curto";
+        if (duration === "medium") return course.duration === "médio";
+        if (duration === "long") return course.duration === "longo";
+      });
+    }
+
+    switch (sortOption) {
+      case "Avaliações":
+        filteredCourses = filteredCourses.sort(
+          (a, b) => b.average_rating - a.average_rating
+        );
+        break;
+      case "Data de Início":
+        filteredCourses = filteredCourses.sort(
+          (a, b) => new Date(a.start_date) - new Date(b.start_date)
+        );
+        break;
+      case "Data de Criação":
+        filteredCourses = filteredCourses.sort(
+          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+        );
+        break;
+      case "Total de avaliações":
+        filteredCourses = filteredCourses.sort(
+          (a, b) => b.total_reviews - a.total_reviews
+        );
+        break;
+      default:
+        break;
+    }
+
+    const start = (page - 1) * perPage;
+    const end = start + perPage;
+    const paginatedCourses = filteredCourses.slice(start, end);
+
     return HttpResponse.json({
-      courses,
-      total: courses.length,
+      courses: paginatedCourses,
+      total: filteredCourses.length,
     });
   }),
 

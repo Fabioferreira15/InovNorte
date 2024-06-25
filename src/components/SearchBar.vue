@@ -15,18 +15,21 @@
 <script>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { useCoursesStore } from "@/stores/coursesStore";
 
 export default {
   setup() {
     const searchQuery = ref("");
     const router = useRouter();
     const loading = ref(false);
+    const coursesStore = useCoursesStore();
 
     const handleSearch = () => {
       loading.value = true;
       setTimeout(() => {
         loading.value = false;
         router.push({ name: "search-result", query: { q: searchQuery.value } });
+        coursesStore.searchCourses(searchQuery.value);
       }, 2000);
     };
 
