@@ -192,7 +192,7 @@
                 <v-card-text class="mb-4">{{
                   category.description
                 }}</v-card-text>
-                <v-btn color="primary">Explorar</v-btn>
+                <v-btn class="explore__btn" color="primary">Explorar</v-btn>
               </v-container>
             </v-card>
           </v-col>
@@ -619,6 +619,11 @@ export default {
   object-fit: cover;
   border-radius: 0.5rem;
 }
+
+.explore__btn {
+  width: 100%;
+}
+
 
 @media (max-width: 960px) {
   .bg-video {
