@@ -62,8 +62,9 @@ export const handlers = [
     }
 
     if (category) {
-      filteredCourses = filteredCourses.filter(
-        (course) => course.category === category
+      const selectedCategories = category.split(","); 
+      filteredCourses = filteredCourses.filter((course) =>
+        selectedCategories.includes(course.category)
       );
     }
 
@@ -235,5 +236,4 @@ export const handlers = [
       course,
     });
   }),
-
 ];

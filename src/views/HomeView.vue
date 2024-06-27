@@ -82,6 +82,7 @@
           </v-col>
         </v-row>
         <v-card
+          v-if="getBestCourseForUser"
           class="OurPick"
           @mouseenter="showVideo[getBestCourseForUser.id] = true"
           @mouseleave="showVideo[getBestCourseForUser.id] = false"
@@ -210,8 +211,7 @@ import Video from "@/assets/video_example.mp4";
 import CourseCarousel from "@/components/CourseCarousel.vue";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 import CourseImage from "@/assets/Images/image.png";
-import SkeletonLoader from "@/components/skeletonLoaders/HomeSkeleton.vue"
-import BreadCrumb from "@/components/Breadcrumb.vue";
+import SkeletonLoader from "@/components/skeletonLoaders/HomeSkeleton.vue";
 
 export default {
   components: {
@@ -223,6 +223,7 @@ export default {
     const rating = ref(3);
     const coursesStore = useCoursesStore();
     const highlightedCourse = ref({
+      id: null,
       title: "",
       category: "",
       description: "",
@@ -468,7 +469,6 @@ export default {
   margin-right: auto;
 }
 
-
 .categories h2 {
   color: var(--color-text-light);
   font-size: 2.4rem;
@@ -629,7 +629,6 @@ export default {
 .explore__btn {
   width: 100%;
 }
-
 
 @media (max-width: 960px) {
   .bg-video {

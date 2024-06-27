@@ -19,6 +19,7 @@ export const useCoursesStore = defineStore("courses", {
     totalPages: 0,
     sortOption: null,
     isLoading: false,
+    isCategoriesLoading: false,
     error: null,
     searchQuery: "",
     filters: {
@@ -29,20 +30,6 @@ export const useCoursesStore = defineStore("courses", {
     },
   }),
   getters: {
-    courseTitles: (state) => {
-      return state.allCourses.map((course) => course.title);
-    },
-    getCourseById: (state) => (id) => {
-      return state.allCourses.find((course) => course.id === id);
-    },
-    paginatedCourses: (state) => {
-      return state.courses;
-    },
-    paginatedSearchResults: (state) => {
-      const start = (state.currentPage - 1) * state.perPage;
-      const end = start + state.perPage;
-      return state.sortedSearchResults.slice(start, end);
-    },
     filteredAndSortedCourses: (state) => {
       let filtered = state.allCourses.filter(
         (course) =>
@@ -80,20 +67,13 @@ export const useCoursesStore = defineStore("courses", {
           return filtered;
       }
     },
-    getBasedOnUserInterests: (state) => {
-      const user = JSON.parse(localStorage.getItem("user"));
-      const interests = user.interests;
-
-      return [...state.allCourses]
-        .filter((course) => {
-          return interests.some((interest) => course.tags.includes(interest));
-        })
-        .slice(0, 10);
-    },
   },
   actions: {
     async fetchData(endpoint, params, mutation, error) {
       this.isLoading = true;
+      if (mutation === "categories") {
+        this.isCategoriesLoading = true;
+      }
       this.error = null;
       try {
         const url = new URL(endpoint, window.location.origin);
@@ -118,6 +98,9 @@ export const useCoursesStore = defineStore("courses", {
         this.error = error.message;
       } finally {
         this.isLoading = false;
+        if (mutation === "categories") {
+          this.isCategoriesLoading = false;
+        }
       }
     },
 
@@ -215,7 +198,7 @@ export const useCoursesStore = defineStore("courses", {
 
     setCategoriesFilter(categories) {
       this.selectedCategories = categories;
-      this.applySorting();
+      this.fetchCourses();  
       this.setCurrentPage(1);
     },
 

@@ -13,7 +13,7 @@
       <v-col cols="12" md="auto" class="chips-container">
         <v-skeleton-loader
           v-for ="n in 5"
-          v-if="coursesStore.isLoading"
+          v-if="coursesStore.isCategoriesLoading"
           card
           :height="'30px'"
           :width="'100px'"
@@ -91,7 +91,6 @@ export default {
         .filter((name) => name !== null);
 
       coursesStore.setCategoriesFilter(selectedCategories);
-      coursesStore.fetchCourses();
     });
 
     return {

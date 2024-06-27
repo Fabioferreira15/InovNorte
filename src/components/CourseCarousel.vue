@@ -131,6 +131,10 @@ export default {
     const menu = ref(true);
     const showVideo = ref({});
 
+    props.courses.forEach((course) => {
+      showVideo.value[course.id] = false;
+    });
+
     return {
       breakpoints,
       props,

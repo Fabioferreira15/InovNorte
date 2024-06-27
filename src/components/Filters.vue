@@ -1,6 +1,5 @@
 <template>
   <v-container>
-    <!-- Filtros de Avaliações -->
     <v-row>
       <v-col>
         <h1>Avaliações</h1>
@@ -18,7 +17,6 @@
       </v-col>
     </v-row>
 
-    <!-- Filtros de Dificuldade -->
     <v-row>
       <v-col>
         <h1>Dificuldade</h1>
@@ -35,7 +33,6 @@
       </v-col>
     </v-row>
 
-    <!-- Filtros de Preço -->
     <v-row>
       <v-col>
         <h1>Preço</h1>
@@ -51,7 +48,6 @@
       </v-col>
     </v-row>
 
-    <!-- Filtros de Duração -->
     <v-row>
       <v-col>
         <h1>Duração</h1>
@@ -68,7 +64,6 @@
       </v-col>
     </v-row>
 
-    <!-- Botão para Resetar Filtros -->
     <v-row>
       <v-col class="text-center">
         <v-btn @click="resetFilters">Resetar Filtros</v-btn>
@@ -93,22 +88,22 @@ export default {
 
     watch(starRating, (newValue) => {
       coursesStore.setFilters({ starRating: newValue });
-      coursesStore.fetchCourses(); // Fetch courses whenever filter changes
+      coursesStore.fetchCourses();
     });
 
     watch(difficulty, (newValue) => {
       coursesStore.setFilters({ difficulty: newValue });
-      coursesStore.fetchCourses(); // Fetch courses whenever filter changes
+      coursesStore.fetchCourses();
     });
 
     watch(price, (newValue) => {
       coursesStore.setFilters({ price: newValue });
-      coursesStore.fetchCourses(); // Fetch courses whenever filter changes
+      coursesStore.fetchCourses();
     });
 
     watch(duration, (newValue) => {
       coursesStore.setFilters({ duration: newValue });
-      coursesStore.fetchCourses(); // Fetch courses whenever filter changes
+      coursesStore.fetchCourses();
     });
 
     const resetFilters = () => {
@@ -122,11 +117,11 @@ export default {
         price: null,
         duration: null,
       });
-      coursesStore.fetchCourses(); // Fetch courses after resetting filters
+      coursesStore.fetchCourses();
     };
 
     onMounted(() => {
-      coursesStore.fetchCourses(); // Fetch courses on component mount
+      coursesStore.fetchCourses();
     });
 
     return {
