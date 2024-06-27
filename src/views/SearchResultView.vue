@@ -100,7 +100,7 @@
       v-model="currentPage"
       :length="totalPages"
       :total-visible="4"
-      color="primary"
+      color="white"
     ></v-pagination>
   </div>
 </template>

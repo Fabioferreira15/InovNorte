@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, computed, watch } from "vue";
 import Navbar from "@/components/NavBar.vue";
 import Courses from "@/components/Courses.vue";
 import FilterBar from "@/components/FilterBar.vue";
@@ -76,10 +76,22 @@ export default {
       isFilterSidebarVisible.value = !isFilterSidebarVisible.value;
     };
 
+    const currentPage = computed({
+      get: () => coursesStore.currentPage,
+      set: (value) => {
+        coursesStore.setCurrentPage(value);
+        coursesStore.fetchCourses();
+      },
+    });
+
     onMounted(() => {
       if (coursesStore.allCourses.length === 0) {
         coursesStore.fetchCourses();
       }
+    });
+
+    watch(currentPage, () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     return {

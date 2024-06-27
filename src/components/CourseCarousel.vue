@@ -237,9 +237,7 @@ export default {
 .course__card-container {
   padding: 0;
 }
-.course__card-img {
-  height: 10%;
-}
+
 
 .course__card-video {
   width: 100%;

@@ -6,8 +6,8 @@
         <v-divider></v-divider>
         <v-row>
           <v-col>
-            <v-radio-group v-model="starRating" row>
-              <v-radio label="Mais de 4.5" value="4.5"></v-radio>
+            <v-radio-group v-model="starRating">
+              <v-radio label="Mais de 4.5" value="4.5"> </v-radio>
               <v-radio label="Mais de 4" value="4"></v-radio>
               <v-radio label="Mais de 3.5" value="3.5"></v-radio>
               <v-radio label="Mais de 3" value="3"></v-radio>
@@ -66,7 +66,7 @@
 
     <v-row>
       <v-col class="text-center">
-        <v-btn @click="resetFilters">Resetar Filtros</v-btn>
+        <v-btn class="reset" flat color="primary" @click="resetFilters">Limpar</v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -137,10 +137,7 @@ export default {
 </script>
 
 <style scoped>
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.reset {
+  width: 100%;
 }
 </style>

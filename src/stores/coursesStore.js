@@ -30,6 +30,7 @@ export const useCoursesStore = defineStore("courses", {
     },
   }),
   getters: {
+   
     filteredAndSortedCourses: (state) => {
       let filtered = state.allCourses.filter(
         (course) =>
@@ -67,6 +68,7 @@ export const useCoursesStore = defineStore("courses", {
           return filtered;
       }
     },
+
   },
   actions: {
     async fetchData(endpoint, params, mutation, error) {
@@ -198,7 +200,7 @@ export const useCoursesStore = defineStore("courses", {
 
     setCategoriesFilter(categories) {
       this.selectedCategories = categories;
-      this.fetchCourses();  
+      this.fetchCourses();
       this.setCurrentPage(1);
     },
 

@@ -50,7 +50,7 @@
     v-model="currentPage"
     :length="totalPages"
     :total-visible="4"
-    color="primary"
+    color="white"
   ></v-pagination>
 </template>
 
@@ -81,6 +81,9 @@ export default {
         coursesStore.fetchCourses();
       }
     });
+
+  
+
 
     return {
       paginatedCourses,
@@ -167,4 +170,6 @@ export default {
   color: var(--color-text-light);
   text-transform: capitalize;
 }
+
+
 </style>
