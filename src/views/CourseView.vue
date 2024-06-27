@@ -30,7 +30,7 @@
                 <h1 class="course__title">
                   {{ course.title }}
                 </h1>
-                <p class="course__categorie mt-md-6 mt-3">
+                <p class="course__categorie mt-3">
                   {{ course.category }}
                   <span>
                     <v-rating
@@ -44,11 +44,7 @@
                   </span>
                   <span>({{ course.total_reviews }})</span>
                 </p>
-                <p class="course__description">{{ course.short_desc }}</p>
-
-                <p class="course__cost mt-4">
-                  {{ course.cost }}
-                </p>
+                <p class="course__description mt-2">{{ course.short_desc }}</p>
                 <div class="mt-3 d-flex align-center">
                   <v-btn
                     color="primary"
@@ -70,7 +66,7 @@
       <v-container fluid>
         <v-row>
           <v-col>
-            <v-tabs v-model="tab" color="white" grow>
+            <v-tabs v-model="tab" color="primary" grow>
               <v-tab v-for="tab in tabs" :key="tab.value" :value="tab.value">
                 {{ tab.title }}
               </v-tab>
@@ -150,13 +146,14 @@
                       <p class="content">{{ course.program.methodologies }}</p>
                     </v-col>
                   </v-row>
-                  <v-row> </v-row>
-                  <v-col cols="12">
-                    <h2 class="title">Avaliação</h2>
-                  </v-col>
-                  <v-col cols="12">
-                    <p class="content">{{ course.program.assessment }}</p>
-                  </v-col>
+                  <v-row>
+                    <v-col cols="12">
+                      <h2 class="title">Avaliação</h2>
+                    </v-col>
+                    <v-col cols="12">
+                      <p class="content">{{ course.program.assessment }}</p>
+                    </v-col>
+                  </v-row>
                 </v-container>
               </v-tabs-window-item>
 
@@ -298,7 +295,7 @@ export default {
 
 .course__title {
   color: var(--color-text-light);
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: var(--font-title);
   font-weight: 700;
 }
@@ -313,17 +310,11 @@ export default {
   gap: 1rem;
 }
 
-.course__cost {
-  color: var(--color-text-light);
-  font-size: 1.6rem;
-  font-family: var(--font-text);
-  font-weight: 200;
-}
 .course__description {
   color: var(--color-text-light);
   font-size: 1.6rem;
   font-family: var(--font-text);
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .title {
@@ -362,6 +353,14 @@ ul {
 .favourite {
   background-color: transparent;
   color: var(--color-text-light);
+}
+
+.v-tabs .v-tab:not(.v-tab--active) {
+  color: var(--color-text-light);
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: var(--font-title);
 }
 
 @media (max-width: 768px) {
