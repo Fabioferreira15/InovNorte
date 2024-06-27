@@ -11,7 +11,21 @@
         </v-btn>
       </v-col>
       <v-col cols="12" md="auto" class="chips-container">
-        <v-chip-group v-model="selectedFilters" multiple class="filter-chips">
+        <v-skeleton-loader
+          v-for ="n in 5"
+          v-if="coursesStore.isLoading"
+          card
+          :height="'30px'"
+          :width="'100px'"
+          class="skeleton-chip"
+        ></v-skeleton-loader>
+
+        <v-chip-group
+          v-else
+          v-model="selectedFilters"
+          multiple
+          class="filter-chips"
+        >
           <v-chip
             v-for="category in categories"
             :key="category.id"
@@ -64,18 +78,20 @@ export default {
       get: () => coursesStore.sortOption,
       set: (value) => {
         coursesStore.setSortOption(value);
-        coursesStore.fetchCourses(); // Atualiza os cursos ao mudar a ordenação
+        coursesStore.fetchCourses();
       },
     });
 
     watch(selectedFilters, (newFilters) => {
-      const selectedCategories = newFilters.map((id) => {
-        const category = categories.value.find((cat) => cat.id === id);
-        return category ? category.name : null;
-      }).filter((name) => name !== null);
+      const selectedCategories = newFilters
+        .map((id) => {
+          const category = categories.value.find((cat) => cat.id === id);
+          return category ? category.name : null;
+        })
+        .filter((name) => name !== null);
 
       coursesStore.setCategoriesFilter(selectedCategories);
-      coursesStore.fetchCourses(); // Atualiza os cursos ao mudar os filtros de categoria
+      coursesStore.fetchCourses();
     });
 
     return {
@@ -83,11 +99,11 @@ export default {
       categories,
       sortOption,
       sortOptions,
+      coursesStore,
     };
   },
 };
 </script>
-
 
 <style scoped>
 .filter-bar {
@@ -154,5 +170,13 @@ export default {
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(4.6px);
   -webkit-backdrop-filter: blur(4.6px);
+}
+
+.skeleton-chip {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  min-width: 10rem;
+  background-color: transparent;
+  border-radius: 999px;
 }
 </style>

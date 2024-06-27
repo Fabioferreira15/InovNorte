@@ -7,6 +7,11 @@
     <v-main>
       <v-container fluid>
         <v-row>
+          <v-col cols="12">
+            <Breadcrumb />
+          </v-col>
+        </v-row>
+        <v-row>
           <v-col cols="10">
             <h1 class="title">
               Resultados para <span>{{ searchQuery }}</span>
@@ -108,11 +113,13 @@ import NavBar from "@/components/NavBar.vue";
 import CourseImage from "@/assets/Images/image.png";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 import SkeletonLoader from "@/components/skeletonLoaders/SearchResultsSkeleton.vue";
+import Breadcrumb from "@/components/Breadcrumb.vue";
 
 export default {
   components: {
     NavBar,
     SkeletonLoader,
+    Breadcrumb,
   },
   setup() {
     const route = useRoute();
@@ -196,6 +203,7 @@ export default {
   font-family: var(--font-title);
   font-size: 2.8rem;
   color: var(--color-text-light);
+  padding-left: 1.2rem;
 }
 
 .title span {

@@ -68,7 +68,7 @@
         </v-container>
       </div>
 
-      <v-container>
+      <v-container fluid class="best__choice">
         <v-row>
           <v-col cols="12">
             <h1 class="user__message">
@@ -211,6 +211,7 @@ import CourseCarousel from "@/components/CourseCarousel.vue";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 import CourseImage from "@/assets/Images/image.png";
 import SkeletonLoader from "@/components/skeletonLoaders/HomeSkeleton.vue"
+import BreadCrumb from "@/components/Breadcrumb.vue";
 
 export default {
   components: {
@@ -457,11 +458,16 @@ export default {
   color: var(--color-primary-200);
 }
 
+.best__choice {
+  max-width: 1800px;
+}
+
 .categories {
   max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
 }
+
 
 .categories h2 {
   color: var(--color-text-light);

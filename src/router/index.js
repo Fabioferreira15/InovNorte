@@ -11,6 +11,7 @@ import SearchResultView from "@/views/SearchResultView.vue";
 import Course from "@/views/CourseView.vue";
 import Login from "@/views/LoginView.vue";
 import { useAuthStore } from "@/stores/authStore";
+import { useBreadcrumbsStore } from "@/stores/breadcrumbsStore";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,46 +33,55 @@ const router = createRouter({
       path: "/home-catalog",
       name: "homeCatalog",
       component: HomeView,
+      meta: { breadcrumbName: "Home" },
     },
     {
       path: "/profile",
       name: "profile",
       component: ProfileView,
+      meta: { breadcrumbName: "Perfil" },
     },
     {
       path: "/favourites",
       name: "favourites",
       component: FavouritesView,
+      meta: { breadcrumbName: "Favoritos" },
     },
     {
       path: "/edit-profile",
       name: "edit-profile",
       component: EditProfileView,
+      meta: { breadcrumbName: "Editar Perfil" },
     },
     {
       path: "/course-catalog",
       name: "course-catalog",
       component: CourseCatalogView,
+      meta: { breadcrumbName: "Catálogo de Cursos" },
     },
     {
       path: "/settings",
       name: "settings",
       component: SettingsView,
+      meta: { breadcrumbName: "Definições" },
     },
     {
       path: "/search-result",
       name: "search-result",
       component: SearchResultView,
+      meta: { breadcrumbName: "Resultados da Pesquisa" },
     },
     {
       path: "/course/:name/:id",
       name: "course",
       component: Course,
+      meta: { breadcrumbName: "Curso" },
     },
     {
       path: "/login",
       name: "login",
       component: Login,
+      meta: { breadcrumbName: "Login" },
     },
   ],
 });
@@ -87,6 +97,11 @@ router.beforeEach((to, from, next) => {
   } else {
     next();
   }
+});
+
+router.afterEach((to, from) => {
+  const breadcrumbsStore = useBreadcrumbsStore();
+  breadcrumbsStore.addBreadcrumb({ path: to.path, name: to.meta.breadcrumbName });
 });
 
 export default router;

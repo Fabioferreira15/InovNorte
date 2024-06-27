@@ -16,6 +16,13 @@
         </video>
       </v-container>
       <div class="overlay">
+        <v-container fluid>
+          <v-row>
+            <v-col>
+              <Breadcrumb />
+            </v-col>
+          </v-row>
+        </v-container>
         <v-container fluid class="info">
           <v-row class="d-flex align-center course__header-info">
             <v-col cols="12" md="5">
@@ -200,13 +207,14 @@ import { useCoursesStore } from "@/stores/coursesStore";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 import NavBar from "@/components/NavBar.vue";
 import Video from "@/assets/video_example.mp4";
-import SkeletonLoader from "@/components/skeletonLoaders/HomeSkeleton.vue"
-
+import SkeletonLoader from "@/components/skeletonLoaders/HomeSkeleton.vue";
+import Breadcrumb from "@/components/Breadcrumb.vue";
 
 export default {
   components: {
     NavBar,
     SkeletonLoader,
+    Breadcrumb,
   },
 
   setup() {

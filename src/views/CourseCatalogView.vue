@@ -5,9 +5,20 @@
     </nav>
 
     <v-main>
-      <v-container>
-        <h1 class="page__title">Catálogo de cursos</h1>
+      <v-container fluid>
+        <v-row>
+          <v-col>
+            <Breadcrumb />
+          </v-col>
+        </v-row>
+
+        <v-row>
+          <v-col>
+            <h1 class="page__title">Catálogo de cursos</h1>
+          </v-col>
+        </v-row>
       </v-container>
+
       <v-container fluid>
         <FilterBar :toggleFilterSidebar="toggleFilterSidebar" />
       </v-container>
@@ -21,7 +32,18 @@
             <Filters />
           </div>
         </v-navigation-drawer>
-        <Courses />
+
+        <v-container fluid v-if="coursesStore.isLoading">
+          <v-row>
+            <v-col v-for="n in coursesStore.perPage" :key="n" cols="12">
+              <SkeletonLoader />
+            </v-col>
+          </v-row>
+        </v-container>
+
+        <v-container fluid v-else>
+          <Courses />
+        </v-container>
       </div>
     </v-main>
   </div>
@@ -34,6 +56,8 @@ import Courses from "@/components/Courses.vue";
 import FilterBar from "@/components/FilterBar.vue";
 import Filters from "@/components/Filters.vue";
 import { useCoursesStore } from "@/stores/coursesStore";
+import Breadcrumb from "@/components/Breadcrumb.vue";
+import SkeletonLoader from "@/components/skeletonLoaders/SearchResultsSkeleton.vue";
 
 export default {
   components: {
@@ -41,6 +65,8 @@ export default {
     Courses,
     FilterBar,
     Filters,
+    Breadcrumb,
+    SkeletonLoader,
   },
   setup() {
     const coursesStore = useCoursesStore();
@@ -59,6 +85,7 @@ export default {
     return {
       isFilterSidebarVisible,
       toggleFilterSidebar,
+      coursesStore,
     };
   },
 };
