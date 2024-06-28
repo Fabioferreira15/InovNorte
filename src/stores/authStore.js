@@ -5,11 +5,15 @@ export const useAuthStore = defineStore("auth", {
   state: () => ({
     user: JSON.parse(localStorage.getItem("user")) || null,
     isLoggedIn: Boolean(localStorage.getItem("isLoggedIn")),
+    isLoading: false,
+    usernameError: null,
+    passwordError: null,
   }),
 
   actions: {
     async login(username, password) {
       try {
+        this.isLoading = true;
         const response = await fetch("/login", {
           method: "POST",
           headers: {
@@ -29,16 +33,24 @@ export const useAuthStore = defineStore("auth", {
           this.isLoggedIn = true;
           localStorage.setItem("user", JSON.stringify(data.user));
           localStorage.setItem("isLoggedIn", true);
+          this.usernameError = null;
+          this.passwordError = null;
 
           const coursesStore = useCoursesStore();
           await coursesStore.fetchBestForUser(data.user.id);
           await coursesStore.fetchInterestsCourses(data.user.id);
         } else {
           this.isLoggedIn = false;
-          throw new Error(data.message);
+          this.isLoading = false;
+          if (data.type === "username") {
+            this.usernameError = data.message;
+          } else {
+            this.passwordError = data.message;
+          }
         }
       } catch (error) {
         this.isLoggedIn = false;
+        this.isLoading = false;
         throw new Error(error.message);
       }
     },
@@ -47,6 +59,8 @@ export const useAuthStore = defineStore("auth", {
       localStorage.removeItem("isLoggedIn");
       this.user = null;
       this.isLoggedIn = false;
+      this.usernameError = null;
+      this.passwordError = null;
       const coursesStore = useCoursesStore();
       coursesStore.clearUserBest();
     },

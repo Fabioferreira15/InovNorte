@@ -62,7 +62,7 @@ export const handlers = [
     }
 
     if (category) {
-      const selectedCategories = category.split(","); 
+      const selectedCategories = category.split(",");
       filteredCourses = filteredCourses.filter((course) =>
         selectedCategories.includes(course.category)
       );
@@ -137,6 +137,7 @@ export const handlers = [
   }),
 
   http.post("/login", async ({ request }) => {
+    await delay(2000);
     const { username, password } = await request.json();
     const user = users.users.find(
       (user) => user.username === username && user.password === password
@@ -148,12 +149,25 @@ export const handlers = [
         user,
       });
     } else {
-      return HttpResponse.json(
-        {
-          message: "Credenciais inválidas",
-        },
-        401
-      );
+      const user = users.users.find((user) => user.username === username);
+
+      if (user) {
+        return HttpResponse.json(
+          {
+            type:"password",
+            message: "Password incorreta",
+          },
+          401
+        );
+      } else {
+        return HttpResponse.json(
+          {
+            type:"username",
+            message: "Utilizador não encontrado",
+          },
+          404
+        );
+      }
     }
   }),
 

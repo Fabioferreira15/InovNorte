@@ -10,6 +10,7 @@ import LandingScrollView from "@/views/LandingScrollView.vue";
 import SearchResultView from "@/views/SearchResultView.vue";
 import Course from "@/views/CourseView.vue";
 import Login from "@/views/LoginView.vue";
+import Registo from "@/views/RegisterView.vue";
 import { useAuthStore } from "@/stores/authStore";
 import { useBreadcrumbsStore } from "@/stores/breadcrumbsStore";
 
@@ -83,12 +84,18 @@ const router = createRouter({
       component: Login,
       meta: { breadcrumbName: "Login" },
     },
+    {
+      path: "/registo",
+      name: "registo",
+      component: Registo,
+      meta: { breadcrumbName: "Registo" },
+    },
   ],
 });
 
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();
-  const publicPages = ["/login", "/"];
+  const publicPages = ["/login", "/", "/registo"];
   const authRequired = !publicPages.includes(to.path);
 
   if (authRequired && !authStore.isLoggedIn) {
@@ -101,7 +108,10 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach((to, from) => {
   const breadcrumbsStore = useBreadcrumbsStore();
-  breadcrumbsStore.addBreadcrumb({ path: to.path, name: to.meta.breadcrumbName });
+  breadcrumbsStore.addBreadcrumb({
+    path: to.path,
+    name: to.meta.breadcrumbName,
+  });
 });
 
 export default router;

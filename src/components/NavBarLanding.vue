@@ -1,9 +1,23 @@
 <template>
   <nav>
     <v-app-bar flat color="transparent" dense>
-      <v-app-bar-title> <v-img :src="Logo" max-width="45"></v-img> </v-app-bar-title>
-      <v-btn variant="plain" color="white" class="btn">Login</v-btn>
-      <v-btn variant="plain" color="white" class="btn">Registar</v-btn>
+      <v-app-bar-title>
+        <v-img :src="Logo" max-width="45"></v-img>
+      </v-app-bar-title>
+      <v-btn
+        variant="plain"
+        color="white"
+        class="btn"
+        @click="$router.push('/login')"
+        >Login</v-btn
+      >
+      <v-btn
+        variant="plain"
+        color="white"
+        class="btn"
+        @click="$router.push('/register')"
+        >Registar</v-btn
+      >
     </v-app-bar>
   </nav>
 </template>
@@ -12,12 +26,10 @@
 import Logo from "@/assets/Images/Logo.svg";
 
 export default {
-  data() {
-    return {
-      Logo,
-    };
+  setup() {
+    return { Logo };
   },
-};
+}
 </script>
 
 <style scoped>
