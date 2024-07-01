@@ -5,7 +5,6 @@ export const useAuthStore = defineStore("auth", {
   state: () => ({
     user: JSON.parse(localStorage.getItem("user")) || null,
     isLoggedIn: Boolean(localStorage.getItem("isLoggedIn")),
-    isLoading: false,
     usernameError: null,
     passwordError: null,
   }),
@@ -13,7 +12,6 @@ export const useAuthStore = defineStore("auth", {
   actions: {
     async login(username, password) {
       try {
-        this.isLoading = true;
         const response = await fetch("/login", {
           method: "POST",
           headers: {
@@ -41,7 +39,6 @@ export const useAuthStore = defineStore("auth", {
           await coursesStore.fetchInterestsCourses(data.user.id);
         } else {
           this.isLoggedIn = false;
-          this.isLoading = false;
           if (data.type === "username") {
             this.usernameError = data.message;
           } else {
@@ -50,7 +47,6 @@ export const useAuthStore = defineStore("auth", {
         }
       } catch (error) {
         this.isLoggedIn = false;
-        this.isLoading = false;
         throw new Error(error.message);
       }
     },

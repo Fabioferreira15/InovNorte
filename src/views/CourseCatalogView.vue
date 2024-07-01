@@ -26,6 +26,7 @@
       <div class="content">
         <v-navigation-drawer
           v-model="isFilterSidebarVisible"
+          :location="$vuetify.display.mobile ? 'bottom' : undefined"
           class="filter-sidebar"
         >
           <div class="sidebar-content">

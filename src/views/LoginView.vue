@@ -21,6 +21,7 @@
                     label="Nome de utilizador"
                     clearable
                     :error-messages="usernameError"
+                    variant="outlined"
                   ></v-text-field>
                   <v-text-field
                     v-model="password"
@@ -28,6 +29,7 @@
                     :rules="[required]"
                     label="Password"
                     placeholder="Coloque a sua password"
+                     variant="outlined"
                     class="form__input"
                     :type="showPassword ? 'text' : 'password'"
                     :append-inner-icon="
@@ -46,6 +48,7 @@
                     block
                     color="primary"
                     class="form__button"
+                   
                     >Entrar</v-btn
                   >
                 </v-form>
@@ -98,8 +101,9 @@ export default {
           router.push("/home-catalog");
         }
       } catch (error) {
-        loading.value = false;
         console.log(error);
+      } finally {
+        loading.value = false;
       }
     };
 
@@ -192,6 +196,12 @@ export default {
   color: var(--color-primary-200);
   font-weight: 700;
 }
+.v-input {
+  color: var(--color-text-light) !important;
+}
+
+
+
 
 @media (max-width: 768px) {
   .image {

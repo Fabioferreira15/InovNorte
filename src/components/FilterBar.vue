@@ -1,18 +1,18 @@
 <template>
-  <v-container class="filter-bar" fluid>
+  <v-container class="filter-bar d-flex" fluid>
     <v-row align="center" class="flex-wrap">
-      <v-col cols="12" md="auto">
+      <v-col cols="1" md="auto" class="filter">
         <v-btn @click="toggleFilterSidebar" class="toggle-button" icon flat>
-          <v-icon>
+          <v-icon size="x-large">
             <svg class="icon" width="100" height="100">
               <use xlink:href="../assets/coolicons-sprite.svg#Filter"></use>
             </svg>
           </v-icon>
         </v-btn>
       </v-col>
-      <v-col cols="12" md="auto" class="chips-container">
+      <v-col cols="12" md="7" class="chips-container">
         <v-skeleton-loader
-          v-for ="n in 5"
+          v-for="n in 5"
           v-if="coursesStore.isCategoriesLoading"
           card
           :height="'30px'"
@@ -25,20 +25,21 @@
           v-model="selectedFilters"
           multiple
           class="filter-chips"
+          column
+          wrap
         >
           <v-chip
             v-for="category in categories"
             :key="category.id"
             :value="category.id"
-            class="filter-chip d-flex align-center justify-center"
+            class="filter-chip"
             filter
           >
             {{ category.name }}
           </v-chip>
         </v-chip-group>
       </v-col>
-      <v-spacer></v-spacer>
-      <v-col class="sort-select-container">
+      <v-col cols="12" md="5" class="sort-select-container">
         <v-select
           v-model="sortOption"
           :items="sortOptions"
@@ -108,6 +109,7 @@ export default {
 .filter-bar {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .toggle-button {
   margin-right: 1rem;
@@ -123,7 +125,7 @@ export default {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   background-color: var(--color-primary-600);
-  min-width: 10rem;
+  min-width: 8rem; /* ajustado para ser mais responsivo */
   font-family: var(--font-text);
   font-size: 1.4rem !important;
   font-weight: 300;
@@ -135,12 +137,12 @@ export default {
   align-items: center;
   justify-content: flex-end;
   flex: 1;
+  margin-top: 1rem; /* espaçamento para separar do conteúdo anterior */
 }
 
 .sort-select {
   min-width: 200px;
   max-width: 300px;
-  background-color: var(--color-background);
   border-radius: 8px;
   font-family: var(--font-text);
   font-size: 1.87rem;
@@ -148,7 +150,7 @@ export default {
 
 .sort-select .v-input__control {
   border-radius: 8px;
-  background-color: var(--color-background);
+  background-color: var(--color-background-light);
   padding: 0.5rem;
 }
 
@@ -164,6 +166,7 @@ export default {
   font-family: var(--font-text);
   font-size: 1.4rem;
 }
+
 .v-input {
   color: var(--color-text-light) !important;
   background: rgba(255, 255, 255, 0.04);
@@ -174,8 +177,24 @@ export default {
 .skeleton-chip {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  min-width: 10rem;
+  min-width: 8rem; /* ajustado para ser mais responsivo */
   background-color: transparent;
   border-radius: 999px;
+}
+
+
+
+@media (max-width: 768px) {
+  .filter {
+    order: 1;
+  }
+
+  .chips-container {
+    order: 3;
+  }
+
+  .sort-select-container {
+    order: 2;
+  }
 }
 </style>
