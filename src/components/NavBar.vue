@@ -279,4 +279,13 @@ export default {
   background-image: url("../assets/Images/backgrounds/Background-home.svg");
   background-size: cover;
 }
+
+@media (max-width: 768px) {
+  .navigation__list-title {
+    font-size: 2rem;
+  }
+  .navigation__list-item {
+    padding: 1rem;
+  }
+}
 </style>

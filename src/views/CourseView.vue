@@ -51,8 +51,8 @@
                     class="header__btn-primary btn"
                     @click="openCourse(course)"
                   >
-                    Inscrever</v-btn
-                  >
+                    Inscrever
+                  </v-btn>
                   <v-btn icon flat class="favourite">
                     <v-icon size="large">mdi-heart-outline</v-icon>
                   </v-btn>
@@ -63,12 +63,32 @@
         </v-container>
       </div>
 
-      <v-container fluid>
+      <v-container fluid class="tabs">
         <v-row>
           <v-col>
-            <v-tabs v-model="tab" color="primary" grow>
-              <v-tab v-for="tab in tabs" :key="tab.value" :value="tab.value">
-                {{ tab.title }}
+            <v-bottom-navigation
+              v-if="isMobile"
+              v-model="tab"
+              class="v-tabs"
+              color="primary"
+            >
+              <v-btn
+                v-for="tabItem in tabs"
+                :key="tabItem.value"
+                :value="tabItem.value"
+                class="v-tab"
+              >
+                {{ tabItem.title }}
+              </v-btn>
+            </v-bottom-navigation>
+
+            <v-tabs v-else v-model="tab" color="primary" grow class="v-tabs">
+              <v-tab
+                v-for="tabItem in tabs"
+                :key="tabItem.value"
+                :value="tabItem.value"
+              >
+                {{ tabItem.title }}
               </v-tab>
             </v-tabs>
 
@@ -172,19 +192,58 @@
                   </v-row>
                 </v-container>
               </v-tabs-window-item>
+
               <v-tabs-window-item value="reviews">
-                <v-container>
-                  <v-row>
-                    <v-col cols="12">
-                      <h2 class="title">Reviews</h2>
+                <v-container >
+                  <v-row v-if="course.reviews && course.reviews.length > 0" class="d-flex align-center justify-center">
+                    <v-col
+                      v-for="(review, index) in course.reviews"
+                      :key="index"
+                      cols="12"
+                      sm="4"
+                    >
+                      <v-container class="review">
+                        <v-row>
+                          <v-col
+                            cols="1"
+                            class="review__user "
+                          >
+                            <v-avatar size="40">
+                              <img
+                                :src="Avatar"
+                                alt="User image"
+                              />
+                            </v-avatar>
+                          </v-col>
+                          <v-col cols="10">
+                            <v-row>
+                              <v-col cols="12" class="review__name">{{
+                                review.user.name
+                              }}</v-col>
+                              <v-col cols="12" class="review__rating">
+                                <v-rating
+                                  v-model="review.nota"
+                                  active-color="primary"
+                                  color="white"
+                                  half-increments
+                                  readonly
+                                  size="20"
+                                ></v-rating>
+                              </v-col>
+                            </v-row>
+                          </v-col>
+                          <v-row>
+                            <v-col cols="12" class="review__comment">{{
+                              review.comentário
+                            }}</v-col>
+                          </v-row>
+                        </v-row>
+                      </v-container>
                     </v-col>
+                  </v-row>
+                  <v-row v-else>
                     <v-col cols="12">
-                      <v-container v-if="course.reviews">
-                        <p>{{ course.reviews }}</p>
-                      </v-container>
-                      <v-container v-else>
-                        <p>Não existem reviews para este curso.</p>
-                      </v-container>
+                      <p class="noReviews">Não existem reviews para este curso.</p>
                     </v-col>
                   </v-row>
                 </v-container>
@@ -198,12 +257,13 @@
 </template>
 
 <script>
-import { onMounted, ref, computed, watch } from "vue";
+import { onMounted, ref, computed, watch, onUnmounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useCoursesStore } from "@/stores/coursesStore";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 import NavBar from "@/components/NavBar.vue";
 import Video from "@/assets/video_example.mp4";
+import Avatar from "@/assets/Images/avatar.png";
 import SkeletonLoader from "@/components/skeletonLoaders/HomeSkeleton.vue";
 import Breadcrumb from "@/components/Breadcrumb.vue";
 
@@ -219,9 +279,23 @@ export default {
     const coursesStore = useCoursesStore();
     const tab = ref(null);
     const { openCourse } = useCourseNavigation();
+    const isMobile = ref(false);
+
+    const checkIsMobile = () => {
+      isMobile.value = window.matchMedia("(max-width: 768px)").matches;
+    };
+
+    onMounted(() => {
+      checkIsMobile();
+      window.addEventListener("resize", checkIsMobile);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener("resize", checkIsMobile);
+    });
 
     const tabs = [
-      { value: "description", title: "Descrição" },
+      { value: "description", title: "Informações" },
       { value: "details", title: "Detalhes" },
       { value: "resources", title: "Recursos" },
       { value: "reviews", title: "Reviews" },
@@ -242,10 +316,12 @@ export default {
     return {
       course,
       Video,
+      Avatar,
       tab,
       tabs,
       openCourse,
       coursesStore,
+      isMobile,
     };
   },
 };
@@ -340,6 +416,15 @@ export default {
   -webkit-backdrop-filter: blur(4.6px);
   border: 1px solid rgba(255, 255, 255, 0.17);
 }
+
+.v-tabs .v-tab:not(.v-tab--active) {
+  color: var(--color-text-light);
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: var(--font-title);
+}
+
 .columns {
   column-count: 2;
   column-gap: 2rem;
@@ -355,12 +440,46 @@ ul {
   color: var(--color-text-light);
 }
 
-.v-tabs .v-tab:not(.v-tab--active) {
-  color: var(--color-text-light);
-  text-transform: capitalize;
-  font-size: 1.4rem;
+
+
+.review__user {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.review__user img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%; /* Ajuste o tamanho conforme necessário */
+  height: 100%; /* Ajuste o tamanho conforme necessário */
+}
+
+.review__name {
   font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--color-text-light);
   font-family: var(--font-title);
+  padding: 0;
+}
+
+.review__rating {
+  padding: 0;
+}
+
+.review__comment {
+  font-size: 1.4rem;
+  color: var(--color-text-light);
+  font-family: var(--font-text);
+  font-weight: 200;
+  padding: 0;
+}
+
+.noReviews {
+  font-size: 1.6rem;
+  color: var(--color-text-light);
+  font-family: var(--font-text);
+  font-weight: 200;
 }
 
 @media (max-width: 768px) {
@@ -403,6 +522,9 @@ ul {
 
   .columns {
     column-count: 1;
+  }
+  .tabs {
+    margin-top: 20rem;
   }
 }
 </style>
