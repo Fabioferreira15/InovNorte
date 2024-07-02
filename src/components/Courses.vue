@@ -56,7 +56,7 @@
 
 <script>
 import { useCoursesStore } from "@/stores/coursesStore";
-import { onMounted, computed, watch } from "vue";
+import { onMounted, computed } from "vue";
 import CourseImage from "@/assets/Images/image.png";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 
@@ -81,9 +81,6 @@ export default {
         coursesStore.fetchCourses();
       }
     });
-
-  
-
 
     return {
       paginatedCourses,
@@ -170,6 +167,4 @@ export default {
   color: var(--color-text-light);
   text-transform: capitalize;
 }
-
-
 </style>

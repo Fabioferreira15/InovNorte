@@ -17,6 +17,13 @@
                 37,
                 42,
                 49
+            ],
+            "favourites": [
+                1,
+                40,
+                33,
+                20,
+                25
             ]
         },
         {
@@ -29,7 +36,9 @@
                 "negócios"
             ],
             "preferred_format": "online",
-            "bio": "As minhas áreas de interesse são saúde e negócios. Estou sempre à procura de novas oportunidades e soluções para melhorar estes setores."
+            "bio": "As minhas áreas de interesse são saúde e negócios. Estou sempre à procura de novas oportunidades e soluções para melhorar estes setores.",
+            "courses_in_progress": [],
+            "favourites": []
         },
         {
             "id": 3,
@@ -41,7 +50,9 @@
                 "tecnologia"
             ],
             "preferred_format": "online",
-            "bio": "Os meus interesses centram-se na sustentabilidade e na tecnologia. Estou empenhado em encontrar formas inovadoras de promover práticas sustentáveis."
+            "bio": "Os meus interesses centram-se na sustentabilidade e na tecnologia. Estou empenhado em encontrar formas inovadoras de promover práticas sustentáveis.",
+            "courses_in_progress": [],
+            "favourites": []
         }
     ]
 }

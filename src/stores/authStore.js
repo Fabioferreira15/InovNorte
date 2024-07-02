@@ -10,6 +10,7 @@ export const useAuthStore = defineStore("auth", {
     passwordError: null,
     isLoading: false,
     coursesInProgress: [],
+    favourites: [],
   }),
 
   actions: {
@@ -30,12 +31,10 @@ export const useAuthStore = defineStore("auth", {
         const data = await response.json();
 
         if (data.user) {
-
           const user = {
             id: data.user.id,
             username: data.user.username,
           };
-
 
           this.user = user;
           this.isLoggedIn = true;
@@ -75,7 +74,24 @@ export const useAuthStore = defineStore("auth", {
         this.userProfile = data.user;
         this.coursesInProgress = data.coursesInProgress;
         this.isLoading = false;
-        
+      } catch (error) {
+        throw new Error(error.message);
+      }
+    },
+
+    async fetchUserFavourites(userId) {
+      this.isLoading = true;
+      try {
+        const response = await fetch(`/users/${userId}/favourites`);
+
+        if (!response.ok) {
+          throw new Error("Utilizador não encontrado");
+        }
+
+        const data = await response.json();
+        this.favourites = data.userFavourites;
+
+        this.isLoading = false;
       } catch (error) {
         throw new Error(error.message);
       }

@@ -154,7 +154,7 @@ export const handlers = [
       if (user) {
         return HttpResponse.json(
           {
-            type:"password",
+            type: "password",
             message: "Password incorreta",
           },
           401
@@ -162,7 +162,7 @@ export const handlers = [
       } else {
         return HttpResponse.json(
           {
-            type:"username",
+            type: "username",
             message: "Utilizador não encontrado",
           },
           404
@@ -269,12 +269,34 @@ export const handlers = [
       user.courses_in_progress.includes(course.id)
     );
 
-    
     const { password, ...userProfile } = user;
 
     return HttpResponse.json({
       user: userProfile,
       coursesInProgress: userCoursesInProgress,
+    });
+  }),
+
+  http.get("/users/:userId/favourites", async ({ params }) => {
+    await delay(2000);
+    const userId = params.userId;
+    const user = users.users.find((user) => user.id.toString() === userId);
+
+    if (!user) {
+      return HttpResponse.json(
+        {
+          message: "Utilizador não encontrado",
+        },
+        404
+      );
+    }
+
+    const userFavourites = courses.filter((course) =>
+      user.favourites.includes(course.id)
+    );
+
+    return HttpResponse.json({
+      userFavourites,
     });
   }),
 ];
