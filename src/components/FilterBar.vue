@@ -56,23 +56,37 @@
 <script>
 import { ref, onMounted, computed, watch } from "vue";
 import { useCoursesStore } from "@/stores/coursesStore";
+import { useRoute } from "vue-router";
 
 export default {
   props: ["toggleFilterSidebar"],
   setup() {
     const coursesStore = useCoursesStore();
     const categories = ref([]);
-    const selectedFilters = ref([]);
+    const selectedFilters = ref(coursesStore.selectedCategories);
     const sortOptions = ref([
       "Avaliações",
       "Data de Início",
       "Data de Criação",
       "Total de avaliações",
     ]);
+    const route = useRoute();
 
     onMounted(async () => {
       await coursesStore.fetchCategories();
       categories.value = coursesStore.categories;
+
+      const categoryName = route.query.categoryName;
+
+      if (categoryName) {
+        const category = categories.value.find(
+          (cat) => cat.name === categoryName
+        );
+        if (category) {
+          selectedFilters.value.push(category.id);
+          coursesStore.setCategoriesFilter([categoryName]);
+        }
+      }
     });
 
     const sortOption = computed({
@@ -181,8 +195,6 @@ export default {
   background-color: transparent;
   border-radius: 999px;
 }
-
-
 
 @media (max-width: 768px) {
   .filter {

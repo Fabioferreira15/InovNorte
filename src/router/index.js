@@ -58,6 +58,7 @@ const router = createRouter({
       path: "/course-catalog",
       name: "course-catalog",
       component: CourseCatalogView,
+      props: (route) => ({ query: route.query.categoryName }),
       meta: { breadcrumbName: "Catálogo de Cursos" },
     },
     {

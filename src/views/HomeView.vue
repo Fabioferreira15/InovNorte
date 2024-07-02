@@ -193,7 +193,7 @@
                 <v-card-text class="mb-4">{{
                   category.description
                 }}</v-card-text>
-                <v-btn class="explore__btn" color="primary">Explorar</v-btn>
+                <v-btn @click="openCategory(category.name)" class="explore__btn" color="primary">Explorar</v-btn>
               </v-container>
             </v-card>
           </v-col>
@@ -212,6 +212,7 @@ import CourseCarousel from "@/components/CourseCarousel.vue";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 import CourseImage from "@/assets/Images/image.png";
 import SkeletonLoader from "@/components/skeletonLoaders/HomeSkeleton.vue";
+import { useRouter } from "vue-router";
 
 export default {
   components: {
@@ -231,6 +232,11 @@ export default {
     });
     const categories = ref([]);
     const { openCourse } = useCourseNavigation();
+    const router = useRouter();
+
+    const openCategory = (categoryName) => {
+      router.push({ name: "course-catalog", query: { categoryName } });
+    };
 
     const topCourses = computed(() => {
       return coursesStore.top10Rated;
@@ -311,6 +317,7 @@ export default {
       CourseImage,
       showVideo,
       coursesStore,
+      openCategory,
     };
   },
 };
