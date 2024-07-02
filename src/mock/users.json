@@ -2,36 +2,46 @@
     "users": [
         {
             "id": 1,
-            "username": "utilizador1",
+            "username": "joaosilva83",
             "password": "senha1",
-            "email": "utilizador1@example.com",
+            "email": "joaosilva83@example.com",
             "interests": [
                 "tecnologia",
                 "educação"
             ],
-            "preferred_format": "online"
+            "preferred_format": "online",
+            "bio": "Sou apaixonado por tecnologia e educação. Estou sempre à procura de aprender novas habilidades e partilhar conhecimento com os outros.",
+            "courses_in_progress": [
+                10,
+                23,
+                37,
+                42,
+                49
+            ]
         },
         {
             "id": 2,
-            "username": "utilizador2",
+            "username": "ana.santos",
             "password": "senha2",
-            "email": "utilizador2@example.com",
+            "email": "ana.santos@example.com",
             "interests": [
                 "saúde",
                 "negócios"
             ],
-            "preferred_format": "online"
+            "preferred_format": "online",
+            "bio": "As minhas áreas de interesse são saúde e negócios. Estou sempre à procura de novas oportunidades e soluções para melhorar estes setores."
         },
         {
             "id": 3,
-            "username": "utilizador3",
+            "username": "pedro_almeida",
             "password": "senha3",
-            "email": "utilizador3@example.com",
+            "email": "pedro_almeida@example.com",
             "interests": [
                 "sustentabilidade",
                 "tecnologia"
             ],
-            "preferred_format": "online"
+            "preferred_format": "online",
+            "bio": "Os meus interesses centram-se na sustentabilidade e na tecnologia. Estou empenhado em encontrar formas inovadoras de promover práticas sustentáveis."
         }
     ]
 }

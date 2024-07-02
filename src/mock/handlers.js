@@ -250,4 +250,31 @@ export const handlers = [
       course,
     });
   }),
+
+  http.get("/users/:userId", async ({ params }) => {
+    await delay(2000);
+    const userId = params.userId;
+    const user = users.users.find((user) => user.id.toString() === userId);
+
+    if (!user) {
+      return HttpResponse.json(
+        {
+          message: "Utilizador não encontrado",
+        },
+        404
+      );
+    }
+
+    const userCoursesInProgress = courses.filter((course) =>
+      user.courses_in_progress.includes(course.id)
+    );
+
+    
+    const { password, ...userProfile } = user;
+
+    return HttpResponse.json({
+      user: userProfile,
+      coursesInProgress: userCoursesInProgress,
+    });
+  }),
 ];

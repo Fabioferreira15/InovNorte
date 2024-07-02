@@ -26,7 +26,7 @@
             v-for="(item, index) in items"
             :key="index"
             :value="index"
-            @click="item.title === 'Logout' ? logout() : null"
+            @click="selectItem(item)"
           >
             <template v-slot:prepend>
               <v-icon color="primary">
@@ -140,6 +140,14 @@ export default {
     const isMobile = ref(false);
     const showSearchBar = ref(false);
 
+    const selectItem = (item) => {
+      if (item.title === "Logout") {
+        logout();
+      } else {
+        router.push(item.path);
+      }
+    };
+
     const checkIsMobile = () => {
       isMobile.value = window.matchMedia("(max-width: 768px)").matches;
     };
@@ -158,9 +166,9 @@ export default {
       window.removeEventListener("resize", checkIsMobile);
     });
     const items = [
-      { title: "Perfil", icon: "User_02" },
-      { title: "Definições", icon: "Settings" },
-      { title: "Favoritos", icon: "Heart_01" },
+      { title: "Perfil", icon: "User_02", path: "/profile" },
+      { title: "Definições", icon: "Settings", path: "/settings" },
+      { title: "Favoritos", icon: "Heart_01", path: "/favourites" },
       { title: "Logout", icon: "Log_Out" },
     ];
 
@@ -186,6 +194,7 @@ export default {
       showSearchBar,
       toggleSearchBar,
       menuItems,
+      selectItem,
     };
   },
 };

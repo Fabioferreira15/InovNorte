@@ -4,9 +4,12 @@ import { useCoursesStore } from "./coursesStore";
 export const useAuthStore = defineStore("auth", {
   state: () => ({
     user: JSON.parse(localStorage.getItem("user")) || null,
+    userProfile: null,
     isLoggedIn: Boolean(localStorage.getItem("isLoggedIn")),
     usernameError: null,
     passwordError: null,
+    isLoading: false,
+    coursesInProgress: [],
   }),
 
   actions: {
@@ -27,9 +30,16 @@ export const useAuthStore = defineStore("auth", {
         const data = await response.json();
 
         if (data.user) {
-          this.user = data.user;
+
+          const user = {
+            id: data.user.id,
+            username: data.user.username,
+          };
+
+
+          this.user = user;
           this.isLoggedIn = true;
-          localStorage.setItem("user", JSON.stringify(data.user));
+          localStorage.setItem("user", JSON.stringify(user));
           localStorage.setItem("isLoggedIn", true);
           this.usernameError = null;
           this.passwordError = null;
@@ -50,6 +60,27 @@ export const useAuthStore = defineStore("auth", {
         throw new Error(error.message);
       }
     },
+
+    async fetchUserById(userId) {
+      this.isLoading = true;
+      try {
+        const response = await fetch(`/users/${userId}`);
+
+        if (!response.ok) {
+          throw new Error("Utilizador não encontrado");
+        }
+
+        const data = await response.json();
+
+        this.userProfile = data.user;
+        this.coursesInProgress = data.coursesInProgress;
+        this.isLoading = false;
+        
+      } catch (error) {
+        throw new Error(error.message);
+      }
+    },
+
     logout() {
       localStorage.removeItem("user");
       localStorage.removeItem("isLoggedIn");
