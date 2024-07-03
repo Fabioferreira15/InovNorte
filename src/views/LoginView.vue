@@ -29,7 +29,7 @@
                     :rules="[required]"
                     label="Password"
                     placeholder="Coloque a sua password"
-                     variant="outlined"
+                    variant="outlined"
                     class="form__input"
                     :type="showPassword ? 'text' : 'password'"
                     :append-inner-icon="
@@ -48,14 +48,15 @@
                     block
                     color="primary"
                     class="form__button"
-                   
                     >Entrar</v-btn
                   >
                 </v-form>
               </v-col>
               <v-col class="text-center text__register">
-                <p>Ainda não tens uma conta? Regista-te <router-link class="link" to="/registo">aqui</router-link></p>
-              
+                <p>
+                  Ainda não tens uma conta? Regista-te
+                  <router-link class="link" to="/registo">aqui</router-link>
+                </p>
               </v-col>
             </v-row>
           </v-container>
@@ -80,7 +81,6 @@ export default {
     const router = useRouter();
     const loading = ref(false);
     const showPassword = ref(false);
-
 
     const required = (v) => !!v || "Campo obrigatório";
 
@@ -112,7 +112,8 @@ export default {
       alert("Logout realizado com sucesso!");
     };
 
-    const { user, isLoggedIn, usernameError, passwordError } = storeToRefs(authStore);
+    const { user, isLoggedIn, usernameError, passwordError } =
+      storeToRefs(authStore);
     return {
       username,
       password,
@@ -159,6 +160,7 @@ export default {
   -webkit-backdrop-filter: blur(4.6px);
   border: 1px solid rgba(255, 255, 255, 0.17);
   width: 100%;
+  animation: fadeInRight 1s;
 }
 
 .image {
@@ -200,8 +202,17 @@ export default {
   color: var(--color-text-light) !important;
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
 
-
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 @media (max-width: 768px) {
   .image {

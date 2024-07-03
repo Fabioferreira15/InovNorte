@@ -146,13 +146,22 @@
         </v-card>
       </v-container>
 
-      <CourseCarousel title="Em destaque" :courses="topCourses" />
+      <CourseCarousel
+        title="Em destaque"
+        :courses="topCourses"
+        class="destaque"
+      />
 
-      <CourseCarousel title="Novidades" :courses="RecentlyAdded" />
+      <CourseCarousel
+        title="Novidades"
+        :courses="RecentlyAdded"
+        class="recents"
+      />
 
       <CourseCarousel
         title="Baseado nos teus interesses"
         :courses="BasedOnInterests"
+        class="interests"
       />
 
       <v-container fluid class="allcourses">
@@ -193,7 +202,12 @@
                 <v-card-text class="mb-4">{{
                   category.description
                 }}</v-card-text>
-                <v-btn @click="openCategory(category.name)" class="explore__btn" color="primary">Explorar</v-btn>
+                <v-btn
+                  @click="openCategory(category.name)"
+                  class="explore__btn"
+                  color="primary"
+                  >Explorar</v-btn
+                >
               </v-container>
             </v-card>
           </v-col>
@@ -468,6 +482,10 @@ export default {
 
 .best__choice {
   max-width: 1800px;
+  scale: 0.8;
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view(450px 200px);
 }
 
 .categories {
@@ -637,7 +655,34 @@ export default {
   width: 100%;
 }
 
+.destaque,
+.interests {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: fade-left linear forwards;
+  animation-timeline: view(650px 200px);
+}
 
+.recents {
+  transform: translateX(100px);
+  opacity: 0;
+  animation: fade-left linear forwards;
+  animation-timeline: view(650px 200px);
+}
+
+@keyframes fade-in {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 @media (max-width: 960px) {
   .bg-video {
@@ -670,6 +715,21 @@ export default {
 
   .course__description {
     font-size: 1.2rem;
+  }
+  .best__choice {
+    animation-timeline: view(650px 200px);
+  }
+
+  .destaque,
+  .interests {
+    transform: none;
+    opacity: 1;
+    animation: none;
+  }
+  .recents {
+    transform: none;
+    opacity: 1;
+    animation: none;
   }
 }
 </style>

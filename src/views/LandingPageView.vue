@@ -143,9 +143,16 @@ export default {
   position: relative;
 }
 
+.btn-hero:hover {
+  animation: pulse 1s infinite;
+
+}
+
 .btn-hero + .btn-hero {
   margin-left: 1rem;
 }
+
+
 
 .features .v-card {
   background: rgba(255, 255, 255, 0.04);
@@ -227,6 +234,20 @@ export default {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+	transform: scale(1);
+  }
+
+  50% {
+	transform: scale(1.1);
+  }
+
+  100% {
+	transform: scale(1);
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="recomendations">
+  <v-container fluid class="recommendations">
     <h1 class="title">{{ title }}</h1>
     <carousel
       ref="carousel"
@@ -8,7 +8,81 @@
       class="custom-carousel"
     >
       <slide v-for="course in courses" :key="course.id">
-        <CourseCard :course="course" :showVideo="showVideo" />
+        <v-menu open-on-hover location="end" transition="scroll-x-transition">
+          <template v-slot:activator="{ props, on }">
+            <v-card
+              class="course__card"
+              v-bind="props"
+              @mouseenter="showVideo[course.id] = true"
+              @mouseleave="showVideo[course.id] = false"
+              v-on="{ ...on, click: () => openCourse(course) }"
+            >
+              <v-container fluid class="course__card-container">
+                <transition name="fade" mode="out-in">
+                  <template v-if="showVideo[course.id]">
+                    <video autoplay muted loop class="course__card-video">
+                      <source :src="video" type="video/mp4" />
+                      Your browser does not support the video.
+                    </video>
+                  </template>
+                  <template v-else>
+                    <v-img
+                      :src="courseImage"
+                      cover
+                      class="course__card-img"
+                    ></v-img>
+                  </template>
+                </transition>
+
+                <v-card-subtitle>{{ course.category }}</v-card-subtitle>
+                <div class="info">
+                  <v-card-title>{{ course.title }}</v-card-title>
+                  <v-card-text>
+                    {{ course.duration }} | {{ course.cost }}
+                    <span class="course__card-rating">{{
+                      course.average_rating
+                    }}</span>
+                    <span>({{ course.total_reviews }})</span>
+                  </v-card-text>
+                </div>
+              </v-container>
+            </v-card>
+          </template>
+
+          <v-card
+            max-width="300"
+            class="v-card--reveal"
+            @mouseenter="showVideo[course.id] = true"
+            @mouseleave="showVideo[course.id] = false"
+          >
+            <v-card-text class="objectives__card-title">
+              <h1>Objetivos</h1>
+              <ul>
+                <li
+                  v-for="objective in course.program.objectives.slice(0, 3)"
+                  :key="objective"
+                >
+                  {{ objective }}
+                </li>
+              </ul>
+            </v-card-text>
+            <div class="btns d-flex">
+              <v-btn
+                class="flex-grow-1"
+                color="white"
+                @click="openCourse(course)"
+                >Inscrever</v-btn
+              >
+              <v-btn class="ml-5" variant="plain" color="white">
+                <svg class="icon" width="24" height="24">
+                  <use
+                    xlink:href="../assets/coolicons-sprite.svg#Heart_01"
+                  ></use>
+                </svg>
+              </v-btn>
+            </div>
+          </v-card>
+        </v-menu>
       </slide>
       <template #addons>
         <Navigation />
@@ -20,20 +94,16 @@
 <script>
 import { Carousel, Slide, Navigation } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
-import CourseImage from "@/assets/Images/image.png";
-import { ref } from "vue";
-import Video from "@/assets/video_example.mp4";
+import courseImage from "@/assets/Images/image.png";
+import video from "@/assets/video_example.mp4";
+import { ref, reactive } from "vue";
 import { useCourseNavigation } from "@/composables/courseNavigation";
-import CourseCard from '@/components/CourseCard.vue';
-
-
 
 export default {
   components: {
     Carousel,
     Slide,
     Navigation,
-    CourseCard,
   },
   props: {
     title: String,
@@ -58,22 +128,18 @@ export default {
       },
     };
 
-    const menu = ref(true);
-    const showVideo = ref({});
+    const showVideo = reactive({});
 
     props.courses.forEach((course) => {
-      showVideo.value[course.id] = false;
+      showVideo[course.id] = false;
     });
 
     return {
       breakpoints,
-      props,
-      CourseImage,
-      menu,
-      Video,
       showVideo,
+      courseImage,
+      video,
       openCourse,
-
     };
   },
 };
@@ -168,7 +234,6 @@ export default {
 .course__card-container {
   padding: 0;
 }
-
 
 .course__card-video {
   width: 100%;
