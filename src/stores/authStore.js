@@ -104,6 +104,8 @@ export const useAuthStore = defineStore("auth", {
       this.isLoggedIn = false;
       this.usernameError = null;
       this.passwordError = null;
+      this.coursesInProgress = [];
+      this.favourites = [];
       const coursesStore = useCoursesStore();
       coursesStore.clearUserBest();
     },

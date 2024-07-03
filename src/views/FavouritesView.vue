@@ -2,39 +2,34 @@
   <div class="favourites">
     <NavBar />
     <v-main>
-      <v-container class="favourites-container">
-        <h1 class="favourites-title">Os meus favoritos</h1>
-
-        <v-row v-if="favourites.length > 0">
-          <v-col
-            v-for="course in favourites"
-            :key="course.id"
-            cols="12"
-            sm="6"
-            md="4"
-          >
-            <v-card class="custom-card" @click="openCourse(course)">
-              <v-img
-                :src="CourseImage"
-                height="180"
-                class="course__card-img"
-                cover
-              ></v-img>
-              <v-card-subtitle>{{ course.category }}</v-card-subtitle>
-              <v-card-title class="card__title">{{
-                course.title
-              }}</v-card-title>
-
-              <v-card-text>
-                {{ course.duration }} | {{ course.cost }}
-                <span class="course__card-rating">{{
-                  course.average_rating
-                }}</span>
-                <span>({{ course.total_reviews }})</span>
-              </v-card-text>
-            </v-card>
+      <v-container>
+        <v-row>
+          <v-col>
+            <Breadcrumb />
           </v-col>
         </v-row>
+      </v-container>
+      <v-container class="favourites-container">
+        <v-row>
+          <v-col cols="12">
+            <h1 class="page__title">Meus favoritos</h1>
+          </v-col>
+        </v-row>
+
+        <div class="courses" v-if="favourites.length > 0">
+          <v-row class="favourites-row">
+            <v-col
+              v-for="course in favourites"
+              :key="course.id"
+              cols="12"
+              md="4"
+            >
+              <CourseCard :course="course" :showVideo="showVideo" />
+            </v-col>
+          </v-row>
+        </div>
+
+        <FavouritesSkeleton v-else-if="authStore.isLoading" />
 
         <div v-else class="empty-state">
           <h2>Você ainda não tem cursos favoritos</h2>
@@ -55,12 +50,17 @@ import NavBar from "@/components/NavBar.vue";
 import { useAuthStore } from "@/stores/authStore";
 import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
-import CourseImage from "@/assets/Images/image.png";
 import { useCourseNavigation } from "@/composables/courseNavigation";
+import FavouritesSkeleton from "@/components/skeletonLoaders/FavouritesSkeleton.vue";
+import CourseCard from "@/components/CourseCard.vue";
+import Breadcrumb from "@/components/Breadcrumb.vue";
 
 export default {
   components: {
     NavBar,
+    FavouritesSkeleton,
+    CourseCard,
+    Breadcrumb,
   },
 
   setup() {
@@ -72,9 +72,15 @@ export default {
       return authStore.favourites;
     });
 
+    const showVideo = ref({});
+
     onMounted(() => {
       const user = JSON.parse(localStorage.getItem("user"));
       authStore.fetchUserFavourites(user.id);
+
+      authStore.favourites.forEach((course) => {
+        showVideo.value[course.id] = false;
+      });
     });
 
     return {
@@ -82,7 +88,7 @@ export default {
       favourites,
       router,
       openCourse,
-      CourseImage,
+      showVideo,
     };
   },
 };
@@ -97,25 +103,6 @@ export default {
   min-height: 100vh;
 }
 
-.custom-card {
-  width: 250px;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(4.6px);
-  -webkit-backdrop-filter: blur(4.6px);
-  border: 1px solid rgba(255, 255, 255, 0.17);
-  border-radius: 10px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.custom-card .v-card__text {
-  flex-grow: 1;
-  padding: 8px;
-}
-
 .empty-state {
   text-align: center;
   margin-top: 20px;
@@ -124,33 +111,40 @@ export default {
 }
 
 .favourites-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
-.card__title {
+.favourites-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.courses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page__title {
   color: var(--color-text-light);
-  font-size: 1.8rem;
-  font-family: var(--font-title);
+  font-size: 2.8rem;
+  font-family: var(--text-title);
+  font-weight: 700;
 }
 
-.course__card-rating {
-  color: var(--color-text-light);
-}
-
-.course__card-rating {
-  color: var(--color-text-light);
-}
-
-.course__card-img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+@media (max-width: 1800px) {
+  .favourites-row {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
-  .custom-card {
-    width: 100%;
-    max-width: 100%;
+  .courses {
+    align-items: start;
   }
 }
 </style>

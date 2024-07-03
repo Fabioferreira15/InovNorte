@@ -4,8 +4,16 @@
       <NavBar />
     </nav>
 
-    <v-main>
-      <v-container v-if="!authStore.isLoading" fluid class="user__info">
+
+    <ProfileSkeleton
+      v-if="authStore.isLoading"
+      :mostrarEmptyStateCursos="mostrarEmptyStateCursos"
+      :mostrarEmptyStateComunidades="mostrarEmptyStateComunidades"
+      :mostrarEmptyStateConversas="mostrarEmptyStateConversas"
+    />
+
+    <v-main v-else>
+      <v-container fluid class="user__info">
         <v-row>
           <v-col
             cols="12"
@@ -73,7 +81,9 @@
                 <template v-slot:image>
                   <v-icon size="100">mdi-book-open-variant</v-icon>
                 </template>
-                <div class="d-flex align-center justify-center flex-column emptyState">
+                <div
+                  class="d-flex align-center justify-center flex-column emptyState"
+                >
                   <p>
                     Ainda não começou nenhum curso. Explore os nossos cursos e
                     comece a sua aprendizagem
@@ -93,8 +103,10 @@
                 <template v-slot:image>
                   <v-icon size="100">mdi-account-group</v-icon>
                 </template>
-                <div class="d-flex align-center justify-center flex-column emptyState">
-                  <p >
+                <div
+                  class="d-flex align-center justify-center flex-column emptyState"
+                >
+                  <p>
                     Ainda não participa em nenhuma comunidade. Encontre
                     comunidades do seu interesse.
                   </p>
@@ -114,7 +126,9 @@
                 <template v-slot:image>
                   <v-icon size="100">mdi-message-text</v-icon>
                 </template>
-                <div class="d-flex align-center justify-center flex-column emptyState">
+                <div
+                  class="d-flex align-center justify-center flex-column emptyState"
+                >
                   <p>
                     Sem conversas fixadas. Fixe as suas conversas favoritas para
                     fácil acesso.
@@ -128,6 +142,7 @@
         </v-row>
       </v-container>
     </v-main>
+
   </div>
 </template>
 
@@ -138,10 +153,13 @@ import NavBar from "@/components/NavBar.vue";
 import Avatar from "@/assets/Images/avatar.png";
 import { useRouter } from "vue-router";
 import CourseImage from "@/assets/Images/image.png";
+import ProfileSkeleton from "@/components/skeletonLoaders/ProfileSkeleton.vue";
 
 export default {
   components: {
     NavBar,
+    ProfileSkeleton,
+
   },
 
   setup() {
@@ -300,20 +318,17 @@ export default {
   font-size: 2rem;
   font-weight: 700;
   color: var(--color-text-light);
-
 }
 
 .emptyState {
   text-align: center;
 }
 
-.emptyState p{
+.emptyState p {
   font-size: 1.4rem;
   font-family: var(--font-title);
   font-weight: 700;
   color: #888;
-
-
 }
 
 @media screen and (max-width: 768px) {

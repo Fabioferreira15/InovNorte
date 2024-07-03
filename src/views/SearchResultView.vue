@@ -36,63 +36,83 @@
             <SkeletonLoader />
           </v-col>
         </v-row>
-        <v-card
-          class="course-item"
-          variant="flat"
-          v-for="course in paginatedCourses"
-          :key="course.id"
-        >
-          <v-container fluid>
-            <v-row>
-              <v-col cols="12" md="2">
-                <v-img
-                  :src="CourseImage"
-                  cover
-                  class="course__card-img"
-                ></v-img>
-              </v-col>
-              <v-col cols="12" md="9" class="d-flex flex-column justify-center">
-                <v-card-title class="course__card-title">{{
-                  course.title
-                }}</v-card-title>
-                <v-card-subtitle class="course__card-category">{{
-                  course.category
-                }}</v-card-subtitle>
-                <v-card-subtitle class="course__card-trainer">{{
-                  course.trainer
-                }}</v-card-subtitle>
-                <v-card-text class="mt-4 rating d-flex align-center">
-                  <v-rating
-                    v-model="course.average_rating"
-                    active-color="primary"
-                    color="white"
-                    half-increments
-                    readonly
-                    size="23"
-                    class="mr-4"
-                  ></v-rating>
-                  <span class="course__card-rating">{{
-                    course.average_rating
-                  }}</span>
-                  <span class="course__card-total"
-                    >({{ course.total_reviews }})</span
-                  >
-                </v-card-text>
-                <div class="d-flex flex-row align-center btns mt-auto">
-                  <v-btn color="primary" @click="openCourse(course)"
-                    >Inscrever</v-btn
-                  >
-                  <v-btn icon flat class="favourite">
-                    <v-icon size="large">mdi-heart-outline</v-icon>
-                  </v-btn>
-                </div>
-              </v-col>
-              <v-col cols="12" md="1" class="d-flex justify-end price">
-                <p>{{ course.cost }}</p>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-card>
+
+        <v-container v-if="paginatedCourses.length > 0 || coursesStore.isLoading">
+          <v-card
+            class="course-item"
+            variant="flat"
+            v-for="course in paginatedCourses"
+            :key="course.id"
+          >
+            <v-container fluid>
+              <v-row>
+                <v-col cols="12" md="2">
+                  <v-img
+                    :src="CourseImage"
+                    cover
+                    class="course__card-img"
+                  ></v-img>
+                </v-col>
+                <v-col
+                  cols="12"
+                  md="9"
+                  class="d-flex flex-column justify-center"
+                >
+                  <v-card-title class="course__card-title">{{
+                    course.title
+                  }}</v-card-title>
+                  <v-card-subtitle class="course__card-category">{{
+                    course.category
+                  }}</v-card-subtitle>
+                  <v-card-subtitle class="course__card-trainer">{{
+                    course.trainer
+                  }}</v-card-subtitle>
+                  <v-card-text class="mt-4 rating d-flex align-center">
+                    <v-rating
+                      v-model="course.average_rating"
+                      active-color="primary"
+                      color="white"
+                      half-increments
+                      readonly
+                      size="23"
+                      class="mr-4"
+                    ></v-rating>
+                    <span class="course__card-rating">{{
+                      course.average_rating
+                    }}</span>
+                    <span class="course__card-total"
+                      >({{ course.total_reviews }})</span
+                    >
+                  </v-card-text>
+                  <div class="d-flex flex-row align-center btns mt-auto">
+                    <v-btn color="primary" @click="openCourse(course)"
+                      >Inscrever</v-btn
+                    >
+                    <v-btn icon flat class="favourite">
+                      <v-icon size="large">mdi-heart-outline</v-icon>
+                    </v-btn>
+                  </div>
+                </v-col>
+                <v-col cols="12" md="1" class="d-flex justify-end price">
+                  <p>{{ course.cost }}</p>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-card>
+        </v-container>
+
+        <v-container v-else>
+          <h1 class="title text-center">
+            Nenhum resultado encontrado
+          </h1>
+          <p class="text-center text">Tente procurar novamente</p>
+          <v-row>
+            <v-col cols="12" class="d-flex align-center justify-center mt-4">
+              <SearchBar />
+            </v-col>
+          </v-row>
+
+        </v-container>
       </v-container>
     </v-main>
 
@@ -114,12 +134,15 @@ import CourseImage from "@/assets/Images/image.png";
 import { useCourseNavigation } from "@/composables/courseNavigation";
 import SkeletonLoader from "@/components/skeletonLoaders/SearchResultsSkeleton.vue";
 import Breadcrumb from "@/components/Breadcrumb.vue";
+import SearchBar from "@/components/SearchBar.vue";
+
 
 export default {
   components: {
     NavBar,
     SkeletonLoader,
     Breadcrumb,
+    SearchBar,
   },
   setup() {
     const route = useRoute();
@@ -218,6 +241,7 @@ export default {
   padding: 15px;
   border-radius: 5px;
 }
+
 .pagination-buttons {
   display: flex;
   justify-content: center;
@@ -261,6 +285,7 @@ export default {
   background-color: transparent;
   color: var(--color-text-light);
 }
+
 .rating {
   font-family: var(--font-text);
   font-weight: 300;
@@ -318,10 +343,16 @@ export default {
   font-family: var(--font-text);
   font-size: 1.4rem;
 }
+
 .v-input {
   color: var(--color-text-light) !important;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(4.6px);
   -webkit-backdrop-filter: blur(4.6px);
+}
+.text {
+  font-family: var(--font-text);
+  font-size: 1.6rem;
+  color: var(--color-text-light);
 }
 </style>

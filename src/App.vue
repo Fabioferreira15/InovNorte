@@ -6,6 +6,7 @@
 
 <script>
 import { RouterView } from "vue-router";
+import router from "./router";
 </script>
 
 <style scoped>

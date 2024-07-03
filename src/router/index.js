@@ -5,12 +5,11 @@ import ProfileView from "../views/ProfileView.vue";
 import FavouritesView from "../views/FavouritesView.vue";
 import EditProfileView from "../views/EditProfileView.vue";
 import CourseCatalogView from "../views/CourseCatalogView.vue";
-import SettingsView from "../views/SettingsView.vue";
-import LandingScrollView from "@/views/LandingScrollView.vue";
 import SearchResultView from "@/views/SearchResultView.vue";
 import Course from "@/views/CourseView.vue";
 import Login from "@/views/LoginView.vue";
 import Registo from "@/views/RegisterView.vue";
+import NotFound from "@/views/NotFoundView.vue";
 import { useAuthStore } from "@/stores/authStore";
 import { useBreadcrumbsStore } from "@/stores/breadcrumbsStore";
 
@@ -25,11 +24,7 @@ const router = createRouter({
       name: "landing",
       component: LandingView,
     },
-    {
-      path: "/landing-scroll",
-      name: "landing-scroll",
-      component: LandingScrollView,
-    },
+
     {
       path: "/home-catalog",
       name: "homeCatalog",
@@ -62,12 +57,6 @@ const router = createRouter({
       meta: { breadcrumbName: "Catálogo de Cursos" },
     },
     {
-      path: "/settings",
-      name: "settings",
-      component: SettingsView,
-      meta: { breadcrumbName: "Definições" },
-    },
-    {
       path: "/search-result",
       name: "search-result",
       component: SearchResultView,
@@ -91,6 +80,7 @@ const router = createRouter({
       component: Registo,
       meta: { breadcrumbName: "Registo" },
     },
+    {path: "/:pathMatch(.*)*", component: NotFound}
   ],
 });
 

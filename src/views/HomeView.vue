@@ -637,6 +637,8 @@ export default {
   width: 100%;
 }
 
+
+
 @media (max-width: 960px) {
   .bg-video {
     height: 40vh;

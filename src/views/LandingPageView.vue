@@ -140,6 +140,7 @@ export default {
   font-weight: 700;
   font-size: 1.6rem;
   text-transform: capitalize;
+  position: relative;
 }
 
 .btn-hero + .btn-hero {
