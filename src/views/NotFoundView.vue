@@ -1,10 +1,6 @@
 <template>
   <div class="notfound">
-    <nav class="navbar">
-      <NavBar />
-    </nav>
-
-    <v-container class="d-flex align-center justify-center">
+    <v-container class="d-flex align-center justify-center flex-column">
       <v-row class="d-flex align-center justify-center">
         <v-col>
           <h1>A página que procuras não foi encontrada</h1>
@@ -12,22 +8,23 @@
           <router-link to="/"><v-btn>Página principal</v-btn></router-link>
         </v-col>
       </v-row>
+      <v-row class="d-flex align-center justify-center">
+        <v-col>
+          <v-img :src="botImage" alt="Bot" />
+        </v-col>
+      </v-row>
     </v-container>
-
-
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
+import botImage from "@/assets/Images/bot.png";
 
 export default {
-  Components: {
-    NavBar,
-  },
-
   setup() {
-    return {};
+    return {
+      botImage,
+    };
   },
 };
 </script>
