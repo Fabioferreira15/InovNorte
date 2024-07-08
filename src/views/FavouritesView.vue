@@ -2,7 +2,7 @@
   <div class="favourites">
     <NavBar />
     <v-main>
-      <v-container>
+      <v-container fluid>
         <v-row>
           <v-col>
             <Breadcrumb />
